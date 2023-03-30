@@ -39,14 +39,13 @@ speller = YandexSpeller()
 bot = Bot(BOT_TOKEN)
 
 
-async def get_audio(text, session, update):
+async def get_audio(text, session):
     global AUDIO_NUM, PATH_AUDIO
     headers = {
         "Authorization": f"Api-Key {API_KEY}"
     }
     sp_txt = speller.spelled_text(text)
-    if len(sp_txt) > 50:
-        await update.message.reply_text('В бете длина сообщений должна быть <= 50 символам.')
+    if len(sp_txt) > 80:
         return -1
     async with session.post(URL_SYN, data={"text": sp_txt},
                             headers=headers) as res:
@@ -81,10 +80,12 @@ async def get_text(file, session):
 
 async def make_voice(update, context):
     t = ' '.join([i.strip() for i in update.message.text.split('\n') if i.strip() != ''])
-    result = await get_audio(t, session, update)
+    result = await get_audio(t, session)
     chat = update.message.chat.id
     if result != -1:
         await bot.sendVoice(chat, result)
+        return
+    await update.message.reply_text('В бете длина сообщений должна быть <= 80 символам.')
 
 
 async def make_text(update, context):
