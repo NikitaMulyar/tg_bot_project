@@ -17,6 +17,7 @@ bot = Bot(BOT_TOKEN)
 
 
 async def start(update, context):
+    context.user_data['skip_voice'] = False
     context.user_data['voice'] = 'alena'
     await update.message.reply_text('Привет! Давай знакомиться. Я - Великий Гуру, умею общаться с людьми голосом!')
     await config_voice(update, context)
@@ -55,6 +56,7 @@ async def stop_dialog(update, context):
 
 
 async def config_voice(update, context):
+    context.user_data['skip_voice'] = False
     keyboard = [
         [
             InlineKeyboardButton("Филипп", callback_data="1"),
