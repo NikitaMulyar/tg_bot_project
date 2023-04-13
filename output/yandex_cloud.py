@@ -36,7 +36,7 @@ async def get_audio(text, voice):
     sp_txt = speller.spelled_text(text)
     if len(sp_txt) > MAX_LEN:
         return -1
-    async with session.post(URL_SYN, data={"text": sp_txt, "voice": voice, "speed": 1.2},
+    async with session.post(URL_SYN, data={"text": sp_txt, "voice": voice, "speed": 1.15},
                             headers=headers) as res:
         k = await res.read()
     res.close()

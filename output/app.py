@@ -197,6 +197,19 @@ class MapRoute:
         return ConversationHandler.END
 
 
+class MainSettings:
+    async def help(self, update, context):
+        pass
+
+    async def about(self, update, context):
+        pass
+
+
+class GameTowns:
+    async def start_game(self, update, context):
+        pass
+
+
 async def send_anecdot(update, context):
     chat = update.message.chat.id
     text = await get_anecdot()

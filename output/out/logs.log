@@ -942,3 +942,1062 @@ KeyError: 'voice'
 2023-04-14 00:45:28,936 - telegram._bot - DEBUG - ()
 2023-04-14 00:45:28,936 - telegram._bot - DEBUG - Exiting: get_updates
 2023-04-14 00:45:28,936 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:45:38,993 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:45:38,994 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:45:38,995 - telegram._bot - DEBUG - ()
+2023-04-14 00:45:38,995 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:45:38,995 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:45:49,060 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:45:49,061 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:45:49,061 - telegram._bot - DEBUG - ()
+2023-04-14 00:45:49,061 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:45:49,061 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:45:59,132 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:45:59,134 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:45:59,134 - telegram._bot - DEBUG - ()
+2023-04-14 00:45:59,134 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:45:59,134 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:46:09,199 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:46:09,200 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:46:09,201 - telegram._bot - DEBUG - ()
+2023-04-14 00:46:09,201 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:46:09,201 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:46:19,258 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:46:19,259 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:46:19,259 - telegram._bot - DEBUG - ()
+2023-04-14 00:46:19,259 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:46:19,259 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:46:29,317 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:46:29,320 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:46:29,320 - telegram._bot - DEBUG - ()
+2023-04-14 00:46:29,320 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:46:29,320 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:46:39,430 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:46:39,432 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:46:39,432 - telegram._bot - DEBUG - ()
+2023-04-14 00:46:39,432 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:46:39,432 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:46:49,491 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:46:49,493 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:46:49,494 - telegram._bot - DEBUG - ()
+2023-04-14 00:46:49,494 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:46:49,494 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:46:59,554 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:46:59,556 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:46:59,556 - telegram._bot - DEBUG - ()
+2023-04-14 00:46:59,556 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:46:59,556 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:47:09,618 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:47:09,618 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:47:09,619 - telegram._bot - DEBUG - ()
+2023-04-14 00:47:09,619 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:47:09,619 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:47:19,673 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:47:19,674 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:47:19,674 - telegram._bot - DEBUG - ()
+2023-04-14 00:47:19,674 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:47:19,674 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:47:29,810 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:47:29,812 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:47:29,812 - telegram._bot - DEBUG - ()
+2023-04-14 00:47:29,812 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:47:29,812 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:47:39,874 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:47:39,876 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:47:39,876 - telegram._bot - DEBUG - ()
+2023-04-14 00:47:39,876 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:47:39,876 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:47:49,985 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:47:49,986 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:47:49,986 - telegram._bot - DEBUG - ()
+2023-04-14 00:47:49,986 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:47:49,986 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:48:00,123 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:48:00,124 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:48:00,124 - telegram._bot - DEBUG - ()
+2023-04-14 00:48:00,124 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:48:00,124 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:48:10,259 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:48:10,260 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:48:10,260 - telegram._bot - DEBUG - ()
+2023-04-14 00:48:10,260 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:48:10,260 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:48:20,399 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:48:20,401 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:48:20,401 - telegram._bot - DEBUG - ()
+2023-04-14 00:48:20,401 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:48:20,401 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:48:30,462 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:48:30,463 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:48:30,463 - telegram._bot - DEBUG - ()
+2023-04-14 00:48:30,463 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:48:30,463 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:48:40,571 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:48:40,573 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:48:40,573 - telegram._bot - DEBUG - ()
+2023-04-14 00:48:40,573 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:48:40,573 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:48:50,635 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:48:50,637 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:48:50,637 - telegram._bot - DEBUG - ()
+2023-04-14 00:48:50,637 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:48:50,637 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:49:00,725 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:49:00,727 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:49:00,727 - telegram._bot - DEBUG - ()
+2023-04-14 00:49:00,727 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:49:00,727 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:49:10,787 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:49:10,788 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:49:10,789 - telegram._bot - DEBUG - ()
+2023-04-14 00:49:10,789 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:49:10,789 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:49:20,916 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:49:20,916 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:49:20,916 - telegram._bot - DEBUG - ()
+2023-04-14 00:49:20,916 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:49:20,917 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:49:31,056 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:49:31,058 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:49:31,058 - telegram._bot - DEBUG - ()
+2023-04-14 00:49:31,058 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:49:31,058 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:49:41,191 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:49:41,193 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:49:41,193 - telegram._bot - DEBUG - ()
+2023-04-14 00:49:41,193 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:49:41,193 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:49:51,329 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:49:51,330 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:49:51,330 - telegram._bot - DEBUG - ()
+2023-04-14 00:49:51,331 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:49:51,331 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:49:58,805 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:49:58,807 - telegram._bot - DEBUG - Getting updates: [48413150]
+2023-04-14 00:49:58,808 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 13, 21, 49, 58, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=8, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=872, supergroup_chat_created=False, text='/anecdot'), update_id=48413150),)
+2023-04-14 00:49:58,808 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:49:58,808 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:49:58,809 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 13, 21, 49, 58, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=8, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=872, supergroup_chat_created=False, text='/anecdot'), update_id=48413150)
+2023-04-14 00:49:58,809 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-14 00:49:58,810 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-14 00:49:58,810 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-14 00:49:58,971 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): speller.yandex.net:443
+2023-04-14 00:49:59,053 - urllib3.connectionpool - DEBUG - https://speller.yandex.net:443 "POST /services/spellservice.json/checkText HTTP/1.1" 200 2
+2023-04-14 00:49:59,054 - root - DEBUG - https://speller.yandex.net/services/spellservice.json/checkText?text=%E2%80%94+%D0%AF+%D0%BD%D0%B5+%D0%BB%D1%8E%D0%B1%D0%BB%D1%8E+%D0%B1%D0%BE%D0%BB%D1%82%D0%B0%D1%82%D1%8C+%D0%B8+%D0%BE%D1%82%D0%B2%D0%B5%D1%87%D0%B0%D1%82%D1%8C+%D0%BD%D0%B0+%D0%B2%D1%81%D1%8F%D0%BA%D0%B8%D0%B5+%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B.%0D%0A%E2%80%94+%D0%90+%D0%B3%D0%B4%D0%B5+%D0%B2%D1%8B+%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82%D0%B5%3F%0D%0A%E2%80%94+%D0%92+%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%BE%D0%BC+%D0%B1%D1%8E%D1%80%D0%BE.&options=0&lang=en%2Cuk%2Cru&format=plain
+2023-04-14 00:49:59,054 - root - DEBUG - response: []
+2023-04-14 00:49:59,245 - telegram._bot - DEBUG - Entering: send_message
+2023-04-14 00:49:59,459 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-14 00:49:59,461 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 13, 21, 49, 59, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=873, supergroup_chat_created=False, text='— Я не люблю болтать и отвечать на всякие вопросы.\n— А где вы работаете?\n— В справочном бюро.')
+2023-04-14 00:49:59,462 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-14 00:49:59,462 - telegram._bot - DEBUG - Entering: send_voice
+2023-04-14 00:49:59,802 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendVoice "HTTP/1.1 200 OK"
+2023-04-14 00:49:59,804 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 13, 21, 49, 59, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=874, supergroup_chat_created=False, voice=Voice(duration=5, file_id='AwACAgIAAxkDAAIDamQ4eQdOfcqmvdmXHSKKykNnIcZzAALjKQACWQ_ISaIGAgEHbgO8LwQ', file_size=45536, file_unique_id='AgAD4ykAAlkPyEk', mime_type='audio/ogg'))
+2023-04-14 00:49:59,804 - telegram._bot - DEBUG - Exiting: send_voice
+2023-04-14 00:50:08,867 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:50:08,869 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:50:08,869 - telegram._bot - DEBUG - ()
+2023-04-14 00:50:08,869 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:50:08,869 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:50:09,106 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:50:09,107 - telegram._bot - DEBUG - Getting updates: [48413151]
+2023-04-14 00:50:09,107 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 13, 21, 50, 9, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=8, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=875, supergroup_chat_created=False, text='/anecdot'), update_id=48413151),)
+2023-04-14 00:50:09,108 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:50:09,108 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:50:09,109 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 13, 21, 50, 9, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=8, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=875, supergroup_chat_created=False, text='/anecdot'), update_id=48413151)
+2023-04-14 00:50:09,109 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-14 00:50:09,109 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-14 00:50:09,109 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-14 00:50:09,201 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): speller.yandex.net:443
+2023-04-14 00:50:09,313 - urllib3.connectionpool - DEBUG - https://speller.yandex.net:443 "POST /services/spellservice.json/checkText HTTP/1.1" 200 2
+2023-04-14 00:50:09,317 - root - DEBUG - https://speller.yandex.net/services/spellservice.json/checkText?text=%D0%9C%D1%8E%D0%BB%D0%BB%D0%B5%D1%80+%D1%81%D0%BF%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%B5%D1%82+%D0%A8%D1%82%D0%B8%D1%80%D0%BB%D0%B8%D1%86%D0%B0%2C+%D0%BD%D0%B5%D0%BB%D0%B5%D0%B3%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE+%D0%BF%D0%BE%D0%B1%D1%8B%D0%B2%D0%B0%D0%B2%D1%88%D0%B5%D0%B3%D0%BE+%D0%B2+%D0%91%D0%B5%D1%80%D0%BD%D0%B5%3A%0D%0A%E2%80%94+%D0%A8%D1%82%D0%B8%D1%80%D0%BB%D0%B8%D1%86%21+%D0%93%D0%B4%D0%B5+%D0%B2%D1%8B+%D0%B1%D1%8B%D0%BB%D0%B8+%D1%82%D1%80%D0%B8+%D0%B4%D0%BD%D1%8F%3F%0D%0A%D0%A8%D1%82%D0%B8%D1%80%D0%BB%D0%B8%D1%86%3A%0D%0A%E2%80%94+%D0%A2%D0%B0%D0%BC%E2%80%A6%0D%0A%D0%9C%D1%8E%D0%BB%D0%BB%D0%B5%D1%80%3A%0D%0A%E2%80%94+%D0%A6%D0%B5%D0%BD%D1%8E+%D0%B2%D0%B0%D1%88%D0%B5+%D1%87%D1%83%D0%B2%D1%81%D1%82%D0%B2%D0%BE+%D1%8E%D0%BC%D0%BE%D1%80%D0%B0%2C+%D0%A8%D1%82%D0%B8%D1%80%D0%BB%D0%B8%D1%86.+%D0%98+%D0%B3%D0%B4%D0%B5+%D0%B6%D0%B5+%D1%8D%D1%82%D0%BE+%D1%82%D0%B0%D0%BC%3F%0D%0A%D0%A8%D1%82%D0%B8%D1%80%D0%BB%D0%B8%D1%86+%28%D0%BD%D0%B0%D0%BF%D0%B5%D0%B2%D0%B0%D1%8F+%D0%BD%D0%B0+%D0%BC%D0%BE%D1%82%D0%B8%D0%B2+%C2%AB%D0%9D%D0%B5+%D0%B4%D1%83%D0%BC%D0%B0%D0%B9+%D0%BE+%D1%81%D0%B5%D0%BA%D1%83%D0%BD%D0%B4%D0%B0%D1%85+%D1%81%D0%B2%D1%8B%D1%81%D0%BE%D0%BA%D0%B0%E2%80%A6%C2%BB%29%3A%0D%0A%E2%80%94+%D0%A2%D0%B0-%D1%82%D0%B0-%D1%82%D0%B0%D0%BC%2C+%D1%82%D0%B0-%D1%82%D0%B0-%D1%82%D0%B0-%D1%82%D0%B0%D0%BC%2C+%D1%82%D0%B0-%D1%82%D0%B0-%D1%82%D0%B0%D0%BC%E2%80%A6&options=0&lang=en%2Cuk%2Cru&format=plain
+2023-04-14 00:50:09,317 - root - DEBUG - response: []
+2023-04-14 00:50:10,552 - telegram._bot - DEBUG - Entering: send_message
+2023-04-14 00:50:10,762 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-14 00:50:10,763 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 13, 21, 50, 10, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=876, supergroup_chat_created=False, text='Мюллер спрашивает Штирлица, нелегально побывавшего в Берне:\n— Штирлиц! Где вы были три дня?\nШтирлиц:\n— Там…\nМюллер:\n— Ценю ваше чувство юмора, Штирлиц. И где же это там?\nШтирлиц (напевая на мотив «Не думай о секундах свысока…»):\n— Та-та-там, та-та-та-там, та-та-там…')
+2023-04-14 00:50:10,764 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-14 00:50:10,764 - telegram._bot - DEBUG - Entering: send_voice
+2023-04-14 00:50:11,175 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendVoice "HTTP/1.1 200 OK"
+2023-04-14 00:50:11,177 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 13, 21, 50, 11, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=877, supergroup_chat_created=False, voice=Voice(duration=18, file_id='AwACAgIAAxkDAAIDbWQ4eROXSDFyZTeduF5-Y_eEQ3AuAALkKQACWQ_ISZgQ-y1jkwsNLwQ', file_size=155966, file_unique_id='AgAD5CkAAlkPyEk', mime_type='audio/ogg'))
+2023-04-14 00:50:11,177 - telegram._bot - DEBUG - Exiting: send_voice
+2023-04-14 00:50:19,181 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:50:19,183 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:50:19,183 - telegram._bot - DEBUG - ()
+2023-04-14 00:50:19,183 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:50:19,183 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:50:29,320 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:50:29,322 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:50:29,322 - telegram._bot - DEBUG - ()
+2023-04-14 00:50:29,322 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:50:29,322 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:50:39,377 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:50:39,379 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:50:39,379 - telegram._bot - DEBUG - ()
+2023-04-14 00:50:39,379 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:50:39,380 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:50:49,437 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:50:49,438 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:50:49,438 - telegram._bot - DEBUG - ()
+2023-04-14 00:50:49,438 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:50:49,438 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:50:59,529 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:50:59,530 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:50:59,530 - telegram._bot - DEBUG - ()
+2023-04-14 00:50:59,530 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:50:59,530 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:51:09,589 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:51:09,590 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:51:09,590 - telegram._bot - DEBUG - ()
+2023-04-14 00:51:09,590 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:51:09,590 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:51:19,647 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:51:19,648 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:51:19,648 - telegram._bot - DEBUG - ()
+2023-04-14 00:51:19,648 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:51:19,648 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:51:29,707 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:51:29,709 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:51:29,709 - telegram._bot - DEBUG - ()
+2023-04-14 00:51:29,709 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:51:29,710 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:51:39,770 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:51:39,772 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:51:39,772 - telegram._bot - DEBUG - ()
+2023-04-14 00:51:39,772 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:51:39,772 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:51:49,910 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:51:49,912 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:51:49,912 - telegram._bot - DEBUG - ()
+2023-04-14 00:51:49,912 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:51:49,913 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:51:59,970 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:51:59,982 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:51:59,983 - telegram._bot - DEBUG - ()
+2023-04-14 00:51:59,983 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:51:59,983 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:52:10,040 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:52:10,041 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:52:10,041 - telegram._bot - DEBUG - ()
+2023-04-14 00:52:10,041 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:52:10,041 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:52:20,103 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:52:20,104 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:52:20,105 - telegram._bot - DEBUG - ()
+2023-04-14 00:52:20,105 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:52:20,105 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:52:30,255 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:52:30,256 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:52:30,256 - telegram._bot - DEBUG - ()
+2023-04-14 00:52:30,256 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:52:30,256 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:52:40,317 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:52:40,321 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:52:40,338 - telegram._bot - DEBUG - ()
+2023-04-14 00:52:40,339 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:52:40,339 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:52:50,399 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:52:50,401 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:52:50,401 - telegram._bot - DEBUG - ()
+2023-04-14 00:52:50,401 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:52:50,401 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:53:00,567 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:53:00,569 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:53:00,569 - telegram._bot - DEBUG - ()
+2023-04-14 00:53:00,569 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:53:00,569 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:53:10,629 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:53:10,631 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:53:10,632 - telegram._bot - DEBUG - ()
+2023-04-14 00:53:10,632 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:53:10,632 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:53:20,740 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:53:20,741 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:53:20,742 - telegram._bot - DEBUG - ()
+2023-04-14 00:53:20,742 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:53:20,742 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:53:30,877 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:53:30,879 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:53:30,879 - telegram._bot - DEBUG - ()
+2023-04-14 00:53:30,879 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:53:30,879 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:53:41,015 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:53:41,017 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:53:41,017 - telegram._bot - DEBUG - ()
+2023-04-14 00:53:41,017 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:53:41,017 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:53:51,076 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:53:51,078 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:53:51,078 - telegram._bot - DEBUG - ()
+2023-04-14 00:53:51,078 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:53:51,078 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:54:01,187 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:54:01,189 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:54:01,189 - telegram._bot - DEBUG - ()
+2023-04-14 00:54:01,189 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:54:01,189 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:54:11,247 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:54:11,249 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:54:11,249 - telegram._bot - DEBUG - ()
+2023-04-14 00:54:11,249 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:54:11,249 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:54:21,309 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:54:21,311 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:54:21,311 - telegram._bot - DEBUG - ()
+2023-04-14 00:54:21,311 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:54:21,311 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:54:31,371 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:54:31,372 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:54:31,373 - telegram._bot - DEBUG - ()
+2023-04-14 00:54:31,373 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:54:31,373 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:54:41,534 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:54:41,535 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:54:41,535 - telegram._bot - DEBUG - ()
+2023-04-14 00:54:41,536 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:54:41,536 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:54:51,593 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:54:51,595 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:54:51,595 - telegram._bot - DEBUG - ()
+2023-04-14 00:54:51,595 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:54:51,595 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:55:01,653 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:55:01,656 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:55:01,656 - telegram._bot - DEBUG - ()
+2023-04-14 00:55:01,656 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:55:01,656 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:55:11,718 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:55:11,720 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:55:11,720 - telegram._bot - DEBUG - ()
+2023-04-14 00:55:11,720 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:55:11,721 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:55:21,879 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:55:21,882 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:55:21,882 - telegram._bot - DEBUG - ()
+2023-04-14 00:55:21,882 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:55:21,882 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:55:31,940 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:55:31,942 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:55:31,942 - telegram._bot - DEBUG - ()
+2023-04-14 00:55:31,942 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:55:31,942 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:55:42,000 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:55:42,002 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:55:42,002 - telegram._bot - DEBUG - ()
+2023-04-14 00:55:42,002 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:55:42,002 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:55:52,066 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:55:52,068 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:55:52,068 - telegram._bot - DEBUG - ()
+2023-04-14 00:55:52,068 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:55:52,068 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:56:02,131 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:56:02,133 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:56:02,133 - telegram._bot - DEBUG - ()
+2023-04-14 00:56:02,133 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:56:02,133 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:56:12,210 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:56:12,212 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:56:12,212 - telegram._bot - DEBUG - ()
+2023-04-14 00:56:12,212 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:56:12,212 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:56:22,296 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:56:22,298 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:56:22,298 - telegram._bot - DEBUG - ()
+2023-04-14 00:56:22,298 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:56:22,298 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:56:32,433 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:56:32,436 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:56:32,436 - telegram._bot - DEBUG - ()
+2023-04-14 00:56:32,436 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:56:32,436 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:56:42,494 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:56:42,496 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:56:42,496 - telegram._bot - DEBUG - ()
+2023-04-14 00:56:42,496 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:56:42,496 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:56:52,560 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:56:52,563 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:56:52,563 - telegram._bot - DEBUG - ()
+2023-04-14 00:56:52,563 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:56:52,563 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:57:02,623 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:57:02,625 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:57:02,625 - telegram._bot - DEBUG - ()
+2023-04-14 00:57:02,625 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:57:02,625 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:57:12,684 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:57:12,687 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:57:12,687 - telegram._bot - DEBUG - ()
+2023-04-14 00:57:12,687 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:57:12,687 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:57:22,815 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:57:22,817 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:57:22,818 - telegram._bot - DEBUG - ()
+2023-04-14 00:57:22,818 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:57:22,818 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:57:32,876 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:57:32,878 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:57:32,878 - telegram._bot - DEBUG - ()
+2023-04-14 00:57:32,878 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:57:32,878 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:57:42,939 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:57:42,941 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:57:42,941 - telegram._bot - DEBUG - ()
+2023-04-14 00:57:42,942 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:57:42,942 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:57:52,998 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:57:53,000 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:57:53,000 - telegram._bot - DEBUG - ()
+2023-04-14 00:57:53,000 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:57:53,000 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:58:03,160 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:58:03,161 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:58:03,162 - telegram._bot - DEBUG - ()
+2023-04-14 00:58:03,162 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:58:03,162 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:58:13,401 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:58:13,404 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:58:13,404 - telegram._bot - DEBUG - ()
+2023-04-14 00:58:13,404 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:58:13,404 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:58:23,467 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:58:23,469 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:58:23,469 - telegram._bot - DEBUG - ()
+2023-04-14 00:58:23,469 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:58:23,469 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:58:33,575 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:58:33,581 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:58:33,581 - telegram._bot - DEBUG - ()
+2023-04-14 00:58:33,582 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:58:33,582 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:58:43,640 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:58:43,640 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:58:43,640 - telegram._bot - DEBUG - ()
+2023-04-14 00:58:43,641 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:58:43,641 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:58:53,746 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:58:53,748 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:58:53,748 - telegram._bot - DEBUG - ()
+2023-04-14 00:58:53,748 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:58:53,748 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:59:03,806 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:59:03,807 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:59:03,808 - telegram._bot - DEBUG - ()
+2023-04-14 00:59:03,808 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:59:03,808 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:59:13,867 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:59:13,868 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:59:13,869 - telegram._bot - DEBUG - ()
+2023-04-14 00:59:13,869 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:59:13,869 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:59:23,933 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:59:23,935 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:59:23,935 - telegram._bot - DEBUG - ()
+2023-04-14 00:59:23,935 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:59:23,935 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:59:33,996 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:59:33,998 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:59:33,998 - telegram._bot - DEBUG - ()
+2023-04-14 00:59:33,998 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:59:33,998 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:59:44,057 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:59:44,059 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:59:44,059 - telegram._bot - DEBUG - ()
+2023-04-14 00:59:44,059 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:59:44,059 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 00:59:54,265 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 00:59:54,269 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 00:59:54,269 - telegram._bot - DEBUG - ()
+2023-04-14 00:59:54,269 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 00:59:54,269 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:00:04,403 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:00:04,404 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:00:04,405 - telegram._bot - DEBUG - ()
+2023-04-14 01:00:04,405 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:00:04,405 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:00:14,475 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:00:14,477 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:00:14,477 - telegram._bot - DEBUG - ()
+2023-04-14 01:00:14,477 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:00:14,477 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:00:24,535 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:00:24,538 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:00:24,538 - telegram._bot - DEBUG - ()
+2023-04-14 01:00:24,538 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:00:24,538 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:00:34,611 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:00:34,612 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:00:34,612 - telegram._bot - DEBUG - ()
+2023-04-14 01:00:34,612 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:00:34,612 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:00:44,672 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:00:44,675 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:00:44,675 - telegram._bot - DEBUG - ()
+2023-04-14 01:00:44,675 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:00:44,675 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:00:54,733 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:00:54,735 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:00:54,735 - telegram._bot - DEBUG - ()
+2023-04-14 01:00:54,735 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:00:54,735 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:01:04,819 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:01:04,820 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:01:04,821 - telegram._bot - DEBUG - ()
+2023-04-14 01:01:04,821 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:01:04,821 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:01:14,877 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:01:14,879 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:01:14,879 - telegram._bot - DEBUG - ()
+2023-04-14 01:01:14,879 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:01:14,880 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:01:24,940 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:01:24,942 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:01:24,942 - telegram._bot - DEBUG - ()
+2023-04-14 01:01:24,942 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:01:24,942 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:01:34,999 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:01:35,000 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:01:35,000 - telegram._bot - DEBUG - ()
+2023-04-14 01:01:35,001 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:01:35,001 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:01:45,164 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:01:45,166 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:01:45,166 - telegram._bot - DEBUG - ()
+2023-04-14 01:01:45,166 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:01:45,166 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:01:55,303 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:01:55,305 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:01:55,305 - telegram._bot - DEBUG - ()
+2023-04-14 01:01:55,305 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:01:55,306 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:02:05,362 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:02:05,363 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:02:05,363 - telegram._bot - DEBUG - ()
+2023-04-14 01:02:05,363 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:02:05,363 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:02:15,474 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:02:15,476 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:02:15,477 - telegram._bot - DEBUG - ()
+2023-04-14 01:02:15,477 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:02:15,477 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:02:25,613 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:02:25,613 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:02:25,613 - telegram._bot - DEBUG - ()
+2023-04-14 01:02:25,613 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:02:25,613 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:02:35,680 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:02:35,681 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:02:35,681 - telegram._bot - DEBUG - ()
+2023-04-14 01:02:35,681 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:02:35,681 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:02:45,787 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:02:45,788 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:02:45,788 - telegram._bot - DEBUG - ()
+2023-04-14 01:02:45,788 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:02:45,788 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:02:55,848 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:02:55,849 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:02:55,849 - telegram._bot - DEBUG - ()
+2023-04-14 01:02:55,849 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:02:55,849 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:03:05,925 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:03:05,935 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:03:05,936 - telegram._bot - DEBUG - ()
+2023-04-14 01:03:05,936 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:03:05,936 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:03:16,010 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:03:16,011 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:03:16,012 - telegram._bot - DEBUG - ()
+2023-04-14 01:03:16,012 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:03:16,012 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:03:26,071 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:03:26,072 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:03:26,072 - telegram._bot - DEBUG - ()
+2023-04-14 01:03:26,073 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:03:26,073 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:03:36,168 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:03:36,170 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:03:36,170 - telegram._bot - DEBUG - ()
+2023-04-14 01:03:36,170 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:03:36,170 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:03:46,230 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:03:46,231 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:03:46,231 - telegram._bot - DEBUG - ()
+2023-04-14 01:03:46,231 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:03:46,231 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:03:56,341 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:03:56,343 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:03:56,343 - telegram._bot - DEBUG - ()
+2023-04-14 01:03:56,343 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:03:56,343 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:04:06,403 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:04:06,404 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:04:06,404 - telegram._bot - DEBUG - ()
+2023-04-14 01:04:06,404 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:04:06,404 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:04:16,513 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:04:16,514 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:04:16,514 - telegram._bot - DEBUG - ()
+2023-04-14 01:04:16,514 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:04:16,515 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:04:26,572 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:04:26,573 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:04:26,573 - telegram._bot - DEBUG - ()
+2023-04-14 01:04:26,573 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:04:26,573 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:04:36,687 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:04:36,693 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:04:36,693 - telegram._bot - DEBUG - ()
+2023-04-14 01:04:36,693 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:04:36,693 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:04:46,825 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:04:46,826 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:04:46,826 - telegram._bot - DEBUG - ()
+2023-04-14 01:04:46,826 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:04:46,826 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:04:56,891 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:04:56,893 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:04:56,893 - telegram._bot - DEBUG - ()
+2023-04-14 01:04:56,893 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:04:56,893 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:05:06,997 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:05:06,998 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:05:06,999 - telegram._bot - DEBUG - ()
+2023-04-14 01:05:06,999 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:05:06,999 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:05:17,134 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:05:17,135 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:05:17,136 - telegram._bot - DEBUG - ()
+2023-04-14 01:05:17,136 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:05:17,136 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:05:27,273 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:05:27,275 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:05:27,275 - telegram._bot - DEBUG - ()
+2023-04-14 01:05:27,275 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:05:27,275 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:05:37,412 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:05:37,415 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:05:37,415 - telegram._bot - DEBUG - ()
+2023-04-14 01:05:37,415 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:05:37,415 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:05:47,473 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:05:47,474 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:05:47,474 - telegram._bot - DEBUG - ()
+2023-04-14 01:05:47,474 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:05:47,474 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:05:57,531 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:05:57,534 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:05:57,534 - telegram._bot - DEBUG - ()
+2023-04-14 01:05:57,534 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:05:57,534 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:06:07,593 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:06:07,594 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:06:07,594 - telegram._bot - DEBUG - ()
+2023-04-14 01:06:07,594 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:06:07,594 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:06:17,649 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:06:17,650 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:06:17,650 - telegram._bot - DEBUG - ()
+2023-04-14 01:06:17,650 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:06:17,650 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:06:27,707 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:06:27,709 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:06:27,709 - telegram._bot - DEBUG - ()
+2023-04-14 01:06:27,709 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:06:27,709 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:06:37,766 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:06:37,767 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:06:37,767 - telegram._bot - DEBUG - ()
+2023-04-14 01:06:37,767 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:06:37,768 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:06:47,829 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:06:47,832 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:06:47,832 - telegram._bot - DEBUG - ()
+2023-04-14 01:06:47,832 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:06:47,832 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:06:57,901 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:06:57,902 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:06:57,903 - telegram._bot - DEBUG - ()
+2023-04-14 01:06:57,903 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:06:57,903 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:07:07,959 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:07:07,959 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:07:07,959 - telegram._bot - DEBUG - ()
+2023-04-14 01:07:07,959 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:07:07,959 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:07:18,013 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:07:18,013 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:07:18,013 - telegram._bot - DEBUG - ()
+2023-04-14 01:07:18,013 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:07:18,013 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:07:28,070 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:07:28,072 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:07:28,072 - telegram._bot - DEBUG - ()
+2023-04-14 01:07:28,072 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:07:28,072 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:07:38,132 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:07:38,134 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:07:38,134 - telegram._bot - DEBUG - ()
+2023-04-14 01:07:38,134 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:07:38,134 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:07:48,191 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:07:48,193 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:07:48,193 - telegram._bot - DEBUG - ()
+2023-04-14 01:07:48,193 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:07:48,193 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:07:58,252 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:07:58,255 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:07:58,255 - telegram._bot - DEBUG - ()
+2023-04-14 01:07:58,255 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:07:58,256 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:08:08,318 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:08:08,319 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:08:08,319 - telegram._bot - DEBUG - ()
+2023-04-14 01:08:08,319 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:08:08,319 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:08:18,387 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:08:18,388 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:08:18,388 - telegram._bot - DEBUG - ()
+2023-04-14 01:08:18,388 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:08:18,388 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:08:28,443 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:08:28,444 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:08:28,444 - telegram._bot - DEBUG - ()
+2023-04-14 01:08:28,444 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:08:28,444 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:08:38,498 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:08:38,500 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:08:38,500 - telegram._bot - DEBUG - ()
+2023-04-14 01:08:38,500 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:08:38,500 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:08:48,556 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:08:48,556 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:08:48,556 - telegram._bot - DEBUG - ()
+2023-04-14 01:08:48,556 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:08:48,556 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:08:58,614 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:08:58,617 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:08:58,617 - telegram._bot - DEBUG - ()
+2023-04-14 01:08:58,617 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:08:58,617 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:09:08,676 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:09:08,678 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:09:08,678 - telegram._bot - DEBUG - ()
+2023-04-14 01:09:08,678 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:09:08,678 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:09:18,737 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:09:18,738 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:09:18,738 - telegram._bot - DEBUG - ()
+2023-04-14 01:09:18,738 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:09:18,738 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:09:28,796 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:09:28,798 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:09:28,798 - telegram._bot - DEBUG - ()
+2023-04-14 01:09:28,798 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:09:28,798 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:09:38,872 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:09:38,874 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:09:38,874 - telegram._bot - DEBUG - ()
+2023-04-14 01:09:38,874 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:09:38,874 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:09:49,011 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:09:49,013 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:09:49,013 - telegram._bot - DEBUG - ()
+2023-04-14 01:09:49,013 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:09:49,013 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:09:59,147 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:09:59,147 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:09:59,147 - telegram._bot - DEBUG - ()
+2023-04-14 01:09:59,148 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:09:59,148 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:10:09,286 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:10:09,289 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:10:09,289 - telegram._bot - DEBUG - ()
+2023-04-14 01:10:09,289 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:10:09,289 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:10:19,422 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:10:19,424 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:10:19,424 - telegram._bot - DEBUG - ()
+2023-04-14 01:10:19,424 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:10:19,424 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:10:29,558 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:10:29,559 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:10:29,559 - telegram._bot - DEBUG - ()
+2023-04-14 01:10:29,559 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:10:29,559 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:10:39,615 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:10:39,616 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:10:39,616 - telegram._bot - DEBUG - ()
+2023-04-14 01:10:39,616 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:10:39,616 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:10:49,675 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:10:49,678 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:10:49,678 - telegram._bot - DEBUG - ()
+2023-04-14 01:10:49,678 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:10:49,678 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:10:59,735 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:10:59,736 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:10:59,736 - telegram._bot - DEBUG - ()
+2023-04-14 01:10:59,736 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:10:59,736 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:11:09,794 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:11:09,795 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:11:09,795 - telegram._bot - DEBUG - ()
+2023-04-14 01:11:09,795 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:11:09,795 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:11:19,942 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:11:19,943 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:11:19,943 - telegram._bot - DEBUG - ()
+2023-04-14 01:11:19,943 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:11:19,943 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:11:30,079 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:11:30,080 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:11:30,080 - telegram._bot - DEBUG - ()
+2023-04-14 01:11:30,081 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:11:30,081 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:11:40,139 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:11:40,140 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:11:40,140 - telegram._bot - DEBUG - ()
+2023-04-14 01:11:40,140 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:11:40,140 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:11:50,207 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:11:50,207 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:11:50,207 - telegram._bot - DEBUG - ()
+2023-04-14 01:11:50,207 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:11:50,207 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:12:00,287 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:12:00,289 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:12:00,289 - telegram._bot - DEBUG - ()
+2023-04-14 01:12:00,289 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:12:00,289 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:12:10,347 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:12:10,349 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:12:10,349 - telegram._bot - DEBUG - ()
+2023-04-14 01:12:10,349 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:12:10,349 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:12:20,407 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:12:20,409 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:12:20,409 - telegram._bot - DEBUG - ()
+2023-04-14 01:12:20,409 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:12:20,409 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:12:30,496 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:12:30,497 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:12:30,497 - telegram._bot - DEBUG - ()
+2023-04-14 01:12:30,497 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:12:30,497 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:12:40,561 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:12:40,563 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:12:40,563 - telegram._bot - DEBUG - ()
+2023-04-14 01:12:40,563 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:12:40,563 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:12:50,860 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:12:50,861 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:12:50,862 - telegram._bot - DEBUG - ()
+2023-04-14 01:12:50,862 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:12:50,862 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:13:00,993 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:13:00,995 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:13:00,995 - telegram._bot - DEBUG - ()
+2023-04-14 01:13:00,995 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:13:00,995 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:13:11,129 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:13:11,130 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:13:11,131 - telegram._bot - DEBUG - ()
+2023-04-14 01:13:11,131 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:13:11,131 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:13:21,265 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:13:21,267 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:13:21,267 - telegram._bot - DEBUG - ()
+2023-04-14 01:13:21,267 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:13:21,267 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:13:31,330 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:13:31,332 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:13:31,332 - telegram._bot - DEBUG - ()
+2023-04-14 01:13:31,332 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:13:31,332 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:13:41,437 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:13:41,438 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:13:41,438 - telegram._bot - DEBUG - ()
+2023-04-14 01:13:41,438 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:13:41,438 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:13:51,569 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:13:51,570 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:13:51,570 - telegram._bot - DEBUG - ()
+2023-04-14 01:13:51,570 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:13:51,570 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:14:01,627 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:14:01,628 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:14:01,628 - telegram._bot - DEBUG - ()
+2023-04-14 01:14:01,628 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:14:01,628 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:14:11,743 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:14:11,745 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:14:11,745 - telegram._bot - DEBUG - ()
+2023-04-14 01:14:11,745 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:14:11,745 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:14:21,803 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:14:21,804 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:14:21,804 - telegram._bot - DEBUG - ()
+2023-04-14 01:14:21,804 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:14:21,804 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:14:31,919 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:14:31,921 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:14:31,921 - telegram._bot - DEBUG - ()
+2023-04-14 01:14:31,921 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:14:31,921 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:14:42,057 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:14:42,058 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:14:42,058 - telegram._bot - DEBUG - ()
+2023-04-14 01:14:42,058 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:14:42,058 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:14:52,195 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:14:52,196 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:14:52,196 - telegram._bot - DEBUG - ()
+2023-04-14 01:14:52,196 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:14:52,196 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:15:02,332 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:15:02,334 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:15:02,334 - telegram._bot - DEBUG - ()
+2023-04-14 01:15:02,335 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:15:02,335 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:15:12,393 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:15:12,394 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:15:12,394 - telegram._bot - DEBUG - ()
+2023-04-14 01:15:12,394 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:15:12,394 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:15:22,490 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:15:22,491 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:15:22,491 - telegram._bot - DEBUG - ()
+2023-04-14 01:15:22,491 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:15:22,491 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:15:32,602 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:15:32,603 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:15:32,603 - telegram._bot - DEBUG - ()
+2023-04-14 01:15:32,603 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:15:32,603 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:15:42,661 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:15:42,661 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:15:42,661 - telegram._bot - DEBUG - ()
+2023-04-14 01:15:42,661 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:15:42,661 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:15:52,734 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:15:52,735 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:15:52,735 - telegram._bot - DEBUG - ()
+2023-04-14 01:15:52,735 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:15:52,735 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:16:02,854 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:16:02,858 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:16:02,858 - telegram._bot - DEBUG - ()
+2023-04-14 01:16:02,858 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:16:02,858 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:16:12,917 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:16:12,917 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:16:12,918 - telegram._bot - DEBUG - ()
+2023-04-14 01:16:12,918 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:16:12,918 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:16:23,026 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:16:23,028 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:16:23,028 - telegram._bot - DEBUG - ()
+2023-04-14 01:16:23,028 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:16:23,028 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:16:33,093 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:16:33,095 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:16:33,095 - telegram._bot - DEBUG - ()
+2023-04-14 01:16:33,095 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:16:33,095 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:16:43,287 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:16:43,289 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:16:43,290 - telegram._bot - DEBUG - ()
+2023-04-14 01:16:43,290 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:16:43,290 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:16:53,351 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:16:53,353 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:16:53,353 - telegram._bot - DEBUG - ()
+2023-04-14 01:16:53,353 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:16:53,353 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:17:03,472 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:17:03,473 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:17:03,473 - telegram._bot - DEBUG - ()
+2023-04-14 01:17:03,473 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:17:03,473 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:17:13,533 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:17:13,534 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:17:13,535 - telegram._bot - DEBUG - ()
+2023-04-14 01:17:13,535 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:17:13,535 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:17:23,596 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:17:23,598 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:17:23,598 - telegram._bot - DEBUG - ()
+2023-04-14 01:17:23,598 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:17:23,598 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:17:33,680 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:17:33,682 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:17:33,682 - telegram._bot - DEBUG - ()
+2023-04-14 01:17:33,682 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:17:33,682 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:17:43,738 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:17:43,740 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:17:43,740 - telegram._bot - DEBUG - ()
+2023-04-14 01:17:43,740 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:17:43,740 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:17:53,797 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:17:53,798 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:17:53,798 - telegram._bot - DEBUG - ()
+2023-04-14 01:17:53,798 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:17:53,799 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:18:03,887 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:18:03,889 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:18:03,889 - telegram._bot - DEBUG - ()
+2023-04-14 01:18:03,889 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:18:03,889 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:18:13,954 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-14 01:18:13,955 - telegram._bot - DEBUG - No new updates found.
+2023-04-14 01:18:13,955 - telegram._bot - DEBUG - ()
+2023-04-14 01:18:13,956 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-14 01:18:13,956 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-14 01:18:16,848 - telegram.ext._updater - DEBUG - Stopping Updater
+2023-04-14 01:18:16,848 - telegram.ext._updater - DEBUG - Waiting background polling task to finish up.
+2023-04-14 01:18:16,849 - telegram.ext._updater - DEBUG - Network loop retry getting Updates was cancelled
+2023-04-14 01:18:16,849 - telegram.ext._updater - DEBUG - Updater.stop() is complete
+2023-04-14 01:18:16,849 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-14 01:18:16,849 - telegram.ext._application - DEBUG - Waiting for update_queue to join
+2023-04-14 01:18:16,849 - telegram.ext._application - DEBUG - Dropping pending updates
+2023-04-14 01:18:16,849 - telegram.ext._application - DEBUG - Application stopped fetching of updates.
+2023-04-14 01:18:16,849 - telegram.ext._application - DEBUG - Waiting for `create_task` calls to be processed
+2023-04-14 01:18:16,849 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-14 01:18:16,850 - telegram._bot - DEBUG - This Bot is already shut down. Returning.
+2023-04-14 01:18:16,850 - telegram.ext._updater - DEBUG - Shut down of Updater complete
+2023-04-14 01:18:16,877 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1043d6d10>
+2023-04-14 01:19:07,635 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:19:07,643 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x107b290c0>
+2023-04-14 01:19:46,070 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:19:46,079 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x105bd51b0>
+2023-04-14 01:20:51,115 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:20:51,125 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x107d877c0>
+2023-04-14 01:21:25,855 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:21:25,869 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x105c1cf40>
+2023-04-14 01:21:31,424 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:21:31,433 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x106090f10>
+2023-04-14 01:23:25,743 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:23:25,785 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x103cd4f40>
+2023-04-14 01:25:10,491 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:25:10,502 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x10778d0f0>
+2023-04-14 01:25:42,575 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:25:42,585 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x107d61240>
+2023-04-14 01:27:11,571 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:27:11,579 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x110889360>
+2023-04-14 01:30:34,259 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:30:34,270 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x107e85060>
+2023-04-14 01:31:48,700 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-14 01:31:48,710 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x105afd2a0>
