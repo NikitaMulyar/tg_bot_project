@@ -11,3 +11,9 @@ MAX_LEN = 4000
 VOICES = {'1': ('filipp', 'Филипп'), '2': ('alena', 'Алена'), '3': ('ermil', 'Ермил'),
           '4': ('jane', 'Джейн'), '5': ('zahar', 'Захар'), '6': ('omazh', 'Омаж'),
           '7': ('madirus', 'Мадирус')}
+
+API_ORGS = 'dda3ddba-c9ea-4ead-9010-f43fbc15c6e3'
+API_GEO = '40d1649f-0493-4b70-98ba-98533de7710b'
+URL_GEOCODER = 'http://geocode-maps.yandex.ru/1.x/'
+URL_ORG = 'https://search-maps.yandex.ru/v1/'
+URL_MAPS = 'http://static-maps.yandex.ru/1.x/'
