@@ -117,5 +117,19 @@ async def get_map(a, b):
     return image
 
 
+async def get_anecdot():
+    url = 'http://anecdotica.ru/'
+    session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
+    async with session.get(url) as res:
+        page = await res.text()
+        res.close()
+    await session.close()
+    sp = BeautifulSoup(page, 'html.parser')
+    res = []
+    for i in sp.find_all('div', class_='item_text'):
+        res.append(i.get_text())
+    return '\n'.join(res)
+
+
 if __name__ == '__main__':
     asyncio.run(get_time_paths())

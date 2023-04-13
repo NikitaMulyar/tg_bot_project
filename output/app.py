@@ -1,3 +1,5 @@
+import logging
+
 from telegram.ext import Application, MessageHandler, filters, CommandHandler, ConversationHandler, \
     CallbackQueryHandler
 from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove
@@ -8,9 +10,11 @@ from funcs_backend import *
 
 
 logging.basicConfig(
+    filename='out/logs.log', filemode='a',
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG
 )
 logger = logging.getLogger(__name__)
+
 
 session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
 bot = Bot(BOT_TOKEN)
@@ -203,6 +207,14 @@ async def stop_navigator(update, context):
     return ConversationHandler.END
 
 
+async def send_anecdot(update, context):
+    chat = update.message.chat.id
+    text = await get_anecdot()
+    audio = await get_audio(text, context.user_data['voice'])
+    await bot.send_message(chat, text)
+    await bot.send_voice(chat, audio)
+
+
 def main():
     try:
         if not os.path.exists('out/'):
@@ -242,6 +254,7 @@ def main():
     application.add_handler(config_voice_handler)
     application.add_handler(conv_handler)
     application.add_handler(navigator_dialog)
+    application.add_handler(CommandHandler('anecdot', send_anecdot))
 
     application.run_polling()
 

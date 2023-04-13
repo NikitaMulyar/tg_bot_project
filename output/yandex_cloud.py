@@ -13,8 +13,6 @@ import os
 from pyaspeller import YandexSpeller
 from consts import *
 
-session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
-speller = YandexSpeller()
 
 """
 async def update_iam_token():
@@ -30,22 +28,26 @@ async def update_iam_token():
 
 
 async def get_audio(text, voice):
+    session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
+    speller = YandexSpeller()
     headers = {
         "Authorization": f"Api-Key {API_KEY}"
     }
     sp_txt = speller.spelled_text(text)
     if len(sp_txt) > MAX_LEN:
         return -1
-    async with session.post(URL_SYN, data={"text": sp_txt, "voice": voice, "speed": 1.1},
+    async with session.post(URL_SYN, data={"text": sp_txt, "voice": voice, "speed": 1.3},
                             headers=headers) as res:
         k = await res.read()
     res.close()
+    await session.close()
     return k
 
 
 # API V1. Не использовать.
 async def get_text(file):
     headers = {'Authorization': f'Api-Key {API_KEY}'}
+    session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
     async with session.post(URL_REC, data=file, headers=headers) as res:
         decode_res = await res.read()
         decode_res = decode_res.decode('UTF-8')  # декодируем
@@ -54,6 +56,8 @@ async def get_text(file):
             text = text.get('result')  # забираем текст из json по ключу result
         else:
             text = text.get('error_code')
+        res.close()
+    await session.close()
     return text
 
 
@@ -109,6 +113,7 @@ def get_text_api_v3(audio_file, chat_id, logger: logging.Logger):
             if event_type == 'final_refinement':
                 # Предложение полностью составлено
                 alternatives = [a.text for a in r.final_refinement.normalized_text.alternatives]
+                os.remove(name)
                 return '\n'.join(alternatives)
     except grpc._channel._Rendezvous as err:
         logger.error(f'Error code {err._state.code}, message: {err._state.details}')
