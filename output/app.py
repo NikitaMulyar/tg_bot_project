@@ -245,9 +245,9 @@ class GameTowns:
                 await get_audio('Города на такую букву нет!', context.user_data['voice']))
             return 1
         if city not in res:
-            await update.message.reply_text('|| Города на такую букву нет\! ||', parse_mode='MarkdownV2')
+            await update.message.reply_text('|| Такого города я не знаю\! Давай другой\. ||', parse_mode='MarkdownV2')
             await bot.send_voice(chat,
-                await get_audio('Города на такую букву нет!', context.user_data['voice']))
+                await get_audio('Такого города я не знаю! Давай другой.', context.user_data['voice']))
             return 1
         formatted_city = city.replace('ы', '').replace('ь', '').replace('ъ', '').replace('ё', 'е')
         last = formatted_city[-1]
