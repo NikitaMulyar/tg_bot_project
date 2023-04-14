@@ -1,3 +1,5 @@
+import random
+
 from telegram import Bot
 from telegram.ext import Application, MessageHandler, filters, CommandHandler, ConversationHandler, \
     CallbackQueryHandler
@@ -206,18 +208,83 @@ class MainSettings:
 
 
 class GameTowns:
+    def __init__(self):
+        with open('cities.json', mode='rb') as c:
+            self.TOWNS = json.load(c)
+        self.LETTERS = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯ'
+
+    def get_random_town(self, lett=''):
+        if lett == '':
+            lett = random.choice(self.LETTERS)
+        return random.choice(self.TOWNS[lett])
+
     async def start_game(self, update, context):
-        await update.message.reply_text('Привет! Давай поиграем в города! Ты должен называть города, начинающиеся на ту букву,'
-                                        ' на которую заканчивается название предыдущего города! Ты начинаешь!')
+        chat = update.message.chat.id
+        await update.message.reply_text(
+            '|| Привет\! Давай поиграем в города\! Ты должен называть города\, начинающиеся на ту букву\,'
+            ' на которую заканчивается название предыдущего города\! Я начинаю\: ||', parse_mode='MarkdownV2')
+        await bot.send_voice(chat, await get_audio(
+            'Привет! Давай поиграем в города! Ты должен называть города, '
+            'начинающиеся на ту букву, на которую заканчивается '
+            'название предыдущего города! Я начинаю.',
+            context.user_data['voice']))
+        town = self.get_random_town()
+        await bot.send_message(chat, '|| ' + town + ' ||', parse_mode='MarkdownV2')
+        await bot.send_voice(chat, await get_audio(town, context.user_data['voice']))
+        context.user_data['bot_town'] = town
+        context.user_data['towns_used'] = [town]
         return 1
 
     async def get_name(self, update, context):
-        return 1
-
-    async def bad_name(self, update, context):
+        chat = update.message.chat.id
+        city = update.message.text
+        res = self.TOWNS.get(city[0].upper())
+        if res is None or res == set():
+            await update.message.reply_text('|| Города на такую букву нет\! ||', parse_mode='MarkdownV2')
+            await bot.send_voice(chat,
+                await get_audio('Города на такую букву нет!', context.user_data['voice']))
+            return 1
+        if city not in res:
+            await update.message.reply_text('|| Города на такую букву нет\! ||', parse_mode='MarkdownV2')
+            await bot.send_voice(chat,
+                await get_audio('Города на такую букву нет!', context.user_data['voice']))
+            return 1
+        formatted_city = city.replace('ы', '').replace('ь', '').replace('ъ', '').replace('ё', 'е')
+        last = formatted_city[-1]
+        first = formatted_city[0].lower()
+        res = self.TOWNS.get(last.upper())
+        if res is None or res == set():
+            await update.message.reply_text('|| Попробуй другой город\. ||', parse_mode='MarkdownV2')
+            await bot.send_voice(chat,
+                await get_audio('Попробуй другой город.', context.user_data['voice']))
+            return 1
+        if context.user_data['bot_town'].lower().replace('ы', '').replace('ь', '') \
+                .replace('ъ', '').replace('ё', 'е')[-1] != first:
+            await update.message.reply_text('|| Неверная первая буква\. ||', parse_mode='MarkdownV2')
+            await bot.send_voice(chat,
+                await get_audio('Неверная первая буква.', context.user_data['voice']))
+            return 1
+        if city in context.user_data['towns_used']:
+            await update.message.reply_text('|| Город уже был\! ||', parse_mode='MarkdownV2')
+            await bot.send_voice(chat, await get_audio('Город уже был!', context.user_data['voice']))
+            return 1
+        context.user_data['towns_used'].append(city)
+        town = self.get_random_town(lett=last.upper())
+        while town in context.user_data['towns_used']:
+            town = self.get_random_town(lett=last.upper())
+        await update.message.reply_text('|| ' + town + ' ||', parse_mode='MarkdownV2')
+        await bot.send_voice(chat, await get_audio(town, context.user_data['voice']))
+        context.user_data['bot_town'] = town
+        context.user_data['towns_used'].append(town)
         return 1
 
     async def end_game(self, update, context):
+        chat = update.message.chat.id
+        await update.message.reply_text('|| Ха\-ха\, сдаешься\? Ну ладно\! ||', parse_mode='MarkdownV2')
+        await bot.send_voice(chat,
+            await get_audio('Ха-ха, сдаешься? Ну ладно!', context.user_data['voice']))
+        context.user_data['bot_town'] = None
+        context.user_data['towns_used'] = []
         return ConversationHandler.END
 
 
@@ -267,6 +334,15 @@ def main():
         },
         fallbacks=[MessageHandler(filters.ALL, voice_config_start.get_out)]
     )
+    game_towns = GameTowns()
+    game_towns_conv = ConversationHandler(
+        entry_points=[CommandHandler('towns', game_towns.start_game)],
+        states={
+            1: [MessageHandler(filters.TEXT & ~filters.COMMAND, game_towns.get_name)]
+        },
+        fallbacks=[CommandHandler('end_game', game_towns.end_game)]
+    )
+    application.add_handler(game_towns_conv)
     application.add_handler(config_voice_handler)
     application.add_handler(conv_handler)
     application.add_handler(navigator_dialog)
