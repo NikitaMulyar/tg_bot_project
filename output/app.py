@@ -207,7 +207,18 @@ class MainSettings:
 
 class GameTowns:
     async def start_game(self, update, context):
-        pass
+        await update.message.reply_text('Привет! Давай поиграем в города! Ты должен называть города, начинающиеся на ту букву,'
+                                        ' на которую заканчивается название предыдущего города! Ты начинаешь!')
+        return 1
+
+    async def get_name(self, update, context):
+        return 1
+
+    async def bad_name(self, update, context):
+        return 1
+
+    async def end_game(self, update, context):
+        return ConversationHandler.END
 
 
 async def send_anecdot(update, context):
