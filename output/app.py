@@ -25,7 +25,8 @@ class ConfigVoice:
         context.user_data['skip_voice'] = False
         context.user_data['voice'] = 'alena'
         await update.message.reply_text(
-            'Привет! Давай знакомиться. Я - Великий Гуру, умею общаться с людьми голосом!')
+            'Привет! Давай знакомиться. Я - Великий Гуру, умею общаться с людьми голосом!',
+            reply_markup=ReplyKeyboardRemove())
         await ConfigVoice.config_voice(self, update, context)
         return 1
 
