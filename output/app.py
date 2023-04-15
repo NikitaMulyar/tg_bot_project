@@ -411,13 +411,9 @@ def main():
         },
         fallbacks=[CommandHandler('stop_ai', ai_dialog.stop_ai)], block=True, conversation_timeout=60
     )
-    application.add_handler(conv_handler)
-    application.add_handler(config_voice_handler)
-    application.add_handler(ai_dialog_conv)
-    application.add_handler(game_towns_conv)
-    application.add_handler(navigator_dialog)
-    application.add_handler(CommandHandler('anecdot', send_anecdot))
-    application.add_handler(CommandHandler('news', send_news))
+    application.add_handlers([conv_handler, config_voice_handler, ai_dialog_conv, game_towns_conv,
+                              navigator_dialog, CommandHandler('anecdot', send_anecdot),
+                              CommandHandler('news', send_news)])
 
     application.run_polling()
 

@@ -11398,3 +11398,916 @@ client_session: <aiohttp.client.ClientSession object at 0x11958b6d0>
 2023-04-16 01:40:09,056 - telegram.ext._updater - DEBUG - Shut down of Updater complete
 2023-04-16 01:40:09,078 - asyncio - ERROR - Unclosed client session
 client_session: <aiohttp.client.ClientSession object at 0x111587970>
+2023-04-16 02:07:09,119 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-16 02:07:09,147 - telegram._bot - DEBUG - Entering: get_me
+2023-04-16 02:07:09,336 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getMe "HTTP/1.1 200 OK"
+2023-04-16 02:07:09,337 - telegram._bot - DEBUG - User(can_join_groups=True, can_read_all_group_messages=False, first_name='Великий Гуру', id=6110921105, is_bot=True, supports_inline_queries=False, username='guru1514_bot')
+2023-04-16 02:07:09,337 - telegram._bot - DEBUG - Exiting: get_me
+2023-04-16 02:07:09,337 - telegram._bot - DEBUG - This Bot is already initialized.
+2023-04-16 02:07:09,337 - telegram.ext._updater - DEBUG - Updater started (polling)
+2023-04-16 02:07:09,337 - telegram.ext._updater - DEBUG - Start network loop retry bootstrap del webhook
+2023-04-16 02:07:09,337 - telegram.ext._updater - DEBUG - Deleting webhook
+2023-04-16 02:07:09,337 - telegram._bot - DEBUG - Entering: delete_webhook
+2023-04-16 02:07:09,392 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/deleteWebhook "HTTP/1.1 200 OK"
+2023-04-16 02:07:09,393 - telegram._bot - DEBUG - True
+2023-04-16 02:07:09,393 - telegram._bot - DEBUG - Exiting: delete_webhook
+2023-04-16 02:07:09,393 - telegram.ext._updater - DEBUG - Bootstrap done
+2023-04-16 02:07:09,393 - telegram.ext._updater - DEBUG - Waiting for polling to start
+2023-04-16 02:07:09,393 - telegram.ext._updater - DEBUG - Polling updates from Telegram started
+2023-04-16 02:07:09,393 - telegram.ext._updater - DEBUG - Start network loop retry getting Updates
+2023-04-16 02:07:09,393 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:09,394 - telegram.ext._application - INFO - Application started
+2023-04-16 02:07:17,539 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:17,540 - telegram._bot - DEBUG - Getting updates: [48413791]
+2023-04-16 02:07:17,541 - telegram._bot - DEBUG - (Update(my_chat_member=ChatMemberUpdated(chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 17, tzinfo=<UTC>), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), new_chat_member=ChatMemberBanned(status=<ChatMemberStatus.BANNED>, until_date=datetime.datetime(1970, 1, 1, 0, 0, tzinfo=<UTC>), user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot')), old_chat_member=ChatMemberMember(status=<ChatMemberStatus.MEMBER>, user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'))), update_id=48413791),)
+2023-04-16 02:07:17,543 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:17,543 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:17,544 - telegram.ext._application - DEBUG - Processing update Update(my_chat_member=ChatMemberUpdated(chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 17, tzinfo=<UTC>), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), new_chat_member=ChatMemberBanned(status=<ChatMemberStatus.BANNED>, until_date=datetime.datetime(1970, 1, 1, 0, 0, tzinfo=<UTC>), user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot')), old_chat_member=ChatMemberMember(status=<ChatMemberStatus.MEMBER>, user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'))), update_id=48413791)
+2023-04-16 02:07:17,544 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:17,545 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:17,545 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:17,545 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:17,545 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:18,227 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:18,229 - telegram._bot - DEBUG - Getting updates: [48413792]
+2023-04-16 02:07:18,229 - telegram._bot - DEBUG - (Update(my_chat_member=ChatMemberUpdated(chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 18, tzinfo=<UTC>), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), new_chat_member=ChatMemberMember(status=<ChatMemberStatus.MEMBER>, user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot')), old_chat_member=ChatMemberBanned(status=<ChatMemberStatus.BANNED>, until_date=datetime.datetime(1970, 1, 1, 0, 0, tzinfo=<UTC>), user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'))), update_id=48413792),)
+2023-04-16 02:07:18,230 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:18,230 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:18,231 - telegram.ext._application - DEBUG - Processing update Update(my_chat_member=ChatMemberUpdated(chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 18, tzinfo=<UTC>), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), new_chat_member=ChatMemberMember(status=<ChatMemberStatus.MEMBER>, user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot')), old_chat_member=ChatMemberBanned(status=<ChatMemberStatus.BANNED>, until_date=datetime.datetime(1970, 1, 1, 0, 0, tzinfo=<UTC>), user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'))), update_id=48413792)
+2023-04-16 02:07:18,232 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:18,232 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:18,232 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:18,232 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:18,232 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:18,294 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:18,295 - telegram._bot - DEBUG - Getting updates: [48413793]
+2023-04-16 02:07:18,296 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 18, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2139, supergroup_chat_created=False, text='/start'), update_id=48413793),)
+2023-04-16 02:07:18,297 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:18,297 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:18,298 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 18, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2139, supergroup_chat_created=False, text='/start'), update_id=48413793)
+2023-04-16 02:07:18,299 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:18,299 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:18,299 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:07:18,689 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:07:18,692 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 18, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2140, supergroup_chat_created=False, text='Привет! Давай знакомиться. Я - Великий Гуру, умею общаться с людьми голосом!')
+2023-04-16 02:07:18,692 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:07:18,692 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:07:18,777 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:07:18,778 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 18, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2141, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Филипп'), InlineKeyboardButton(callback_data='2', text='Алена')), (InlineKeyboardButton(callback_data='3', text='Ермил'), InlineKeyboardButton(callback_data='4', text='Джейн')), (InlineKeyboardButton(callback_data='5', text='Захар'), InlineKeyboardButton(callback_data='6', text='Омаж')), (InlineKeyboardButton(callback_data='7', text='Мадирус'),))), supergroup_chat_created=False, text='Выбери голос:')
+2023-04-16 02:07:18,779 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:07:20,351 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:20,352 - telegram._bot - DEBUG - Getting updates: [48413794]
+2023-04-16 02:07:20,353 - telegram._bot - DEBUG - (Update(callback_query=CallbackQuery(chat_instance='-3471195433472786633', data='1', from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), id='2416060566941934735', message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 18, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2141, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Филипп'), InlineKeyboardButton(callback_data='2', text='Алена')), (InlineKeyboardButton(callback_data='3', text='Ермил'), InlineKeyboardButton(callback_data='4', text='Джейн')), (InlineKeyboardButton(callback_data='5', text='Захар'), InlineKeyboardButton(callback_data='6', text='Омаж')), (InlineKeyboardButton(callback_data='7', text='Мадирус'),))), supergroup_chat_created=False, text='Выбери голос:')), update_id=48413794),)
+2023-04-16 02:07:20,354 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:20,354 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:20,355 - telegram.ext._application - DEBUG - Processing update Update(callback_query=CallbackQuery(chat_instance='-3471195433472786633', data='1', from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), id='2416060566941934735', message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 18, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2141, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Филипп'), InlineKeyboardButton(callback_data='2', text='Алена')), (InlineKeyboardButton(callback_data='3', text='Ермил'), InlineKeyboardButton(callback_data='4', text='Джейн')), (InlineKeyboardButton(callback_data='5', text='Захар'), InlineKeyboardButton(callback_data='6', text='Омаж')), (InlineKeyboardButton(callback_data='7', text='Мадирус'),))), supergroup_chat_created=False, text='Выбери голос:')), update_id=48413794)
+2023-04-16 02:07:20,356 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:20,356 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state 1
+2023-04-16 02:07:20,356 - telegram._bot - DEBUG - Entering: answer_callback_query
+2023-04-16 02:07:20,443 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/answerCallbackQuery "HTTP/1.1 200 OK"
+2023-04-16 02:07:20,445 - telegram._bot - DEBUG - True
+2023-04-16 02:07:20,445 - telegram._bot - DEBUG - Exiting: answer_callback_query
+2023-04-16 02:07:20,446 - telegram._bot - DEBUG - Entering: edit_message_text
+2023-04-16 02:07:20,627 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/editMessageText "HTTP/1.1 200 OK"
+2023-04-16 02:07:20,627 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 18, tzinfo=<UTC>), delete_chat_photo=False, edit_date=datetime.datetime(2023, 4, 15, 23, 7, 20, tzinfo=<UTC>), from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2141, supergroup_chat_created=False, text='Выбранный голос: Филипп')
+2023-04-16 02:07:20,627 - telegram._bot - DEBUG - Exiting: edit_message_text
+2023-04-16 02:07:22,574 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:22,576 - telegram._bot - DEBUG - Getting updates: [48413795]
+2023-04-16 02:07:22,578 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 22, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=13, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2142, supergroup_chat_created=False, text='/start_dialog'), update_id=48413795),)
+2023-04-16 02:07:22,578 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:22,578 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:22,579 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 22, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=13, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2142, supergroup_chat_created=False, text='/start_dialog'), update_id=48413795)
+2023-04-16 02:07:22,580 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:22,580 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:07:22,661 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:07:22,663 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 22, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2143, supergroup_chat_created=False, text='Давай поболтаем! Отправляй мне воисы - а я тебе их расшифровку, и наоборот!\nНо учти - если воис не на русском языке, я не гарантирую хороший перевод!')
+2023-04-16 02:07:22,663 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:07:24,779 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:24,781 - telegram._bot - DEBUG - Getting updates: [48413796]
+2023-04-16 02:07:24,782 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 24, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2144, supergroup_chat_created=False, text='/route'), update_id=48413796),)
+2023-04-16 02:07:24,782 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:24,783 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:24,784 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 24, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2144, supergroup_chat_created=False, text='/route'), update_id=48413796)
+2023-04-16 02:07:24,784 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state 1
+2023-04-16 02:07:24,803 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): speller.yandex.net:443
+2023-04-16 02:07:24,903 - urllib3.connectionpool - DEBUG - https://speller.yandex.net:443 "POST /services/spellservice.json/checkText HTTP/1.1" 200 2
+2023-04-16 02:07:24,907 - root - DEBUG - https://speller.yandex.net/services/spellservice.json/checkText?text=%2Froute&options=0&lang=ru%2Cen%2Cuk&format=plain
+2023-04-16 02:07:24,907 - root - DEBUG - response: []
+2023-04-16 02:07:25,065 - telegram._bot - DEBUG - Entering: send_voice
+2023-04-16 02:07:25,283 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendVoice "HTTP/1.1 200 OK"
+2023-04-16 02:07:25,285 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 25, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2145, supergroup_chat_created=False, voice=Voice(duration=0, file_id='AwACAgIAAxkDAAIIYWQ7Li2_RsROcThw-lna-eGPwMTvAAJ5LAACB5TYSTMgSZuZu4VcLwQ', file_size=6937, file_unique_id='AgADeSwAAgeU2Ek', mime_type='audio/ogg'))
+2023-04-16 02:07:25,286 - telegram._bot - DEBUG - Exiting: send_voice
+2023-04-16 02:07:30,049 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:30,052 - telegram._bot - DEBUG - Getting updates: [48413797]
+2023-04-16 02:07:30,053 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 30, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=12, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2146, supergroup_chat_created=False, text='/stop_dialog'), update_id=48413797),)
+2023-04-16 02:07:30,053 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:30,053 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:30,055 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 30, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=12, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2146, supergroup_chat_created=False, text='/stop_dialog'), update_id=48413797)
+2023-04-16 02:07:30,055 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state 1
+2023-04-16 02:07:30,059 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): speller.yandex.net:443
+2023-04-16 02:07:30,170 - urllib3.connectionpool - DEBUG - https://speller.yandex.net:443 "POST /services/spellservice.json/checkText HTTP/1.1" 200 364
+2023-04-16 02:07:30,174 - root - DEBUG - https://speller.yandex.net/services/spellservice.json/checkText?text=%2Fstop_dialog&options=0&lang=ru%2Cen%2Cuk&format=plain
+2023-04-16 02:07:30,174 - root - DEBUG - response: [{'code': 1, 'pos': 1, 'row': 0, 'col': 1, 'len': 4, 'word': 'stop', 's': ['/стоп', '/stop', '/top', '/стол', '/step', '/стопы', '/shop']}, {'code': 1, 'pos': 6, 'row': 0, 'col': 6, 'len': 6, 'word': 'dialog', 's': ['диалог', 'dialog', 'diallog', 'dialogue', 'диалога']}]
+2023-04-16 02:07:30,317 - telegram._bot - DEBUG - Entering: send_voice
+2023-04-16 02:07:30,616 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendVoice "HTTP/1.1 200 OK"
+2023-04-16 02:07:30,617 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 30, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2147, supergroup_chat_created=False, voice=Voice(duration=1, file_id='AwACAgIAAxkDAAIIY2Q7LjIeM_PR0cy1Kq1Aje6eTVSSAAJ6LAACB5TYSUDCVpdLuTksLwQ', file_size=19093, file_unique_id='AgADeiwAAgeU2Ek', mime_type='audio/ogg'))
+2023-04-16 02:07:30,618 - telegram._bot - DEBUG - Exiting: send_voice
+2023-04-16 02:07:40,229 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:40,230 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:07:40,230 - telegram._bot - DEBUG - ()
+2023-04-16 02:07:40,231 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:40,231 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:49,006 - telegram.ext._updater - DEBUG - Stopping Updater
+2023-04-16 02:07:49,006 - telegram.ext._updater - DEBUG - Waiting background polling task to finish up.
+2023-04-16 02:07:49,006 - telegram.ext._updater - DEBUG - Network loop retry getting Updates was cancelled
+2023-04-16 02:07:49,006 - telegram.ext._updater - DEBUG - Updater.stop() is complete
+2023-04-16 02:07:49,006 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-16 02:07:49,007 - telegram.ext._application - DEBUG - Waiting for update_queue to join
+2023-04-16 02:07:49,007 - telegram.ext._application - DEBUG - Dropping pending updates
+2023-04-16 02:07:49,007 - telegram.ext._application - DEBUG - Application stopped fetching of updates.
+2023-04-16 02:07:49,007 - telegram.ext._application - DEBUG - Waiting for `create_task` calls to be processed
+2023-04-16 02:07:49,007 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-16 02:07:49,007 - telegram._bot - DEBUG - This Bot is already shut down. Returning.
+2023-04-16 02:07:49,007 - telegram.ext._updater - DEBUG - Shut down of Updater complete
+2023-04-16 02:07:49,032 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x107a9f0a0>
+2023-04-16 02:07:49,367 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-16 02:07:49,397 - telegram._bot - DEBUG - Entering: get_me
+2023-04-16 02:07:49,580 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getMe "HTTP/1.1 200 OK"
+2023-04-16 02:07:49,580 - telegram._bot - DEBUG - User(can_join_groups=True, can_read_all_group_messages=False, first_name='Великий Гуру', id=6110921105, is_bot=True, supports_inline_queries=False, username='guru1514_bot')
+2023-04-16 02:07:49,580 - telegram._bot - DEBUG - Exiting: get_me
+2023-04-16 02:07:49,580 - telegram._bot - DEBUG - This Bot is already initialized.
+2023-04-16 02:07:49,580 - telegram.ext._updater - DEBUG - Updater started (polling)
+2023-04-16 02:07:49,580 - telegram.ext._updater - DEBUG - Start network loop retry bootstrap del webhook
+2023-04-16 02:07:49,580 - telegram.ext._updater - DEBUG - Deleting webhook
+2023-04-16 02:07:49,581 - telegram._bot - DEBUG - Entering: delete_webhook
+2023-04-16 02:07:49,636 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/deleteWebhook "HTTP/1.1 200 OK"
+2023-04-16 02:07:49,637 - telegram._bot - DEBUG - True
+2023-04-16 02:07:49,637 - telegram._bot - DEBUG - Exiting: delete_webhook
+2023-04-16 02:07:49,637 - telegram.ext._updater - DEBUG - Bootstrap done
+2023-04-16 02:07:49,637 - telegram.ext._updater - DEBUG - Waiting for polling to start
+2023-04-16 02:07:49,637 - telegram.ext._updater - DEBUG - Polling updates from Telegram started
+2023-04-16 02:07:49,637 - telegram.ext._updater - DEBUG - Start network loop retry getting Updates
+2023-04-16 02:07:49,637 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:49,637 - telegram.ext._application - INFO - Application started
+2023-04-16 02:07:51,058 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:51,060 - telegram._bot - DEBUG - Getting updates: [48413798]
+2023-04-16 02:07:51,061 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 51, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2148, supergroup_chat_created=False, text='/start'), update_id=48413798),)
+2023-04-16 02:07:51,062 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:51,062 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:51,063 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 51, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2148, supergroup_chat_created=False, text='/start'), update_id=48413798)
+2023-04-16 02:07:51,063 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:51,063 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:51,064 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:07:51,154 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:07:51,156 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 51, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2149, supergroup_chat_created=False, text='Привет! Давай знакомиться. Я - Великий Гуру, умею общаться с людьми голосом!')
+2023-04-16 02:07:51,157 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:07:51,157 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:07:51,242 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:07:51,243 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 51, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2150, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Филипп'), InlineKeyboardButton(callback_data='2', text='Алена')), (InlineKeyboardButton(callback_data='3', text='Ермил'), InlineKeyboardButton(callback_data='4', text='Джейн')), (InlineKeyboardButton(callback_data='5', text='Захар'), InlineKeyboardButton(callback_data='6', text='Омаж')), (InlineKeyboardButton(callback_data='7', text='Мадирус'),))), supergroup_chat_created=False, text='Выбери голос:')
+2023-04-16 02:07:51,244 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:07:55,449 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:55,450 - telegram._bot - DEBUG - Getting updates: [48413799]
+2023-04-16 02:07:55,451 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 55, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2151, supergroup_chat_created=False, text='/route'), update_id=48413799),)
+2023-04-16 02:07:55,451 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:55,451 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:55,452 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 55, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2151, supergroup_chat_created=False, text='/route'), update_id=48413799)
+2023-04-16 02:07:55,452 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:55,452 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state 1
+2023-04-16 02:07:55,452 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:07:55,637 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:07:55,639 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 55, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2152, supergroup_chat_created=False, text='Выбор голоса пропущен. Пропишите команду еще раз.')
+2023-04-16 02:07:55,640 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:07:56,688 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:56,689 - telegram._bot - DEBUG - Getting updates: [48413800]
+2023-04-16 02:07:56,689 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 56, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2153, supergroup_chat_created=False, text='/route'), update_id=48413800),)
+2023-04-16 02:07:56,690 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:56,690 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:56,691 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 56, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2153, supergroup_chat_created=False, text='/route'), update_id=48413800)
+2023-04-16 02:07:56,691 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:56,691 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:56,692 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:56,692 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:56,692 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:56,692 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:07:56,930 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:07:56,932 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 57, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2154, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Геопозицией'),), (InlineKeyboardButton(callback_data='2', text='Текстом (напишу адрес)'),))), supergroup_chat_created=False, text='Привет. Чтобы узнать информацию о маршруте, для начала выбери, как ты пришлешь место отправления:')
+2023-04-16 02:07:56,933 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:07:59,669 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:07:59,670 - telegram._bot - DEBUG - Getting updates: [48413801]
+2023-04-16 02:07:59,671 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 59, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=13, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2155, supergroup_chat_created=False, text='/start_dialog'), update_id=48413801),)
+2023-04-16 02:07:59,671 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:07:59,671 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:07:59,672 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 59, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=13, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2155, supergroup_chat_created=False, text='/start_dialog'), update_id=48413801)
+2023-04-16 02:07:59,673 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:07:59,673 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:07:59,753 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:07:59,755 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 7, 59, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2156, supergroup_chat_created=False, text='Давай поболтаем! Отправляй мне воисы - а я тебе их расшифровку, и наоборот!\nНо учти - если воис не на русском языке, я не гарантирую хороший перевод!')
+2023-04-16 02:07:59,756 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:08:03,023 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:08:03,025 - telegram._bot - DEBUG - Getting updates: [48413802]
+2023-04-16 02:08:03,026 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 8, 3, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=12, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2157, supergroup_chat_created=False, text='/stop_dialog'), update_id=48413802),)
+2023-04-16 02:08:03,026 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:08:03,026 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:08:03,027 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 8, 3, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=12, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2157, supergroup_chat_created=False, text='/stop_dialog'), update_id=48413802)
+2023-04-16 02:08:03,027 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state 1
+2023-04-16 02:08:03,027 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:08:03,134 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:08:03,136 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 8, 3, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2158, supergroup_chat_created=False, text='Возвращайся скорее!')
+2023-04-16 02:08:03,136 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:08:05,084 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:08:05,085 - telegram._bot - DEBUG - Getting updates: [48413803]
+2023-04-16 02:08:05,086 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 8, 5, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=11, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2159, supergroup_chat_created=False, text='/stop_route'), update_id=48413803),)
+2023-04-16 02:08:05,087 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:08:05,087 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:08:05,088 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 8, 5, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=11, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2159, supergroup_chat_created=False, text='/stop_route'), update_id=48413803)
+2023-04-16 02:08:05,089 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:08:05,089 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:08:05,089 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:08:05,089 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:08:05,089 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state 1
+2023-04-16 02:08:05,089 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:08:05,188 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:08:05,190 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 8, 5, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2160, supergroup_chat_created=False, text='Ну раз не хочешь, ну и ладно!')
+2023-04-16 02:08:05,191 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:08:15,148 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:08:15,150 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:08:15,150 - telegram._bot - DEBUG - ()
+2023-04-16 02:08:15,150 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:08:15,150 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:08:25,206 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:08:25,208 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:08:25,208 - telegram._bot - DEBUG - ()
+2023-04-16 02:08:25,208 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:08:25,208 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:08:35,301 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:08:35,302 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:08:35,302 - telegram._bot - DEBUG - ()
+2023-04-16 02:08:35,302 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:08:35,302 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:08:45,355 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:08:45,356 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:08:45,357 - telegram._bot - DEBUG - ()
+2023-04-16 02:08:45,357 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:08:45,357 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:08:55,414 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:08:55,416 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:08:55,417 - telegram._bot - DEBUG - ()
+2023-04-16 02:08:55,417 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:08:55,417 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:09:05,474 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:09:05,476 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:09:05,476 - telegram._bot - DEBUG - ()
+2023-04-16 02:09:05,476 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:09:05,477 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:09:15,541 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:09:15,545 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:09:15,545 - telegram._bot - DEBUG - ()
+2023-04-16 02:09:15,545 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:09:15,545 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:09:25,605 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:09:25,608 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:09:25,608 - telegram._bot - DEBUG - ()
+2023-04-16 02:09:25,608 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:09:25,608 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:09:35,663 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:09:35,664 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:09:35,664 - telegram._bot - DEBUG - ()
+2023-04-16 02:09:35,664 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:09:35,665 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:09:45,729 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:09:45,732 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:09:45,732 - telegram._bot - DEBUG - ()
+2023-04-16 02:09:45,732 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:09:45,732 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:09:55,795 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:09:55,798 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:09:55,798 - telegram._bot - DEBUG - ()
+2023-04-16 02:09:55,798 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:09:55,798 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:10:05,861 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:10:05,863 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:10:05,863 - telegram._bot - DEBUG - ()
+2023-04-16 02:10:05,863 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:10:05,863 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:10:15,923 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:10:15,924 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:10:15,924 - telegram._bot - DEBUG - ()
+2023-04-16 02:10:15,924 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:10:15,924 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:10:25,989 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:10:25,991 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:10:25,991 - telegram._bot - DEBUG - ()
+2023-04-16 02:10:25,991 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:10:25,991 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:10:36,081 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:10:36,083 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:10:36,083 - telegram._bot - DEBUG - ()
+2023-04-16 02:10:36,083 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:10:36,083 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:10:46,139 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:10:46,141 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:10:46,141 - telegram._bot - DEBUG - ()
+2023-04-16 02:10:46,141 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:10:46,141 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:10:51,525 - telegram.ext._updater - DEBUG - Stopping Updater
+2023-04-16 02:10:51,525 - telegram.ext._updater - DEBUG - Waiting background polling task to finish up.
+2023-04-16 02:10:51,525 - telegram.ext._updater - DEBUG - Network loop retry getting Updates was cancelled
+2023-04-16 02:10:51,525 - telegram.ext._updater - DEBUG - Updater.stop() is complete
+2023-04-16 02:10:51,525 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-16 02:10:51,525 - telegram.ext._application - DEBUG - Waiting for update_queue to join
+2023-04-16 02:10:51,526 - telegram.ext._application - DEBUG - Dropping pending updates
+2023-04-16 02:10:51,526 - telegram.ext._application - DEBUG - Application stopped fetching of updates.
+2023-04-16 02:10:51,526 - telegram.ext._application - DEBUG - Waiting for `create_task` calls to be processed
+2023-04-16 02:10:51,526 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-16 02:10:51,526 - telegram._bot - DEBUG - This Bot is already shut down. Returning.
+2023-04-16 02:10:51,526 - telegram.ext._updater - DEBUG - Shut down of Updater complete
+2023-04-16 02:10:51,560 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x105223820>
+2023-04-16 02:10:52,071 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-16 02:10:52,098 - telegram._bot - DEBUG - Entering: get_me
+2023-04-16 02:10:52,295 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getMe "HTTP/1.1 200 OK"
+2023-04-16 02:10:52,300 - telegram._bot - DEBUG - User(can_join_groups=True, can_read_all_group_messages=False, first_name='Великий Гуру', id=6110921105, is_bot=True, supports_inline_queries=False, username='guru1514_bot')
+2023-04-16 02:10:52,300 - telegram._bot - DEBUG - Exiting: get_me
+2023-04-16 02:10:52,300 - telegram._bot - DEBUG - This Bot is already initialized.
+2023-04-16 02:10:52,301 - telegram.ext._updater - DEBUG - Updater started (polling)
+2023-04-16 02:10:52,301 - telegram.ext._updater - DEBUG - Start network loop retry bootstrap del webhook
+2023-04-16 02:10:52,301 - telegram.ext._updater - DEBUG - Deleting webhook
+2023-04-16 02:10:52,301 - telegram._bot - DEBUG - Entering: delete_webhook
+2023-04-16 02:10:52,359 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/deleteWebhook "HTTP/1.1 200 OK"
+2023-04-16 02:10:52,360 - telegram._bot - DEBUG - True
+2023-04-16 02:10:52,360 - telegram._bot - DEBUG - Exiting: delete_webhook
+2023-04-16 02:10:52,360 - telegram.ext._updater - DEBUG - Bootstrap done
+2023-04-16 02:10:52,360 - telegram.ext._updater - DEBUG - Waiting for polling to start
+2023-04-16 02:10:52,360 - telegram.ext._updater - DEBUG - Polling updates from Telegram started
+2023-04-16 02:10:52,360 - telegram.ext._updater - DEBUG - Start network loop retry getting Updates
+2023-04-16 02:10:52,360 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:10:52,361 - telegram.ext._application - INFO - Application started
+2023-04-16 02:11:02,523 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:11:02,524 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:11:02,524 - telegram._bot - DEBUG - ()
+2023-04-16 02:11:02,525 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:11:02,525 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:11:12,585 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:11:12,588 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:11:12,588 - telegram._bot - DEBUG - ()
+2023-04-16 02:11:12,588 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:11:12,588 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:11:22,644 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:11:22,645 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:11:22,645 - telegram._bot - DEBUG - ()
+2023-04-16 02:11:22,645 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:11:22,645 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:11:32,701 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:11:32,702 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:11:32,702 - telegram._bot - DEBUG - ()
+2023-04-16 02:11:32,703 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:11:32,703 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:11:42,760 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:11:42,761 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:11:42,761 - telegram._bot - DEBUG - ()
+2023-04-16 02:11:42,761 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:11:42,761 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:11:52,820 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:11:52,822 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:11:52,822 - telegram._bot - DEBUG - ()
+2023-04-16 02:11:52,822 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:11:52,822 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:02,883 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:12:02,886 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:12:02,886 - telegram._bot - DEBUG - ()
+2023-04-16 02:12:02,886 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:12:02,887 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:12,949 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:12:12,950 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:12:12,950 - telegram._bot - DEBUG - ()
+2023-04-16 02:12:12,950 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:12:12,950 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:23,138 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:12:23,138 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:12:23,138 - telegram._bot - DEBUG - ()
+2023-04-16 02:12:23,138 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:12:23,138 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:31,095 - telegram.ext._updater - DEBUG - Stopping Updater
+2023-04-16 02:12:31,095 - telegram.ext._updater - DEBUG - Waiting background polling task to finish up.
+2023-04-16 02:12:31,095 - telegram.ext._updater - DEBUG - Network loop retry getting Updates was cancelled
+2023-04-16 02:12:31,095 - telegram.ext._updater - DEBUG - Updater.stop() is complete
+2023-04-16 02:12:31,096 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-16 02:12:31,096 - telegram.ext._application - DEBUG - Waiting for update_queue to join
+2023-04-16 02:12:31,096 - telegram.ext._application - DEBUG - Dropping pending updates
+2023-04-16 02:12:31,096 - telegram.ext._application - DEBUG - Application stopped fetching of updates.
+2023-04-16 02:12:31,096 - telegram.ext._application - DEBUG - Waiting for `create_task` calls to be processed
+2023-04-16 02:12:31,096 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-16 02:12:31,096 - telegram._bot - DEBUG - This Bot is already shut down. Returning.
+2023-04-16 02:12:31,096 - telegram.ext._updater - DEBUG - Shut down of Updater complete
+2023-04-16 02:12:31,139 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1053d7490>
+2023-04-16 02:12:31,640 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-16 02:12:31,663 - telegram._bot - DEBUG - Entering: get_me
+2023-04-16 02:12:31,863 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getMe "HTTP/1.1 200 OK"
+2023-04-16 02:12:31,869 - telegram._bot - DEBUG - User(can_join_groups=True, can_read_all_group_messages=False, first_name='Великий Гуру', id=6110921105, is_bot=True, supports_inline_queries=False, username='guru1514_bot')
+2023-04-16 02:12:31,869 - telegram._bot - DEBUG - Exiting: get_me
+2023-04-16 02:12:31,869 - telegram._bot - DEBUG - This Bot is already initialized.
+2023-04-16 02:12:31,869 - telegram.ext._updater - DEBUG - Updater started (polling)
+2023-04-16 02:12:31,870 - telegram.ext._updater - DEBUG - Start network loop retry bootstrap del webhook
+2023-04-16 02:12:31,870 - telegram.ext._updater - DEBUG - Deleting webhook
+2023-04-16 02:12:31,870 - telegram._bot - DEBUG - Entering: delete_webhook
+2023-04-16 02:12:31,934 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/deleteWebhook "HTTP/1.1 200 OK"
+2023-04-16 02:12:31,935 - telegram._bot - DEBUG - True
+2023-04-16 02:12:31,935 - telegram._bot - DEBUG - Exiting: delete_webhook
+2023-04-16 02:12:31,935 - telegram.ext._updater - DEBUG - Bootstrap done
+2023-04-16 02:12:31,935 - telegram.ext._updater - DEBUG - Waiting for polling to start
+2023-04-16 02:12:31,935 - telegram.ext._updater - DEBUG - Polling updates from Telegram started
+2023-04-16 02:12:31,935 - telegram.ext._updater - DEBUG - Start network loop retry getting Updates
+2023-04-16 02:12:31,935 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:31,937 - telegram.ext._application - INFO - Application started
+2023-04-16 02:12:34,844 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:12:34,845 - telegram._bot - DEBUG - Getting updates: [48413804]
+2023-04-16 02:12:34,846 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 34, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2161, supergroup_chat_created=False, text='/start'), update_id=48413804),)
+2023-04-16 02:12:34,847 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:12:34,847 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:34,848 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 34, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2161, supergroup_chat_created=False, text='/start'), update_id=48413804)
+2023-04-16 02:12:39,011 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:12:39,014 - telegram._bot - DEBUG - Getting updates: [48413805]
+2023-04-16 02:12:39,014 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 39, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2162, supergroup_chat_created=False, text='/start'), update_id=48413805),)
+2023-04-16 02:12:39,014 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:12:39,015 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:39,016 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 39, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2162, supergroup_chat_created=False, text='/start'), update_id=48413805)
+2023-04-16 02:12:41,023 - telegram.ext._updater - DEBUG - Stopping Updater
+2023-04-16 02:12:41,024 - telegram.ext._updater - DEBUG - Waiting background polling task to finish up.
+2023-04-16 02:12:41,024 - telegram.ext._updater - DEBUG - Network loop retry getting Updates was cancelled
+2023-04-16 02:12:41,024 - telegram.ext._updater - DEBUG - Updater.stop() is complete
+2023-04-16 02:12:41,025 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-16 02:12:41,025 - telegram.ext._application - DEBUG - Waiting for update_queue to join
+2023-04-16 02:12:41,025 - telegram.ext._application - DEBUG - Dropping pending updates
+2023-04-16 02:12:41,025 - telegram.ext._application - DEBUG - Application stopped fetching of updates.
+2023-04-16 02:12:41,025 - telegram.ext._application - DEBUG - Waiting for `create_task` calls to be processed
+2023-04-16 02:12:41,025 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-16 02:12:41,025 - telegram._bot - DEBUG - This Bot is already shut down. Returning.
+2023-04-16 02:12:41,025 - telegram.ext._updater - DEBUG - Shut down of Updater complete
+2023-04-16 02:12:41,047 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x109a27af0>
+2023-04-16 02:12:42,384 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-16 02:12:42,416 - telegram._bot - DEBUG - Entering: get_me
+2023-04-16 02:12:42,598 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getMe "HTTP/1.1 200 OK"
+2023-04-16 02:12:42,598 - telegram._bot - DEBUG - User(can_join_groups=True, can_read_all_group_messages=False, first_name='Великий Гуру', id=6110921105, is_bot=True, supports_inline_queries=False, username='guru1514_bot')
+2023-04-16 02:12:42,598 - telegram._bot - DEBUG - Exiting: get_me
+2023-04-16 02:12:42,598 - telegram._bot - DEBUG - This Bot is already initialized.
+2023-04-16 02:12:42,598 - telegram.ext._updater - DEBUG - Updater started (polling)
+2023-04-16 02:12:42,599 - telegram.ext._updater - DEBUG - Start network loop retry bootstrap del webhook
+2023-04-16 02:12:42,599 - telegram.ext._updater - DEBUG - Deleting webhook
+2023-04-16 02:12:42,599 - telegram._bot - DEBUG - Entering: delete_webhook
+2023-04-16 02:12:42,653 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/deleteWebhook "HTTP/1.1 200 OK"
+2023-04-16 02:12:42,654 - telegram._bot - DEBUG - True
+2023-04-16 02:12:42,654 - telegram._bot - DEBUG - Exiting: delete_webhook
+2023-04-16 02:12:42,654 - telegram.ext._updater - DEBUG - Bootstrap done
+2023-04-16 02:12:42,654 - telegram.ext._updater - DEBUG - Waiting for polling to start
+2023-04-16 02:12:42,654 - telegram.ext._updater - DEBUG - Polling updates from Telegram started
+2023-04-16 02:12:42,654 - telegram.ext._updater - DEBUG - Start network loop retry getting Updates
+2023-04-16 02:12:42,654 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:42,655 - telegram.ext._application - INFO - Application started
+2023-04-16 02:12:43,909 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:12:43,910 - telegram._bot - DEBUG - Getting updates: [48413806]
+2023-04-16 02:12:43,910 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 43, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2163, supergroup_chat_created=False, text='/start'), update_id=48413806),)
+2023-04-16 02:12:43,911 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:12:43,911 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:43,912 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 43, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2163, supergroup_chat_created=False, text='/start'), update_id=48413806)
+2023-04-16 02:12:48,746 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:12:48,747 - telegram._bot - DEBUG - Getting updates: [48413807]
+2023-04-16 02:12:48,748 - telegram._bot - DEBUG - (Update(my_chat_member=ChatMemberUpdated(chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 48, tzinfo=<UTC>), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), new_chat_member=ChatMemberBanned(status=<ChatMemberStatus.BANNED>, until_date=datetime.datetime(1970, 1, 1, 0, 0, tzinfo=<UTC>), user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot')), old_chat_member=ChatMemberMember(status=<ChatMemberStatus.MEMBER>, user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'))), update_id=48413807),)
+2023-04-16 02:12:48,750 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:12:48,750 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:48,751 - telegram.ext._application - DEBUG - Processing update Update(my_chat_member=ChatMemberUpdated(chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 48, tzinfo=<UTC>), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), new_chat_member=ChatMemberBanned(status=<ChatMemberStatus.BANNED>, until_date=datetime.datetime(1970, 1, 1, 0, 0, tzinfo=<UTC>), user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot')), old_chat_member=ChatMemberMember(status=<ChatMemberStatus.MEMBER>, user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'))), update_id=48413807)
+2023-04-16 02:12:49,353 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:12:49,355 - telegram._bot - DEBUG - Getting updates: [48413808]
+2023-04-16 02:12:49,355 - telegram._bot - DEBUG - (Update(my_chat_member=ChatMemberUpdated(chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 49, tzinfo=<UTC>), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), new_chat_member=ChatMemberMember(status=<ChatMemberStatus.MEMBER>, user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot')), old_chat_member=ChatMemberBanned(status=<ChatMemberStatus.BANNED>, until_date=datetime.datetime(1970, 1, 1, 0, 0, tzinfo=<UTC>), user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'))), update_id=48413808),)
+2023-04-16 02:12:49,356 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:12:49,356 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:49,357 - telegram.ext._application - DEBUG - Processing update Update(my_chat_member=ChatMemberUpdated(chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 49, tzinfo=<UTC>), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), new_chat_member=ChatMemberMember(status=<ChatMemberStatus.MEMBER>, user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot')), old_chat_member=ChatMemberBanned(status=<ChatMemberStatus.BANNED>, until_date=datetime.datetime(1970, 1, 1, 0, 0, tzinfo=<UTC>), user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'))), update_id=48413808)
+2023-04-16 02:12:49,421 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:12:49,421 - telegram._bot - DEBUG - Getting updates: [48413809]
+2023-04-16 02:12:49,422 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 49, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2164, supergroup_chat_created=False, text='/start'), update_id=48413809),)
+2023-04-16 02:12:49,422 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:12:49,422 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:12:49,423 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 12, 49, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2164, supergroup_chat_created=False, text='/start'), update_id=48413809)
+2023-04-16 02:12:59,478 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:12:59,479 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:12:59,479 - telegram._bot - DEBUG - ()
+2023-04-16 02:12:59,479 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:12:59,480 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:13:09,538 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:13:09,539 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:13:09,540 - telegram._bot - DEBUG - ()
+2023-04-16 02:13:09,540 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:13:09,540 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:13:19,601 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:13:19,604 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:13:19,604 - telegram._bot - DEBUG - ()
+2023-04-16 02:13:19,605 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:13:19,605 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:13:29,673 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:13:29,674 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:13:29,674 - telegram._bot - DEBUG - ()
+2023-04-16 02:13:29,675 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:13:29,675 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:13:39,753 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:13:39,754 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:13:39,754 - telegram._bot - DEBUG - ()
+2023-04-16 02:13:39,754 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:13:39,754 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:13:49,808 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:13:49,808 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:13:49,808 - telegram._bot - DEBUG - ()
+2023-04-16 02:13:49,808 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:13:49,808 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:13:59,894 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:13:59,896 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:13:59,896 - telegram._bot - DEBUG - ()
+2023-04-16 02:13:59,896 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:13:59,896 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:14:10,035 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:14:10,036 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:14:10,036 - telegram._bot - DEBUG - ()
+2023-04-16 02:14:10,036 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:14:10,036 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:14:20,092 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:14:20,094 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:14:20,094 - telegram._bot - DEBUG - ()
+2023-04-16 02:14:20,094 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:14:20,094 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:14:30,148 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:14:30,149 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:14:30,149 - telegram._bot - DEBUG - ()
+2023-04-16 02:14:30,149 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:14:30,149 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:14:40,209 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:14:40,210 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:14:40,210 - telegram._bot - DEBUG - ()
+2023-04-16 02:14:40,210 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:14:40,210 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:14:50,038 - telegram.ext._updater - DEBUG - Stopping Updater
+2023-04-16 02:14:50,039 - telegram.ext._updater - DEBUG - Waiting background polling task to finish up.
+2023-04-16 02:14:50,039 - telegram.ext._updater - DEBUG - Network loop retry getting Updates was cancelled
+2023-04-16 02:14:50,039 - telegram.ext._updater - DEBUG - Updater.stop() is complete
+2023-04-16 02:14:50,039 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-16 02:14:50,039 - telegram.ext._application - DEBUG - Waiting for update_queue to join
+2023-04-16 02:14:50,039 - telegram.ext._application - DEBUG - Dropping pending updates
+2023-04-16 02:14:50,039 - telegram.ext._application - DEBUG - Application stopped fetching of updates.
+2023-04-16 02:14:50,039 - telegram.ext._application - DEBUG - Waiting for `create_task` calls to be processed
+2023-04-16 02:14:50,039 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-16 02:14:50,040 - telegram._bot - DEBUG - This Bot is already shut down. Returning.
+2023-04-16 02:14:50,040 - telegram.ext._updater - DEBUG - Shut down of Updater complete
+2023-04-16 02:14:50,062 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x105af79a0>
+2023-04-16 02:14:50,489 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-16 02:14:50,519 - telegram._bot - DEBUG - Entering: get_me
+2023-04-16 02:14:50,704 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getMe "HTTP/1.1 200 OK"
+2023-04-16 02:14:50,704 - telegram._bot - DEBUG - User(can_join_groups=True, can_read_all_group_messages=False, first_name='Великий Гуру', id=6110921105, is_bot=True, supports_inline_queries=False, username='guru1514_bot')
+2023-04-16 02:14:50,704 - telegram._bot - DEBUG - Exiting: get_me
+2023-04-16 02:14:50,704 - telegram._bot - DEBUG - This Bot is already initialized.
+2023-04-16 02:14:50,704 - telegram.ext._updater - DEBUG - Updater started (polling)
+2023-04-16 02:14:50,704 - telegram.ext._updater - DEBUG - Start network loop retry bootstrap del webhook
+2023-04-16 02:14:50,704 - telegram.ext._updater - DEBUG - Deleting webhook
+2023-04-16 02:14:50,704 - telegram._bot - DEBUG - Entering: delete_webhook
+2023-04-16 02:14:50,763 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/deleteWebhook "HTTP/1.1 200 OK"
+2023-04-16 02:14:50,765 - telegram._bot - DEBUG - True
+2023-04-16 02:14:50,765 - telegram._bot - DEBUG - Exiting: delete_webhook
+2023-04-16 02:14:50,765 - telegram.ext._updater - DEBUG - Bootstrap done
+2023-04-16 02:14:50,765 - telegram.ext._updater - DEBUG - Waiting for polling to start
+2023-04-16 02:14:50,765 - telegram.ext._updater - DEBUG - Polling updates from Telegram started
+2023-04-16 02:14:50,765 - telegram.ext._updater - DEBUG - Start network loop retry getting Updates
+2023-04-16 02:14:50,765 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:14:50,766 - telegram.ext._application - INFO - Application started
+2023-04-16 02:14:53,768 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:14:53,769 - telegram._bot - DEBUG - Getting updates: [48413810]
+2023-04-16 02:14:53,770 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 14, 53, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2165, supergroup_chat_created=False, text='/start'), update_id=48413810),)
+2023-04-16 02:14:53,771 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:14:53,771 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:14:53,772 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 14, 53, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2165, supergroup_chat_created=False, text='/start'), update_id=48413810)
+2023-04-16 02:14:53,772 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:14:53,772 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:14:53,773 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:14:53,871 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:14:53,873 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 14, 53, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2166, supergroup_chat_created=False, text='Привет! Давай знакомиться. Я - Великий Гуру, умею общаться с людьми голосом!')
+2023-04-16 02:14:53,873 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:14:53,873 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:14:53,954 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:14:53,956 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 14, 54, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2167, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Филипп'), InlineKeyboardButton(callback_data='2', text='Алена')), (InlineKeyboardButton(callback_data='3', text='Ермил'), InlineKeyboardButton(callback_data='4', text='Джейн')), (InlineKeyboardButton(callback_data='5', text='Захар'), InlineKeyboardButton(callback_data='6', text='Омаж')), (InlineKeyboardButton(callback_data='7', text='Мадирус'),))), supergroup_chat_created=False, text='Выбери голос:')
+2023-04-16 02:14:53,957 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:14:55,616 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:14:55,617 - telegram._bot - DEBUG - Getting updates: [48413811]
+2023-04-16 02:14:55,619 - telegram._bot - DEBUG - (Update(callback_query=CallbackQuery(chat_instance='-3471195433472786633', data='1', from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), id='2416060563880042435', message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 14, 54, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2167, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Филипп'), InlineKeyboardButton(callback_data='2', text='Алена')), (InlineKeyboardButton(callback_data='3', text='Ермил'), InlineKeyboardButton(callback_data='4', text='Джейн')), (InlineKeyboardButton(callback_data='5', text='Захар'), InlineKeyboardButton(callback_data='6', text='Омаж')), (InlineKeyboardButton(callback_data='7', text='Мадирус'),))), supergroup_chat_created=False, text='Выбери голос:')), update_id=48413811),)
+2023-04-16 02:14:55,620 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:14:55,620 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:14:55,621 - telegram.ext._application - DEBUG - Processing update Update(callback_query=CallbackQuery(chat_instance='-3471195433472786633', data='1', from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), id='2416060563880042435', message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 14, 54, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2167, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Филипп'), InlineKeyboardButton(callback_data='2', text='Алена')), (InlineKeyboardButton(callback_data='3', text='Ермил'), InlineKeyboardButton(callback_data='4', text='Джейн')), (InlineKeyboardButton(callback_data='5', text='Захар'), InlineKeyboardButton(callback_data='6', text='Омаж')), (InlineKeyboardButton(callback_data='7', text='Мадирус'),))), supergroup_chat_created=False, text='Выбери голос:')), update_id=48413811)
+2023-04-16 02:14:55,621 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:14:55,622 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state 1
+2023-04-16 02:14:55,622 - telegram._bot - DEBUG - Entering: answer_callback_query
+2023-04-16 02:14:55,684 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/answerCallbackQuery "HTTP/1.1 200 OK"
+2023-04-16 02:14:55,685 - telegram._bot - DEBUG - True
+2023-04-16 02:14:55,685 - telegram._bot - DEBUG - Exiting: answer_callback_query
+2023-04-16 02:14:55,685 - telegram._bot - DEBUG - Entering: edit_message_text
+2023-04-16 02:14:55,760 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/editMessageText "HTTP/1.1 200 OK"
+2023-04-16 02:14:55,763 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 14, 54, tzinfo=<UTC>), delete_chat_photo=False, edit_date=datetime.datetime(2023, 4, 15, 23, 14, 55, tzinfo=<UTC>), from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2167, supergroup_chat_created=False, text='Выбранный голос: Филипп')
+2023-04-16 02:14:55,763 - telegram._bot - DEBUG - Exiting: edit_message_text
+2023-04-16 02:15:00,322 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:15:00,323 - telegram._bot - DEBUG - Getting updates: [48413812]
+2023-04-16 02:15:00,324 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 15, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2168, supergroup_chat_created=False, text='/route'), update_id=48413812),)
+2023-04-16 02:15:00,324 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:15:00,324 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:15:00,325 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 15, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2168, supergroup_chat_created=False, text='/route'), update_id=48413812)
+2023-04-16 02:15:00,326 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:15:00,326 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:15:00,326 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:15:00,326 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:15:00,326 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:15:00,326 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:15:00,414 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:15:00,416 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 15, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2169, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Геопозицией'),), (InlineKeyboardButton(callback_data='2', text='Текстом (напишу адрес)'),))), supergroup_chat_created=False, text='Привет. Чтобы узнать информацию о маршруте, для начала выбери, как ты пришлешь место отправления:')
+2023-04-16 02:15:00,417 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:15:03,490 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:15:03,491 - telegram._bot - DEBUG - Getting updates: [48413813]
+2023-04-16 02:15:03,492 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 15, 3, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=13, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2170, supergroup_chat_created=False, text='/start_dialog'), update_id=48413813),)
+2023-04-16 02:15:03,493 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:15:03,493 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:15:03,494 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 15, 3, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=13, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='ru', username='delikatny_pon'), group_chat_created=False, message_id=2170, supergroup_chat_created=False, text='/start_dialog'), update_id=48413813)
+2023-04-16 02:15:03,494 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:15:03,494 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:15:03,621 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:15:03,623 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 15, 3, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6110921105, is_bot=True, username='guru1514_bot'), group_chat_created=False, message_id=2171, supergroup_chat_created=False, text='Давай поболтаем! Отправляй мне воисы - а я тебе их расшифровку, и наоборот!\nНо учти - если воис не на русском языке, я не гарантирую хороший перевод!')
+2023-04-16 02:15:03,624 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:15:13,625 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:15:13,626 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:15:13,626 - telegram._bot - DEBUG - ()
+2023-04-16 02:15:13,626 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:15:13,627 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:15:23,687 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:15:23,689 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:15:23,689 - telegram._bot - DEBUG - ()
+2023-04-16 02:15:23,689 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:15:23,689 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:15:33,749 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:15:33,751 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:15:33,751 - telegram._bot - DEBUG - ()
+2023-04-16 02:15:33,751 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:15:33,751 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:15:43,834 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:15:43,837 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:15:43,838 - telegram._bot - DEBUG - ()
+2023-04-16 02:15:43,838 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:15:43,838 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:15:53,897 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:15:53,899 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:15:53,899 - telegram._bot - DEBUG - ()
+2023-04-16 02:15:53,899 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:15:53,900 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:16:03,960 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:16:03,963 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:16:03,963 - telegram._bot - DEBUG - ()
+2023-04-16 02:16:03,963 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:16:03,963 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:16:14,023 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:16:14,024 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:16:14,025 - telegram._bot - DEBUG - ()
+2023-04-16 02:16:14,025 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:16:14,025 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:16:24,084 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:16:24,087 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:16:24,087 - telegram._bot - DEBUG - ()
+2023-04-16 02:16:24,087 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:16:24,087 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:16:34,150 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:16:34,155 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:16:34,156 - telegram._bot - DEBUG - ()
+2023-04-16 02:16:34,156 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:16:34,156 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:16:44,214 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:16:44,216 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:16:44,217 - telegram._bot - DEBUG - ()
+2023-04-16 02:16:44,217 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:16:44,217 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:16:54,276 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:16:54,278 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:16:54,278 - telegram._bot - DEBUG - ()
+2023-04-16 02:16:54,278 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:16:54,278 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:17:04,340 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:17:04,342 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:17:04,342 - telegram._bot - DEBUG - ()
+2023-04-16 02:17:04,342 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:17:04,342 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:17:14,467 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:17:14,470 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:17:14,470 - telegram._bot - DEBUG - ()
+2023-04-16 02:17:14,470 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:17:14,471 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:17:24,530 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:17:24,531 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:17:24,531 - telegram._bot - DEBUG - ()
+2023-04-16 02:17:24,531 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:17:24,531 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:17:34,592 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:17:34,593 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:17:34,593 - telegram._bot - DEBUG - ()
+2023-04-16 02:17:34,593 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:17:34,593 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:17:44,654 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:17:44,655 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:17:44,655 - telegram._bot - DEBUG - ()
+2023-04-16 02:17:44,655 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:17:44,655 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:17:54,718 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:17:54,719 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:17:54,719 - telegram._bot - DEBUG - ()
+2023-04-16 02:17:54,719 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:17:54,719 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:18:04,781 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:18:04,782 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:18:04,782 - telegram._bot - DEBUG - ()
+2023-04-16 02:18:04,782 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:18:04,782 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:18:14,836 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:18:14,837 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:18:14,837 - telegram._bot - DEBUG - ()
+2023-04-16 02:18:14,837 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:18:14,837 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:18:24,898 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:18:24,900 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:18:24,900 - telegram._bot - DEBUG - ()
+2023-04-16 02:18:24,900 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:18:24,900 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:18:35,047 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:18:35,049 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:18:35,049 - telegram._bot - DEBUG - ()
+2023-04-16 02:18:35,049 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:18:35,049 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:18:45,183 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:18:45,185 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:18:45,185 - telegram._bot - DEBUG - ()
+2023-04-16 02:18:45,186 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:18:45,186 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:18:55,242 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:18:55,243 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:18:55,243 - telegram._bot - DEBUG - ()
+2023-04-16 02:18:55,243 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:18:55,243 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:19:05,298 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:19:05,299 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:19:05,299 - telegram._bot - DEBUG - ()
+2023-04-16 02:19:05,299 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:19:05,299 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:19:15,356 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:19:15,357 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:19:15,357 - telegram._bot - DEBUG - ()
+2023-04-16 02:19:15,357 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:19:15,357 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:19:25,416 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:19:25,419 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:19:25,419 - telegram._bot - DEBUG - ()
+2023-04-16 02:19:25,419 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:19:25,419 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:19:35,557 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:19:35,558 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:19:35,558 - telegram._bot - DEBUG - ()
+2023-04-16 02:19:35,558 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:19:35,558 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:19:45,702 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:19:45,704 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:19:45,704 - telegram._bot - DEBUG - ()
+2023-04-16 02:19:45,704 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:19:45,704 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:19:55,761 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:19:55,762 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:19:55,762 - telegram._bot - DEBUG - ()
+2023-04-16 02:19:55,762 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:19:55,763 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:20:05,824 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:20:05,826 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:20:05,826 - telegram._bot - DEBUG - ()
+2023-04-16 02:20:05,826 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:20:05,826 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:20:15,885 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6110921105:AAEBZ01brLGcF3xaDu2MFSY3zP7YFrOxuX4/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:20:15,888 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:20:15,888 - telegram._bot - DEBUG - ()
+2023-04-16 02:20:15,888 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:20:15,888 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:20:16,849 - telegram.ext._updater - DEBUG - Stopping Updater
+2023-04-16 02:20:16,849 - telegram.ext._updater - DEBUG - Waiting background polling task to finish up.
+2023-04-16 02:20:16,850 - telegram.ext._updater - DEBUG - Network loop retry getting Updates was cancelled
+2023-04-16 02:20:16,850 - telegram.ext._updater - DEBUG - Updater.stop() is complete
+2023-04-16 02:20:16,850 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-16 02:20:16,850 - telegram.ext._application - DEBUG - Waiting for update_queue to join
+2023-04-16 02:20:16,850 - telegram.ext._application - DEBUG - Dropping pending updates
+2023-04-16 02:20:16,850 - telegram.ext._application - DEBUG - Application stopped fetching of updates.
+2023-04-16 02:20:16,850 - telegram.ext._application - DEBUG - Waiting for `create_task` calls to be processed
+2023-04-16 02:20:16,850 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-16 02:20:16,851 - telegram._bot - DEBUG - This Bot is already shut down. Returning.
+2023-04-16 02:20:16,851 - telegram.ext._updater - DEBUG - Shut down of Updater complete
+2023-04-16 02:20:16,887 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1071c7a00>
+2023-04-16 02:20:52,833 - asyncio - DEBUG - Using selector: KqueueSelector
+2023-04-16 02:20:52,861 - telegram._bot - DEBUG - Entering: get_me
+2023-04-16 02:20:55,354 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/getMe "HTTP/1.1 200 OK"
+2023-04-16 02:20:55,354 - telegram._bot - DEBUG - User(can_join_groups=True, can_read_all_group_messages=False, first_name='Великий Гуру', id=6181868360, is_bot=True, supports_inline_queries=False, username='guruu1514_bot')
+2023-04-16 02:20:55,355 - telegram._bot - DEBUG - Exiting: get_me
+2023-04-16 02:20:55,355 - telegram._bot - DEBUG - This Bot is already initialized.
+2023-04-16 02:20:55,355 - telegram.ext._updater - DEBUG - Updater started (polling)
+2023-04-16 02:20:55,355 - telegram.ext._updater - DEBUG - Start network loop retry bootstrap del webhook
+2023-04-16 02:20:55,355 - telegram.ext._updater - DEBUG - Deleting webhook
+2023-04-16 02:20:55,355 - telegram._bot - DEBUG - Entering: delete_webhook
+2023-04-16 02:20:55,415 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/deleteWebhook "HTTP/1.1 200 OK"
+2023-04-16 02:20:55,417 - telegram._bot - DEBUG - True
+2023-04-16 02:20:55,417 - telegram._bot - DEBUG - Exiting: delete_webhook
+2023-04-16 02:20:55,417 - telegram.ext._updater - DEBUG - Bootstrap done
+2023-04-16 02:20:55,417 - telegram.ext._updater - DEBUG - Waiting for polling to start
+2023-04-16 02:20:55,417 - telegram.ext._updater - DEBUG - Polling updates from Telegram started
+2023-04-16 02:20:55,417 - telegram.ext._updater - DEBUG - Start network loop retry getting Updates
+2023-04-16 02:20:55,417 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:20:55,434 - telegram.ext._application - INFO - Application started
+2023-04-16 02:21:05,628 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:21:05,629 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:21:05,629 - telegram._bot - DEBUG - ()
+2023-04-16 02:21:05,629 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:21:05,630 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:21:15,712 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:21:15,715 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:21:15,715 - telegram._bot - DEBUG - ()
+2023-04-16 02:21:15,716 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:21:15,716 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:21:23,058 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:21:23,060 - telegram._bot - DEBUG - Getting updates: [213474763]
+2023-04-16 02:21:23,061 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 23, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='en', username='delikatny_pon'), group_chat_created=False, message_id=2, supergroup_chat_created=False, text='/start'), update_id=213474763),)
+2023-04-16 02:21:23,063 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:21:23,063 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:21:23,065 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 23, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='en', username='delikatny_pon'), group_chat_created=False, message_id=2, supergroup_chat_created=False, text='/start'), update_id=213474763)
+2023-04-16 02:21:23,065 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:21:23,065 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:21:23,066 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:21:23,260 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:21:23,263 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 23, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6181868360, is_bot=True, username='guruu1514_bot'), group_chat_created=False, message_id=3, supergroup_chat_created=False, text='Привет! Давай знакомиться. Я - Великий Гуру, умею общаться с людьми голосом!')
+2023-04-16 02:21:23,263 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:21:23,264 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:21:23,352 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:21:23,354 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 23, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6181868360, is_bot=True, username='guruu1514_bot'), group_chat_created=False, message_id=4, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Филипп'), InlineKeyboardButton(callback_data='2', text='Алена')), (InlineKeyboardButton(callback_data='3', text='Ермил'), InlineKeyboardButton(callback_data='4', text='Джейн')), (InlineKeyboardButton(callback_data='5', text='Захар'), InlineKeyboardButton(callback_data='6', text='Омаж')), (InlineKeyboardButton(callback_data='7', text='Мадирус'),))), supergroup_chat_created=False, text='Выбери голос:')
+2023-04-16 02:21:23,355 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:21:25,042 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:21:25,044 - telegram._bot - DEBUG - Getting updates: [213474764]
+2023-04-16 02:21:25,045 - telegram._bot - DEBUG - (Update(callback_query=CallbackQuery(chat_instance='6497685057784423039', data='1', from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='en', username='delikatny_pon'), id='2416060565358895095', message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 23, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6181868360, is_bot=True, username='guruu1514_bot'), group_chat_created=False, message_id=4, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Филипп'), InlineKeyboardButton(callback_data='2', text='Алена')), (InlineKeyboardButton(callback_data='3', text='Ермил'), InlineKeyboardButton(callback_data='4', text='Джейн')), (InlineKeyboardButton(callback_data='5', text='Захар'), InlineKeyboardButton(callback_data='6', text='Омаж')), (InlineKeyboardButton(callback_data='7', text='Мадирус'),))), supergroup_chat_created=False, text='Выбери голос:')), update_id=213474764),)
+2023-04-16 02:21:25,046 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:21:25,047 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:21:25,048 - telegram.ext._application - DEBUG - Processing update Update(callback_query=CallbackQuery(chat_instance='6497685057784423039', data='1', from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='en', username='delikatny_pon'), id='2416060565358895095', message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 23, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6181868360, is_bot=True, username='guruu1514_bot'), group_chat_created=False, message_id=4, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Филипп'), InlineKeyboardButton(callback_data='2', text='Алена')), (InlineKeyboardButton(callback_data='3', text='Ермил'), InlineKeyboardButton(callback_data='4', text='Джейн')), (InlineKeyboardButton(callback_data='5', text='Захар'), InlineKeyboardButton(callback_data='6', text='Омаж')), (InlineKeyboardButton(callback_data='7', text='Мадирус'),))), supergroup_chat_created=False, text='Выбери голос:')), update_id=213474764)
+2023-04-16 02:21:25,048 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:21:25,049 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state 1
+2023-04-16 02:21:25,049 - telegram._bot - DEBUG - Entering: answer_callback_query
+2023-04-16 02:21:25,114 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/answerCallbackQuery "HTTP/1.1 200 OK"
+2023-04-16 02:21:25,115 - telegram._bot - DEBUG - True
+2023-04-16 02:21:25,116 - telegram._bot - DEBUG - Exiting: answer_callback_query
+2023-04-16 02:21:25,116 - telegram._bot - DEBUG - Entering: edit_message_text
+2023-04-16 02:21:25,196 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/editMessageText "HTTP/1.1 200 OK"
+2023-04-16 02:21:25,198 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 23, tzinfo=<UTC>), delete_chat_photo=False, edit_date=datetime.datetime(2023, 4, 15, 23, 21, 25, tzinfo=<UTC>), from_user=User(first_name='Великий Гуру', id=6181868360, is_bot=True, username='guruu1514_bot'), group_chat_created=False, message_id=4, supergroup_chat_created=False, text='Выбранный голос: Филипп')
+2023-04-16 02:21:25,199 - telegram._bot - DEBUG - Exiting: edit_message_text
+2023-04-16 02:21:35,108 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:21:35,110 - telegram._bot - DEBUG - No new updates found.
+2023-04-16 02:21:35,110 - telegram._bot - DEBUG - ()
+2023-04-16 02:21:35,110 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:21:35,111 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:21:36,625 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:21:36,626 - telegram._bot - DEBUG - Getting updates: [213474765]
+2023-04-16 02:21:36,627 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 36, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=13, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='en', username='delikatny_pon'), group_chat_created=False, message_id=5, supergroup_chat_created=False, text='/start_dialog'), update_id=213474765),)
+2023-04-16 02:21:36,627 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:21:36,627 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:21:36,628 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 36, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=13, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='en', username='delikatny_pon'), group_chat_created=False, message_id=5, supergroup_chat_created=False, text='/start_dialog'), update_id=213474765)
+2023-04-16 02:21:36,628 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:21:36,628 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:21:36,828 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:21:36,829 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 36, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6181868360, is_bot=True, username='guruu1514_bot'), group_chat_created=False, message_id=6, supergroup_chat_created=False, text='Давай поболтаем! Отправляй мне воисы - а я тебе их расшифровку, и наоборот!\nНо учти - если воис не на русском языке, я не гарантирую хороший перевод!')
+2023-04-16 02:21:36,830 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:21:40,627 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/getUpdates "HTTP/1.1 200 OK"
+2023-04-16 02:21:40,628 - telegram._bot - DEBUG - Getting updates: [213474766]
+2023-04-16 02:21:40,629 - telegram._bot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 40, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='en', username='delikatny_pon'), group_chat_created=False, message_id=7, supergroup_chat_created=False, text='/route'), update_id=213474766),)
+2023-04-16 02:21:40,630 - telegram._bot - DEBUG - Exiting: get_updates
+2023-04-16 02:21:40,630 - telegram._bot - DEBUG - Entering: get_updates
+2023-04-16 02:21:40,632 - telegram.ext._application - DEBUG - Processing update Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 40, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Nikita', id=562532936, is_bot=False, language_code='en', username='delikatny_pon'), group_chat_created=False, message_id=7, supergroup_chat_created=False, text='/route'), update_id=213474766)
+2023-04-16 02:21:40,632 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state 1
+2023-04-16 02:21:40,632 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:21:40,633 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:21:40,633 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:21:40,633 - telegram.ext._conversationhandler - DEBUG - Selecting conversation (562532936, 562532936) with state None
+2023-04-16 02:21:40,633 - telegram._bot - DEBUG - Entering: send_message
+2023-04-16 02:21:40,720 - httpx._client - DEBUG - HTTP Request: POST https://api.telegram.org/bot6181868360:AAGFpfhdMgvnCzvg4lHxnhy_qjeVX4Q3TdA/sendMessage "HTTP/1.1 200 OK"
+2023-04-16 02:21:40,722 - telegram._bot - DEBUG - Message(channel_chat_created=False, chat=Chat(first_name='Nikita', id=562532936, type=<ChatType.PRIVATE>, username='delikatny_pon'), date=datetime.datetime(2023, 4, 15, 23, 21, 40, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='Великий Гуру', id=6181868360, is_bot=True, username='guruu1514_bot'), group_chat_created=False, message_id=8, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='1', text='Геопозицией'),), (InlineKeyboardButton(callback_data='2', text='Текстом (напишу адрес)'),))), supergroup_chat_created=False, text='Привет. Чтобы узнать информацию о маршруте, для начала выбери, как ты пришлешь место отправления:')
+2023-04-16 02:21:40,723 - telegram._bot - DEBUG - Exiting: send_message
+2023-04-16 02:21:45,625 - telegram.ext._updater - DEBUG - Stopping Updater
+2023-04-16 02:21:45,625 - telegram.ext._updater - DEBUG - Waiting background polling task to finish up.
+2023-04-16 02:21:45,626 - telegram.ext._updater - DEBUG - Network loop retry getting Updates was cancelled
+2023-04-16 02:21:45,626 - telegram.ext._updater - DEBUG - Updater.stop() is complete
+2023-04-16 02:21:45,626 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-16 02:21:45,626 - telegram.ext._application - DEBUG - Waiting for update_queue to join
+2023-04-16 02:21:45,626 - telegram.ext._application - DEBUG - Dropping pending updates
+2023-04-16 02:21:45,626 - telegram.ext._application - DEBUG - Application stopped fetching of updates.
+2023-04-16 02:21:45,626 - telegram.ext._application - DEBUG - Waiting for `create_task` calls to be processed
+2023-04-16 02:21:45,626 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-16 02:21:45,626 - telegram._bot - DEBUG - This Bot is already shut down. Returning.
+2023-04-16 02:21:45,626 - telegram.ext._updater - DEBUG - Shut down of Updater complete
+2023-04-16 02:21:45,652 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1035236a0>
