@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import aiohttp
 import asyncio
 from consts import *
+import openai
+import string
 
 
 async def location_kbrd():
@@ -25,7 +27,7 @@ async def choose_way():
 
 
 async def get_time_paths(a, b):
-    url = f'https://yandex.ru/maps/213/moscow/?ll={a[0]}%2C{a[1]}&mode=routes&routes%5BactiveComparisonMode%5D=auto&rtext={a[0]}%2C{a[1]}~{b[0]}%2C{b[1]}&rtt=comparison'
+    url = f'https://yandex.ru/maps/?ll={a[1]}%2C{a[0]}&mode=routes&routes%5BactiveComparisonMode%5D=auto&rtext={a[0]}%2C{a[1]}~{b[0]}%2C{b[1]}&rtt=comparison'
     session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
     async with session.get(url) as res:
         txt = await res.text()
@@ -131,5 +133,21 @@ async def get_anecdot():
     return '\n'.join(res)
 
 
+def get_answer(prompt):
+    completion = openai.Completion.create(engine="text-davinci-003", prompt=prompt, temperature=0.5,
+                                          max_tokens=1000)
+    return completion.choices[0]['text']
+
+
+def prepare_for_markdown(text):
+    res = '|| '
+    for i in text:
+        if i in string.punctuation:
+            res += '\\' + i
+        else:
+            res += i
+    return res + ' ||'
+
+
 if __name__ == '__main__':
-    asyncio.run(get_time_paths())
+    print(get_answer('Приветики-пистолетики! Как настроение?'))

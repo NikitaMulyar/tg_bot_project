@@ -8,9 +8,11 @@ from config import BOT_TOKEN
 from funcs_backend import *
 from yandex_cloud import *
 
+openai.api_key = AI_KEY
+
 logging.basicConfig(
     filename='out/logs.log', filemode='a',
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
 )
 logger = logging.getLogger(__name__)
 
@@ -222,7 +224,8 @@ class GameTowns:
         chat = update.message.chat.id
         await update.message.reply_text(
             '|| Привет\! Давай поиграем в города\! Ты должен называть города\, начинающиеся на ту букву\,'
-            ' на которую заканчивается название предыдущего города\! Я начинаю\: ||', parse_mode='MarkdownV2')
+            ' на которую заканчивается название предыдущего города\! Я начинаю\: ||',
+            parse_mode='MarkdownV2')
         await bot.send_voice(chat, await get_audio(
             'Привет! Давай поиграем в города! Ты должен называть города, '
             'начинающиеся на ту букву, на которую заканчивается '
@@ -240,39 +243,48 @@ class GameTowns:
         city = update.message.text
         res = self.TOWNS.get(city[0].upper())
         if res is None or res == set():
-            await update.message.reply_text('|| Города на такую букву нет\! ||', parse_mode='MarkdownV2')
+            await update.message.reply_text('|| Города на такую букву нет\! ||',
+                                            parse_mode='MarkdownV2')
             await bot.send_voice(chat,
-                await get_audio('Города на такую букву нет!', context.user_data['voice']))
+                                 await get_audio('Города на такую букву нет!',
+                                                 context.user_data['voice']))
             return 1
         if city not in res:
-            await update.message.reply_text('|| Такого города я не знаю\! Давай другой\. ||', parse_mode='MarkdownV2')
+            await update.message.reply_text('|| Такого города я не знаю\! Давай другой\. ||',
+                                            parse_mode='MarkdownV2')
             await bot.send_voice(chat,
-                await get_audio('Такого города я не знаю! Давай другой.', context.user_data['voice']))
+                                 await get_audio('Такого города я не знаю! Давай другой.',
+                                                 context.user_data['voice']))
             return 1
         formatted_city = city.replace('ы', '').replace('ь', '').replace('ъ', '').replace('ё', 'е')
         last = formatted_city[-1]
         first = formatted_city[0].lower()
         res = self.TOWNS.get(last.upper())
         if res is None or res == set():
-            await update.message.reply_text('|| Попробуй другой город\. ||', parse_mode='MarkdownV2')
+            await update.message.reply_text('|| Попробуй другой город\. ||',
+                                            parse_mode='MarkdownV2')
             await bot.send_voice(chat,
-                await get_audio('Попробуй другой город.', context.user_data['voice']))
+                                 await get_audio('Попробуй другой город.',
+                                                 context.user_data['voice']))
             return 1
         if context.user_data['bot_town'].lower().replace('ы', '').replace('ь', '') \
                 .replace('ъ', '').replace('ё', 'е')[-1] != first:
-            await update.message.reply_text('|| Неверная первая буква\. ||', parse_mode='MarkdownV2')
+            await update.message.reply_text('|| Неверная первая буква\. ||',
+                                            parse_mode='MarkdownV2')
             await bot.send_voice(chat,
-                await get_audio('Неверная первая буква.', context.user_data['voice']))
+                                 await get_audio('Неверная первая буква.',
+                                                 context.user_data['voice']))
             return 1
         if city in context.user_data['towns_used']:
             await update.message.reply_text('|| Город уже был\! ||', parse_mode='MarkdownV2')
-            await bot.send_voice(chat, await get_audio('Город уже был!', context.user_data['voice']))
+            await bot.send_voice(chat,
+                                 await get_audio('Город уже был!', context.user_data['voice']))
             return 1
         context.user_data['towns_used'].append(city)
         town = self.get_random_town(lett=last.upper())
         while town in context.user_data['towns_used']:
             town = self.get_random_town(lett=last.upper())
-        await update.message.reply_text('|| ' + town + ' ||', parse_mode='MarkdownV2')
+        await update.message.reply_text(prepare_for_markdown(town), parse_mode='MarkdownV2')
         await bot.send_voice(chat, await get_audio(town, context.user_data['voice']))
         context.user_data['bot_town'] = town
         context.user_data['towns_used'].append(town)
@@ -280,12 +292,56 @@ class GameTowns:
 
     async def end_game(self, update, context):
         chat = update.message.chat.id
-        await update.message.reply_text('|| Ха\-ха\, сдаешься\? Ну ладно\! ||', parse_mode='MarkdownV2')
-        await bot.send_voice(chat,
-            await get_audio('Ха-ха, сдаешься? Ну ладно!', context.user_data['voice']))
+        await update.message.reply_text('|| Ха\-ха\, сдаешься\? Ну ладно\! ||',
+                                        parse_mode='MarkdownV2')
+        await bot.send_voice(chat, await get_audio('Ха-ха, сдаешься? Ну ладно!',
+                                                   context.user_data['voice']))
         context.user_data['bot_town'] = None
         context.user_data['towns_used'] = []
         return ConversationHandler.END
+
+
+class ChatGPTDialog:
+    async def start(self, update, context):
+        chat = update.message.chat.id
+        await update.message.reply_text('|| Доброго времени суток\! Давай поболтаем \- присылай '
+                                        'мне воисы или сообщения\, а я отвечу на них\.\.\. ||',
+                                        parse_mode='MarkdownV2')
+        await bot.send_voice(chat, await get_audio('Доброго времени суток! Давай поболтаем - '
+                                                   'присылай мне воисы или сообщения, а я отвечу '
+                                                   'на них...', context.user_data['voice']))
+        return 1
+
+    async def audio_request(self, update, context):
+        chat = update.message.chat.id
+        info_msg = await bot.send_message(chat, 'Время ожидания ответа: 5-15с')
+        path = await update.message.voice.get_file()
+        file = await path.download_as_bytearray()
+        result = get_text_api_v3(file, chat, logger)
+        return await self.send_response(update, context, result, info_msg, chat)
+
+    async def text_request(self, update, context):
+        chat = update.message.chat.id
+        info_msg = await bot.send_message(chat, 'Время ожидания ответа: 5-15с')
+        return await self.send_response(update, context, update.message.text, info_msg, chat)
+
+    async def send_response(self, update, context, request, info_msg, chat):
+        resp = get_answer(request)
+        audio = await get_audio(resp, context.user_data['voice'])
+        await info_msg.delete()
+        await update.message.reply_text(prepare_for_markdown(resp))
+        await bot.send_voice(chat, audio)
+        return 1
+
+    async def stop_ai(self, update, context):
+        chat = update.message.chat.id
+        await update.message.reply_text('|| До встречи\! ||', parse_mode='MarkdownV2')
+        await bot.send_voice(chat, await get_audio('До встречи!', context.user_data['voice']))
+        return ConversationHandler.END
+
+
+async def news(update, context):
+    pass
 
 
 async def send_anecdot(update, context):
@@ -342,6 +398,16 @@ def main():
         },
         fallbacks=[CommandHandler('end_game', game_towns.end_game)]
     )
+    ai_dialog = ChatGPTDialog()
+    ai_dialog_conv = ConversationHandler(
+        entry_points=[CommandHandler('ai', ai_dialog.start)],
+        states={
+            1: [MessageHandler(filters.TEXT & ~filters.COMMAND, ai_dialog.text_request),
+                MessageHandler(filters.VOICE, ai_dialog.audio_request)]
+        },
+        fallbacks=[CommandHandler('stop_ai', ai_dialog.stop_ai)]
+    )
+    application.add_handler(ai_dialog_conv)
     application.add_handler(game_towns_conv)
     application.add_handler(config_voice_handler)
     application.add_handler(conv_handler)

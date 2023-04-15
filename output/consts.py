@@ -17,3 +17,4 @@ API_GEO = '40d1649f-0493-4b70-98ba-98533de7710b'
 URL_GEOCODER = 'http://geocode-maps.yandex.ru/1.x/'
 URL_ORG = 'https://search-maps.yandex.ru/v1/'
 URL_MAPS = 'http://static-maps.yandex.ru/1.x/'
+AI_KEY = "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"
