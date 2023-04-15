@@ -134,19 +134,36 @@ async def get_anecdot():
 
 
 def get_answer(prompt):
-    completion = openai.Completion.create(engine="text-davinci-003", prompt=prompt, temperature=0.5,
+    completion = openai.Completion.create(engine="text-davinci-003", prompt=prompt, temperature=0.7,
                                           max_tokens=1000)
     return completion.choices[0]['text']
 
 
-def prepare_for_markdown(text):
-    res = '|| '
+def prepare_for_markdown(text, spoiler=True):
+    res = ''
+    if spoiler:
+        res += '|| '
     for i in text:
         if i in string.punctuation:
             res += '\\' + i
         else:
             res += i
-    return res + ' ||'
+    if spoiler:
+        return res + ' ||'
+    return res
+
+
+async def get_news_list():
+    session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
+    async with session.get('https://life.ru/s/novosti') as res:
+        page = await res.text()
+    sp = BeautifulSoup(page, 'html.parser')
+    arr = []
+    for i in sp.find_all('a', class_='styles_root__2aHN8 styles_l__3AE69 styles_news__15P0n'):
+        name = i.get_text('###').split('###')[-2] + '\n'
+        link = 'https://life.ru' + i.get('href')
+        arr.append((name, link))
+    return arr
 
 
 if __name__ == '__main__':

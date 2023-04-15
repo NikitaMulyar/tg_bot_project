@@ -1,3 +1,4 @@
+import logging
 import random
 
 from telegram import Bot, ReplyKeyboardRemove
@@ -12,7 +13,7 @@ openai.api_key = AI_KEY
 
 logging.basicConfig(
     filename='out/logs.log', filemode='a',
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG
 )
 logger = logging.getLogger(__name__)
 
@@ -27,8 +28,7 @@ class ConfigVoice:
         await update.message.reply_text(
             'Привет! Давай знакомиться. Я - Великий Гуру, умею общаться с людьми голосом!',
             reply_markup=ReplyKeyboardRemove())
-        await ConfigVoice.config_voice(self, update, context)
-        return 1
+        return await ConfigVoice.config_voice(self, update, context)
 
     async def config_voice(self, update, context):
         context.user_data['skip_voice'] = False
@@ -224,15 +224,11 @@ class GameTowns:
 
     async def start_game(self, update, context):
         chat = update.message.chat.id
-        await update.message.reply_text(
-            '|| Привет\! Давай поиграем в города\! Ты должен называть города\, начинающиеся на ту букву\,'
-            ' на которую заканчивается название предыдущего города\! Я начинаю\: ||',
-            parse_mode='MarkdownV2')
-        await bot.send_voice(chat, await get_audio(
-            'Привет! Давай поиграем в города! Ты должен называть города, '
-            'начинающиеся на ту букву, на которую заканчивается '
-            'название предыдущего города! Я начинаю.',
-            context.user_data['voice']))
+        s = 'Привет! Давай поиграем в города! Ты должен называть города, '\
+            'начинающиеся на ту букву, на которую заканчивается '\
+            'название предыдущего города! Напоминаю правило: буквы ы, ъ, ь выкидываются! Я начинаю.'
+        await update.message.reply_text(prepare_for_markdown(s), parse_mode='MarkdownV2')
+        await bot.send_voice(chat, await get_audio(s, context.user_data['voice']))
         town = self.get_random_town()
         await bot.send_message(chat, '|| ' + town + ' ||', parse_mode='MarkdownV2')
         await bot.send_voice(chat, await get_audio(town, context.user_data['voice']))
@@ -316,7 +312,7 @@ class ChatGPTDialog:
 
     async def audio_request(self, update, context):
         chat = update.message.chat.id
-        info_msg = await bot.send_message(chat, 'Время ожидания ответа: 5-15с')
+        info_msg = await bot.send_message(chat, 'Время ожидания ответа: 5-20с')
         path = await update.message.voice.get_file()
         file = await path.download_as_bytearray()
         result = get_text_api_v3(file, chat, logger)
@@ -324,14 +320,14 @@ class ChatGPTDialog:
 
     async def text_request(self, update, context):
         chat = update.message.chat.id
-        info_msg = await bot.send_message(chat, 'Время ожидания ответа: 5-15с')
+        info_msg = await bot.send_message(chat, 'Время ожидания ответа: 5-20с')
         return await self.send_response(update, context, update.message.text, info_msg, chat)
 
     async def send_response(self, update, context, request, info_msg, chat):
         resp = get_answer(request)
         audio = await get_audio(resp, context.user_data['voice'])
         await info_msg.delete()
-        await update.message.reply_text(prepare_for_markdown(resp))
+        await update.message.reply_text(prepare_for_markdown(resp), parse_mode='MarkdownV2')
         await bot.send_voice(chat, audio)
         return 1
 
@@ -342,8 +338,13 @@ class ChatGPTDialog:
         return ConversationHandler.END
 
 
-async def news(update, context):
-    pass
+async def send_news(update, context):
+    chat = update.message.chat.id
+    news = random.sample(await get_news_list(), k=3)
+    text = '\n'.join([i[0] + '...' for i in news])
+    md_text = '\n'.join(f'[{prepare_for_markdown(i[0], spoiler=False)}]({i[1]})' for i in news)
+    await update.message.reply_text(md_text, parse_mode='MarkdownV2')
+    await bot.send_voice(chat, await get_audio(text, context.user_data['voice']))
 
 
 async def send_anecdot(update, context):
@@ -362,15 +363,19 @@ def main():
         pass
     application = Application.builder().token(BOT_TOKEN).build()
     dialog = Dialog()
+    navi = MapRoute()
+    voice_config_start = ConfigVoice()
+    game_towns = GameTowns()
+    ai_dialog = ChatGPTDialog()
+
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start_dialog', dialog.start_dialog)],
         states={
             1: [MessageHandler(filters.VOICE, dialog.send_stt_msg_dialog),
                 MessageHandler(filters.TEXT & ~filters.COMMAND, dialog.send_tts_msg_dialog)]
         },
-        fallbacks=[CommandHandler('stop_dialog', dialog.stop_dialog)]
+        fallbacks=[CommandHandler('stop_dialog', dialog.stop_dialog)], block=True, conversation_timeout=60
     )
-    navi = MapRoute()
     navigator_dialog = ConversationHandler(
         entry_points=[CommandHandler('route', navi.navigator_start)],
         states={
@@ -381,40 +386,38 @@ def main():
             5: [MessageHandler(filters.LOCATION, navi.address_loc_to)],
             6: [MessageHandler(filters.TEXT & ~filters.COMMAND, navi.address_name_to)]
         },
-        fallbacks=[CommandHandler('stop_route', navi.stop_navigator)]
+        fallbacks=[CommandHandler('stop_route', navi.stop_navigator)], block=True, conversation_timeout=60
     )
-    voice_config_start = ConfigVoice()
     config_voice_handler = ConversationHandler(
         entry_points=[CommandHandler("start", voice_config_start.start),
                       CommandHandler("config_voice", voice_config_start.config_voice)],
         states={
             1: [CallbackQueryHandler(voice_config_start.inline_button)]
         },
-        fallbacks=[MessageHandler(filters.ALL, voice_config_start.get_out)]
+        fallbacks=[MessageHandler(filters.ALL, voice_config_start.get_out)], block=True, conversation_timeout=60
     )
-    game_towns = GameTowns()
     game_towns_conv = ConversationHandler(
         entry_points=[CommandHandler('towns', game_towns.start_game)],
         states={
             1: [MessageHandler(filters.TEXT & ~filters.COMMAND, game_towns.get_name)]
         },
-        fallbacks=[CommandHandler('end_game', game_towns.end_game)]
+        fallbacks=[CommandHandler('end_game', game_towns.end_game)], block=True, conversation_timeout=60
     )
-    ai_dialog = ChatGPTDialog()
     ai_dialog_conv = ConversationHandler(
         entry_points=[CommandHandler('ai', ai_dialog.start)],
         states={
             1: [MessageHandler(filters.TEXT & ~filters.COMMAND, ai_dialog.text_request),
                 MessageHandler(filters.VOICE, ai_dialog.audio_request)]
         },
-        fallbacks=[CommandHandler('stop_ai', ai_dialog.stop_ai)]
+        fallbacks=[CommandHandler('stop_ai', ai_dialog.stop_ai)], block=True, conversation_timeout=60
     )
+    application.add_handler(conv_handler)
+    application.add_handler(config_voice_handler)
     application.add_handler(ai_dialog_conv)
     application.add_handler(game_towns_conv)
-    application.add_handler(config_voice_handler)
-    application.add_handler(conv_handler)
     application.add_handler(navigator_dialog)
     application.add_handler(CommandHandler('anecdot', send_anecdot))
+    application.add_handler(CommandHandler('news', send_news))
 
     application.run_polling()
 
