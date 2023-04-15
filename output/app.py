@@ -1,6 +1,6 @@
 import random
 
-from telegram import Bot
+from telegram import Bot, ReplyKeyboardRemove
 from telegram.ext import Application, MessageHandler, filters, CommandHandler, ConversationHandler, \
     CallbackQueryHandler
 
@@ -166,7 +166,7 @@ class MapRoute:
         context.user_data['geopos']['to'] = (user_location.latitude, user_location.longitude)
         res = await make_path(context.user_data['geopos'])
         if res == -1:
-            await update.message.reply_text('Увы, но пути нет.')
+            await update.message.reply_text('Увы, но пути нет.', reply_markup=ReplyKeyboardRemove())
         else:
             pass
         return ConversationHandler.END
@@ -192,12 +192,13 @@ class MapRoute:
             text = f'Путь от {name_from} до {name_to}.\n'
             text += "\n".join(
                 [i[0] + ': ' + i[1][0] + ' (' + ", ".join(i[1][1:]) + ')' for i in res[0]])
-            await bot.send_message(chat, text)
+            await bot.send_message(chat, text, reply_markup=ReplyKeyboardRemove())
             await bot.send_voice(chat, audio)
         return ConversationHandler.END
 
     async def stop_navigator(self, update, context):
-        await update.message.reply_text('Ну раз не хочешь, ну и ладно!')
+        await update.message.reply_text('Ну раз не хочешь, ну и ладно!',
+                                        reply_markup=ReplyKeyboardRemove())
         return ConversationHandler.END
 
 

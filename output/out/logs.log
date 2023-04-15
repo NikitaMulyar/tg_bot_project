@@ -14,3 +14,23 @@ client_session: <aiohttp.client.ClientSession object at 0x1053461d0>
 2023-04-15 20:45:21,729 - asyncio - ERROR - Unclosed client session
 client_session: <aiohttp.client.ClientSession object at 0x10452ebc0>
 2023-04-15 20:45:22,510 - telegram.ext._application - INFO - Application started
+2023-04-15 20:57:07,784 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-15 20:57:07,784 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-15 20:57:07,819 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1065c67d0>
+2023-04-15 20:57:08,797 - telegram.ext._application - INFO - Application started
+2023-04-15 20:57:44,807 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-15 20:57:44,807 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-15 20:57:44,827 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x107da69b0>
+2023-04-15 20:57:45,432 - telegram.ext._application - INFO - Application started
+2023-04-15 20:58:03,289 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-15 20:58:03,289 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-15 20:58:03,315 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x104dca770>
+2023-04-15 20:58:03,813 - telegram.ext._application - INFO - Application started
+2023-04-15 21:00:19,670 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-15 21:00:19,671 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-15 21:00:19,696 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1075be7a0>
+2023-04-15 21:00:20,469 - telegram.ext._application - INFO - Application started
