@@ -23,12 +23,15 @@ bot = Bot(BOT_TOKEN)
 
 class ConfigVoice:
     async def start(self, update, context):
+        if context.user_data.get('in_conversation'):
+            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            return
         context.user_data['skip_voice'] = False
         context.user_data['voice'] = 'alena'
         await update.message.reply_text(
             'Привет! Давай знакомиться. Я - Великий Гуру, умею общаться с людьми голосом!',
             reply_markup=ReplyKeyboardRemove())
-        return await ConfigVoice.config_voice(self, update, context)
+        return await self.config_voice(update, context)
 
     async def config_voice(self, update, context):
         context.user_data['skip_voice'] = False
@@ -58,6 +61,7 @@ class ConfigVoice:
         await query.answer()
         if context.user_data.get('skip_voice'):
             chat = query.message.chat.id
+            context.user_data['in_conversation'] = False
             await bot.send_message(chat, "Выбор голоса пропущен. Пропишите команду еще раз.")
             return ConversationHandler.END
         num = query.data
@@ -66,9 +70,10 @@ class ConfigVoice:
         return ConversationHandler.END
 
     async def get_out(self, update, context):
-        """context.user_data['skip_voice'] = True
-        chat = update.message.chat.id
-        await bot.send_message(chat, "Выбор голоса пропущен. Пропишите команду еще раз.")"""
+        context.user_data['skip_voice'] = True
+        context.user_data['in_conversation'] = False
+        # chat = update.message.chat.id
+        # await bot.send_message(chat, "Выбор голоса пропущен. Пропишите команду еще раз.")
         return ConversationHandler.END
 
 
@@ -219,6 +224,9 @@ class MainSettings:
         pass
 
     async def about(self, update, context):
+        pass
+
+    async def report(self, update, context):
         pass
 
 
