@@ -66,14 +66,18 @@ class ConfigVoice:
         return ConversationHandler.END
 
     async def get_out(self, update, context):
-        context.user_data['skip_voice'] = True
+        """context.user_data['skip_voice'] = True
         chat = update.message.chat.id
-        await bot.send_message(chat, "Выбор голоса пропущен. Пропишите команду еще раз.")
+        await bot.send_message(chat, "Выбор голоса пропущен. Пропишите команду еще раз.")"""
         return ConversationHandler.END
 
 
 class Dialog:
     async def start_dialog(self, update, context):
+        if context.user_data.get('in_conversation'):
+            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            return ConversationHandler.END
+        context.user_data['in_conversation'] = True
         await update.message.reply_text(
             'Давай поболтаем! Отправляй мне воисы - а я тебе их расшифровку, и наоборот!\n'
             'Но учти - если воис не на русском языке, я не гарантирую хороший перевод!')
@@ -98,12 +102,17 @@ class Dialog:
         return 1
 
     async def stop_dialog(self, update, context):
+        context.user_data['in_conversation'] = False
         await update.message.reply_text('Возвращайся скорее!')
         return ConversationHandler.END
 
 
 class MapRoute:
     async def navigator_start(self, update, context):
+        if context.user_data.get('in_conversation'):
+            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            return ConversationHandler.END
+        context.user_data['in_conversation'] = True
         reply_markup = await choose_way()
         if context.user_data.get('voice') is None:
             context.user_data['voice'] = 'alena'
@@ -173,6 +182,7 @@ class MapRoute:
         return ConversationHandler.END
 
     async def address_name_to(self, update, context):
+        context.user_data['in_conversation'] = False
         res = await get_coords(update.message.text)
         if res == -1:
             await update.message.reply_text('Такого адреса нет. Давай еще разок.')
@@ -198,6 +208,7 @@ class MapRoute:
         return ConversationHandler.END
 
     async def stop_navigator(self, update, context):
+        context.user_data['in_conversation'] = False
         await update.message.reply_text('Ну раз не хочешь, ну и ладно!',
                                         reply_markup=ReplyKeyboardRemove())
         return ConversationHandler.END
@@ -223,6 +234,10 @@ class GameTowns:
         return random.choice(self.TOWNS[lett])
 
     async def start_game(self, update, context):
+        if context.user_data.get('in_conversation'):
+            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            return ConversationHandler.END
+        context.user_data['in_conversation'] = True
         chat = update.message.chat.id
         s = 'Привет! Давай поиграем в города! Ты должен называть города, '\
             'начинающиеся на ту букву, на которую заканчивается '\
@@ -289,6 +304,7 @@ class GameTowns:
         return 1
 
     async def end_game(self, update, context):
+        context.user_data['in_conversation'] = False
         chat = update.message.chat.id
         await update.message.reply_text('|| Ха\-ха\, сдаешься\? Ну ладно\! ||',
                                         parse_mode='MarkdownV2')
@@ -301,6 +317,10 @@ class GameTowns:
 
 class ChatGPTDialog:
     async def start(self, update, context):
+        if context.user_data.get('in_conversation'):
+            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            return ConversationHandler.END
+        context.user_data['in_conversation'] = True
         chat = update.message.chat.id
         await update.message.reply_text('|| Доброго времени суток\! Давай поболтаем \- присылай '
                                         'мне воисы или сообщения\, а я отвечу на них\.\.\. ||',
@@ -332,6 +352,7 @@ class ChatGPTDialog:
         return 1
 
     async def stop_ai(self, update, context):
+        context.user_data['in_conversation'] = False
         chat = update.message.chat.id
         await update.message.reply_text('|| До встречи\! ||', parse_mode='MarkdownV2')
         await bot.send_voice(chat, await get_audio('До встречи!', context.user_data['voice']))
@@ -339,6 +360,9 @@ class ChatGPTDialog:
 
 
 async def send_news(update, context):
+    if context.user_data.get('in_conversation'):
+        await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+        return
     chat = update.message.chat.id
     news = random.sample(await get_news_list(), k=3)
     text = '\n'.join([i[0] + '...' for i in news])
@@ -348,6 +372,9 @@ async def send_news(update, context):
 
 
 async def send_anecdot(update, context):
+    if context.user_data.get('in_conversation'):
+        await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+        return
     chat = update.message.chat.id
     text = await get_anecdot()
     audio = await get_audio(text, context.user_data['voice'])
@@ -411,9 +438,11 @@ def main():
         },
         fallbacks=[CommandHandler('stop_ai', ai_dialog.stop_ai)], block=True, conversation_timeout=60
     )
-    application.add_handlers([conv_handler, config_voice_handler, ai_dialog_conv, game_towns_conv,
-                              navigator_dialog, CommandHandler('anecdot', send_anecdot),
-                              CommandHandler('news', send_news)])
+    application.add_handlers(handlers={
+        1: [conv_handler], 2: [navigator_dialog], 3: [config_voice_handler], 4: [game_towns_conv],
+        5: [ai_dialog_conv], 6: [CommandHandler('anecdot', send_anecdot)],
+        7: [CommandHandler('news', send_news)]
+    })
 
     application.run_polling()
 
