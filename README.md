@@ -56,3 +56,4 @@ python app.py
 ## Ссылки
 
 * [Бот](https://t.me/guru1514_bot)
+* [Документация](https://telegra.ph/Kak-polzovatsya-botom-Velikij-Guru-opisanie-komand-04-16)
