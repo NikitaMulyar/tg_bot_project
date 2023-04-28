@@ -193,7 +193,7 @@ def put_to_db(update):
         db_sess.add(user)
         db_sess.commit()
         db_sess = db_session.create_session()
-        statistic = Statistic(user_id=db_sess.query(User).filter(User.telegram_id == user__id).first().id)
+        statistic = Statistic(user_id=user__id)
         db_sess.add(statistic)
     db_sess.commit()
 
@@ -201,15 +201,14 @@ def put_to_db(update):
 def total_msg_func(update, msg_format="text"):
     db_sess = db_session.create_session()
     put_to_db(update)
-    id_user = db_sess.query(User).filter(User.telegram_id == update.message.from_user.id).first().id
-    user = db_sess.query(Statistic).filter(Statistic.user_id == id_user).first()
+    user = db_sess.query(Statistic).filter(Statistic.user_id == update.message.from_user.id).first()
     if msg_format == "text":
         user.total_len += len("".join(update.message.text.split()))
         user.total_msgs += 1
     else:
         user.total_seconds += datetime.timedelta(seconds=update.message.voice.duration)
         user.total_voices += 1
-    big_data = Big_data(user_id=user.user_id)
+    big_data = Big_data(user_id=user.user_id, type=msg_format)
     db_sess.add(big_data)
     db_sess.commit()
 

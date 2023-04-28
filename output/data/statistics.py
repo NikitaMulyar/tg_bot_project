@@ -6,7 +6,7 @@ from datetime import timedelta
 class Statistic(SqlAlchemyBase):
     __tablename__ = 'statistics'
 
-    user_id = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey("users.id"), primary_key=True)
+    user_id = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey("users.telegram_id"), primary_key=True)
     user = orm.relationship('User')
     total_len = sqlalchemy.Column(sqlalchemy.Integer, nullable=True, default=0)
     total_seconds = sqlalchemy.Column(sqlalchemy.Interval, nullable=True, default=timedelta(seconds=0))

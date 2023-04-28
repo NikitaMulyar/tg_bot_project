@@ -29,6 +29,7 @@ bot = Bot(BOT_TOKEN)
 class ConfigVoice:
     async def start(self, update, context):
         put_to_db(update)
+        total_msg_func(update)
         if context.user_data.get('in_conversation'):
             await update.message.reply_text('Для начала выйди из предыдущего диалога.')
             return
@@ -85,6 +86,7 @@ class ConfigVoice:
 
 class Dialog:
     async def start_dialog(self, update, context):
+        total_msg_func(update)
         if context.user_data.get('in_conversation'):
             await update.message.reply_text('Для начала выйди из предыдущего диалога.')
             return ConversationHandler.END
@@ -115,6 +117,7 @@ class Dialog:
         return 1
 
     async def stop_dialog(self, update, context):
+        total_msg_func(update)
         context.user_data['in_conversation'] = False
         await update.message.reply_text('Возвращайся скорее!')
         return ConversationHandler.END
@@ -122,6 +125,7 @@ class Dialog:
 
 class MapRoute:
     async def navigator_start(self, update, context):
+        total_msg_func(update)
         if context.user_data.get('in_conversation'):
             await update.message.reply_text('Для начала выйди из предыдущего диалога.')
             return ConversationHandler.END
@@ -197,6 +201,7 @@ class MapRoute:
         return ConversationHandler.END
 
     async def address_name_to(self, update, context):
+        total_msg_func(update)
         context.user_data['in_conversation'] = False
         res = await get_coords(update.message.text)
         if res == -1:
@@ -223,6 +228,7 @@ class MapRoute:
         return ConversationHandler.END
 
     async def stop_navigator(self, update, context):
+        total_msg_func(update)
         context.user_data['in_conversation'] = False
         await update.message.reply_text('Ну раз не хочешь, ну и ладно!',
                                         reply_markup=ReplyKeyboardRemove())
@@ -252,6 +258,7 @@ class GameTowns:
         return random.choice(self.TOWNS[lett])
 
     async def start_game(self, update, context):
+        total_msg_func(update)
         if context.user_data.get('in_conversation'):
             await update.message.reply_text('Для начала выйди из предыдущего диалога.')
             return ConversationHandler.END
@@ -320,6 +327,7 @@ class GameTowns:
         return 1
 
     async def end_game(self, update, context):
+        total_msg_func(update)
         context.user_data['in_conversation'] = False
         chat = update.message.chat.id
         await update.message.reply_text('Ха-ха, сдаешься? Ну ладно!')
@@ -332,6 +340,7 @@ class GameTowns:
 
 class ChatGPTDialog:
     async def start(self, update, context):
+        total_msg_func(update)
         if context.user_data.get('in_conversation'):
             await update.message.reply_text('Для начала выйди из предыдущего диалога.')
             return ConversationHandler.END
@@ -369,6 +378,7 @@ class ChatGPTDialog:
         return 1
 
     async def stop_ai(self, update, context):
+        total_msg_func(update)
         context.user_data['in_conversation'] = False
         chat = update.message.chat.id
         await update.message.reply_text('|| До встречи\! ||', parse_mode='MarkdownV2')
@@ -377,6 +387,7 @@ class ChatGPTDialog:
 
 
 async def send_news(update, context):
+    total_msg_func(update)
     if context.user_data.get('in_conversation'):
         await update.message.reply_text('Для начала выйди из предыдущего диалога.')
         return
@@ -389,6 +400,7 @@ async def send_news(update, context):
 
 
 async def send_anecdot(update, context):
+    total_msg_func(update)
     if context.user_data.get('in_conversation'):
         await update.message.reply_text('Для начала выйди из предыдущего диалога.')
         return
