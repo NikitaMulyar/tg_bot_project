@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 CHUNK_SIZE = 4000
 # URL_IAM_TOKEN = 'https://iam.api.cloud.yandex.net/iam/v1/tokens'
 # OAUTH_TOKEN = "y0_AgAAAAAmLq4dAATuwQAAAADfsx7bRjjHC7ycRfCVmVVaTuuAwIQ6d_Y"
@@ -17,4 +18,4 @@ API_GEO = '40d1649f-0493-4b70-98ba-98533de7710b'
 URL_GEOCODER = 'http://geocode-maps.yandex.ru/1.x/'
 URL_ORG = 'https://search-maps.yandex.ru/v1/'
 URL_MAPS = 'http://static-maps.yandex.ru/1.x/'
-AI_KEY = "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"
+AI_KEY = "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"

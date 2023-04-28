@@ -9,11 +9,16 @@ from config import BOT_TOKEN
 from funcs_backend import *
 from yandex_cloud import *
 
+from data import db_session
+from data.users import User
+from data.big_data import Big_data
+from data.statistics import Statistic
+
 openai.api_key = AI_KEY
 
 logging.basicConfig(
     filename='out/logs.log', filemode='a',
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
 )
 logger = logging.getLogger(__name__)
 
@@ -23,6 +28,7 @@ bot = Bot(BOT_TOKEN)
 
 class ConfigVoice:
     async def start(self, update, context):
+        put_to_db(update)
         if context.user_data.get('in_conversation'):
             await update.message.reply_text('Для начала выйди из предыдущего диалога.')
             return
@@ -89,6 +95,7 @@ class Dialog:
         return 1
 
     async def send_tts_msg_dialog(self, update, context):
+        total_msg_func(update)
         t = ' '.join([i.strip() for i in update.message.text.split('\n') if i.strip() != ''])
         result = await get_audio(t, context.user_data['voice'])
         chat = update.message.chat.id
@@ -101,6 +108,7 @@ class Dialog:
     async def send_stt_msg_dialog(self, update, context):
         path = await update.message.voice.get_file()
         file = await path.download_as_bytearray()
+        total_msg_func(update, msg_format="voice")
         chat = update.message.chat.id
         result = get_text_api_v3(file, chat, logger)
         await bot.sendMessage(chat, result)
@@ -142,6 +150,7 @@ class MapRoute:
             return 3
 
     async def address_loc(self, update, context):
+        total_msg_func(update)
         user_location = update.message.location
         context.user_data['geopos'] = {'from': (user_location.latitude, user_location.longitude)}
         reply_markup = await choose_way()
@@ -150,6 +159,7 @@ class MapRoute:
         return 4
 
     async def address_name(self, update, context):
+        total_msg_func(update)
         reply_markup = await choose_way()
         res = await get_coords(update.message.text)
         if res == -1:
@@ -247,32 +257,32 @@ class GameTowns:
             return ConversationHandler.END
         context.user_data['in_conversation'] = True
         chat = update.message.chat.id
-        s = 'Привет! Давай поиграем в города! Ты должен называть города, '\
-            'начинающиеся на ту букву, на которую заканчивается '\
+        s = 'Привет! Давай поиграем в города! Ты должен называть города, ' \
+            'начинающиеся на ту букву, на которую заканчивается ' \
             'название предыдущего города! Напоминаю правило: буквы ы, ъ, ь выкидываются! Я начинаю.'
-        await update.message.reply_text(prepare_for_markdown(s), parse_mode='MarkdownV2')
+        await update.message.reply_text(s)
         await bot.send_voice(chat, await get_audio(s, context.user_data['voice']))
         town = self.get_random_town()
-        await bot.send_message(chat, '|| ' + town + ' ||', parse_mode='MarkdownV2')
+        await bot.send_message(chat, town)
         await bot.send_voice(chat, await get_audio(town, context.user_data['voice']))
+
         context.user_data['bot_town'] = town
         context.user_data['towns_used'] = [town]
         return 1
 
     async def get_name(self, update, context):
+        total_msg_func(update)
         chat = update.message.chat.id
         city = update.message.text
         res = self.TOWNS.get(city[0].upper())
         if res is None or res == set():
-            await update.message.reply_text('|| Города на такую букву нет\! ||',
-                                            parse_mode='MarkdownV2')
+            await update.message.reply_text('Города на такую букву нет!')
             await bot.send_voice(chat,
                                  await get_audio('Города на такую букву нет!',
                                                  context.user_data['voice']))
             return 1
-        if city not in res:
-            await update.message.reply_text('|| Такого города я не знаю\! Давай другой\. ||',
-                                            parse_mode='MarkdownV2')
+        if city.capitalize() not in res:
+            await update.message.reply_text('Такого города я не знаю! Давай другой.')
             await bot.send_voice(chat,
                                  await get_audio('Такого города я не знаю! Давай другой.',
                                                  context.user_data['voice']))
@@ -282,22 +292,20 @@ class GameTowns:
         first = formatted_city[0].lower()
         res = self.TOWNS.get(last.upper())
         if res is None or res == set():
-            await update.message.reply_text('|| Попробуй другой город\. ||',
-                                            parse_mode='MarkdownV2')
+            await update.message.reply_text('Попробуй другой город.')
             await bot.send_voice(chat,
                                  await get_audio('Попробуй другой город.',
                                                  context.user_data['voice']))
             return 1
         if context.user_data['bot_town'].lower().replace('ы', '').replace('ь', '') \
                 .replace('ъ', '').replace('ё', 'е')[-1] != first:
-            await update.message.reply_text('|| Неверная первая буква\. ||',
-                                            parse_mode='MarkdownV2')
+            await update.message.reply_text('Неверная первая буква.')
             await bot.send_voice(chat,
                                  await get_audio('Неверная первая буква.',
                                                  context.user_data['voice']))
             return 1
         if city in context.user_data['towns_used']:
-            await update.message.reply_text('|| Город уже был\! ||', parse_mode='MarkdownV2')
+            await update.message.reply_text('Город уже был!')
             await bot.send_voice(chat,
                                  await get_audio('Город уже был!', context.user_data['voice']))
             return 1
@@ -305,7 +313,7 @@ class GameTowns:
         town = self.get_random_town(lett=last.upper())
         while town in context.user_data['towns_used']:
             town = self.get_random_town(lett=last.upper())
-        await update.message.reply_text(prepare_for_markdown(town), parse_mode='MarkdownV2')
+        await update.message.reply_text(town)
         await bot.send_voice(chat, await get_audio(town, context.user_data['voice']))
         context.user_data['bot_town'] = town
         context.user_data['towns_used'].append(town)
@@ -314,8 +322,7 @@ class GameTowns:
     async def end_game(self, update, context):
         context.user_data['in_conversation'] = False
         chat = update.message.chat.id
-        await update.message.reply_text('|| Ха\-ха\, сдаешься\? Ну ладно\! ||',
-                                        parse_mode='MarkdownV2')
+        await update.message.reply_text('Ха-ха, сдаешься? Ну ладно!')
         await bot.send_voice(chat, await get_audio('Ха-ха, сдаешься? Ну ладно!',
                                                    context.user_data['voice']))
         context.user_data['bot_town'] = None
@@ -339,6 +346,7 @@ class ChatGPTDialog:
         return 1
 
     async def audio_request(self, update, context):
+        total_msg_func(update, msg_format="voice")
         chat = update.message.chat.id
         info_msg = await bot.send_message(chat, 'Время ожидания ответа: 5-20с')
         path = await update.message.voice.get_file()
@@ -347,6 +355,7 @@ class ChatGPTDialog:
         return await self.send_response(update, context, result, info_msg, chat)
 
     async def text_request(self, update, context):
+        total_msg_func(update)
         chat = update.message.chat.id
         info_msg = await bot.send_message(chat, 'Время ожидания ответа: 5-20с')
         return await self.send_response(update, context, update.message.text, info_msg, chat)
@@ -456,4 +465,5 @@ def main():
 
 
 if __name__ == '__main__':
+    db_session.global_init("database/telegram_bot.db")
     main()

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from telegram import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 from bs4 import BeautifulSoup
 import aiohttp
@@ -5,6 +6,12 @@ import asyncio
 from consts import *
 import openai
 import string
+
+from data import db_session
+from data.users import User
+from data.big_data import Big_data
+from data.statistics import Statistic
+import datetime
 
 
 async def location_kbrd():
@@ -28,12 +35,14 @@ async def choose_way():
 
 async def get_time_paths(a, b):
     url = f'https://yandex.ru/maps/?ll={a[1]}%2C{a[0]}&mode=routes&routes%5BactiveComparisonMode%5D=auto&rtext={a[0]}%2C{a[1]}~{b[0]}%2C{b[1]}&rtt=comparison'
+    print(url)
     session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
     async with session.get(url) as res:
         txt = await res.text()
         res.close()
     await session.close()
     sp = BeautifulSoup(txt, 'html.parser')
+    print(sp.text)
     res = []
     for i in sp.find_all('div', class_='comparison-route-snippet-view__route-title'):
         s = i.get_text(separator=';').split(';')
@@ -94,7 +103,7 @@ async def get_address_text(pos):
         await session.close()
         return '-1'
 
-    toponym = json_response["response"]["GeoObjectCollection"]["featureMember"][0]["GeoObject"]\
+    toponym = json_response["response"]["GeoObjectCollection"]["featureMember"][0]["GeoObject"] \
         ["metaDataProperty"]["GeocoderMetaData"]["text"]
     return toponym
 
@@ -105,7 +114,13 @@ async def get_map(a, b):
         "l": "map",
         "pt": "~".join([f"{a[1]},{a[0]},pm2am", f"{b[1]},{b[0]},pm2bm"])
     }
-
+    print("~".join([f"{a[1]},{a[0]},pm2am", f"{b[1]},{b[0]},pm2bm"]))
+    import requests
+    try:
+        image = requests.get(URL_MAPS, params=map_params).content
+        return image
+    except Exception:
+        return -1
     session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
     try:
         async with session.get(URL_MAPS, params=map_params) as res:
@@ -164,6 +179,39 @@ async def get_news_list():
         link = 'https://life.ru' + i.get('href')
         arr.append((name, link))
     return arr
+
+
+def put_to_db(update):
+    db_sess = db_session.create_session()
+    user__id = update.message.from_user.id
+    if db_sess.query(User).filter(User.telegram_id == user__id).first():
+        if not db_sess.query(User).filter(User.telegram_id == user__id, User.chat_id == update.message.chat.id).first():
+            user = User(chat_id=update.message.chat.id, telegram_id=user__id, name=update.message.from_user.name)
+            db_sess.add(user)
+    else:
+        user = User(chat_id=update.message.chat.id, telegram_id=user__id, name=update.message.from_user.name)
+        db_sess.add(user)
+        db_sess.commit()
+        db_sess = db_session.create_session()
+        statistic = Statistic(user_id=db_sess.query(User).filter(User.telegram_id == user__id).first().id)
+        db_sess.add(statistic)
+    db_sess.commit()
+
+
+def total_msg_func(update, msg_format="text"):
+    db_sess = db_session.create_session()
+    put_to_db(update)
+    id_user = db_sess.query(User).filter(User.telegram_id == update.message.from_user.id).first().id
+    user = db_sess.query(Statistic).filter(Statistic.user_id == id_user).first()
+    if msg_format == "text":
+        user.total_len += len("".join(update.message.text.split()))
+        user.total_msgs += 1
+    else:
+        user.total_seconds += datetime.timedelta(seconds=update.message.voice.duration)
+        user.total_voices += 1
+    big_data = Big_data(user_id=user.user_id)
+    db_sess.add(big_data)
+    db_sess.commit()
 
 
 if __name__ == '__main__':
