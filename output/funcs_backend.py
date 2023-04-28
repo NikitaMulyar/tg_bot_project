@@ -2,7 +2,7 @@
 from telegram import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 from bs4 import BeautifulSoup
 import aiohttp
-import asyncio
+import math
 from consts import *
 import openai
 import string
@@ -207,6 +207,47 @@ def total_msg_func(update, msg_format="text"):
     db_sess.add(big_data)
     db_sess.commit()
     db_sess.close()
+
+
+async def get_nearest_metro_station(coords=None, place=None):
+    if place is None:
+        place = await get_address_text(coords)
+    elif coords is None:
+        coords = await get_coords(place)
+    if place == '-1' or coords == -1:
+        return 'Неверно введен адрес.'
+    try:
+        session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
+        url = f'https://geocode-maps.yandex.ru/1.x/?apikey=40d1649f-0493-4b70-98ba-98533de7710b&geocode=' \
+              f'{",".join([str(i) for i in coords][::-1])}&kind=metro&format=json'
+        async with session.get(url) as res:
+            name = await res.json()
+            res.close()
+        await session.close()
+        pos = name['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'].split()
+        pos = [float(i) for i in pos]
+        dist = lonlat_distance(pos, (coords[1], coords[0]))
+        metrost = name['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['name']
+        return f'Ближайшая станция метро рядом с {place}: ' + metrost + f'.\nРасстояние до {metrost}: {int(dist)} метров.'
+    except Exception as e:
+        await session.close()
+        return 'Данные о ближайшей станции отсутствуют.'
+
+
+def lonlat_distance(a, b):
+    degree_to_meters_factor = 111000
+    a_lon, a_lat = a
+    b_lon, b_lat = b
+
+    radians_lattitude = math.radians((a_lat + b_lat) / 2.0)
+    lat_lon_factor = math.cos(radians_lattitude)
+
+    dx = abs(a_lon - b_lon) * degree_to_meters_factor * lat_lon_factor
+    dy = abs(a_lat - b_lat) * degree_to_meters_factor
+
+    distance = math.sqrt(dx * dx + dy * dy)
+
+    return distance
 
 
 if __name__ == '__main__':

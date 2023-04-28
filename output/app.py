@@ -157,7 +157,6 @@ class MapRoute:
             return 3
 
     async def address_loc(self, update, context):
-        total_msg_func(update)
         user_location = update.message.location
         context.user_data['geopos'] = {'from': (user_location.latitude, user_location.longitude)}
         reply_markup = await choose_way()
@@ -240,13 +239,24 @@ class MapRoute:
 
 class MainSettings:
     async def help(self, update, context):
-        pass
+        await bot.send_message(update.message.chat.id,
+                               prepare_for_markdown("Если у вас возникли какие-либо вопросы, "
+                               "пишите одному из админов: @delikatny_pon, @Matthew_Davidyan или "
+                               "обратитесь к документации: ", spoiler=False) + f"[Документация]({prepare_for_markdown('https://telegra.ph/Kak-polzovatsya-botom-Velikij-Guru-opisanie-komand-04-16', spoiler=False)})",
+                               parse_mode="MarkdownV2")
 
     async def about(self, update, context):
-        pass
+        await bot.send_message(update.message.chat.id,
+                               """
+Не каждый может позволить себе телеграм-премиум. Но бывает очень неудобно слушать аудио: в общественных или очень тихих местах... А кому-то лень читать большие сообщения, и он просто хочет послушать голосом!\n
+Telegram Premium (цены):\n
+2000 рублей/год\n
+Наш бот по распознаванию и синтезу голоса: бесплатно\n
+Есть вопросы?
+                               """)
 
     async def report(self, update, context):
-        pass
+        await bot.send_message(update.message.chat.id, f"Скоро!")
 
 
 class GameTowns:
@@ -399,18 +409,19 @@ class Stats:
             if last is None:
                 last = i.start_date
                 continue
-            if i.start_date - last >= timedelta(minutes=3):
-                if dur_curr.total_seconds() != 0:
+            if i.start_date - last >= timedelta(minutes=5):
+                if dur_curr.total_seconds() >= 0:
                     total += 1
                     durs.append(dur_curr.total_seconds())
                 dur_curr = timedelta(minutes=0)
             else:
                 dur_curr += i.start_date - last
             last = i.start_date
-        if i.start_date - last >= timedelta(minutes=3):
-            if dur_curr.total_seconds() != 0:
+        if i.start_date - last >= timedelta(minutes=5):
+            if dur_curr.total_seconds() >= 0:
                 total += 1
                 durs.append(dur_curr.total_seconds())
+        print(durs)
         return durs, total if total else 1
 
     def make_pic(self, dau_text, dau_voice, user_id):
@@ -454,6 +465,10 @@ class Stats:
         return df
 
     async def send_msg_user_stat(self, update, context):
+        total_msg_func(update)
+        if context.user_data.get('in_conversation'):
+            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            return ConversationHandler.END
         user_id = update.message.from_user.id
         db_sess = db_session.create_session()
         res = db_sess.query(User).filter(User.telegram_id == user_id).first()
@@ -470,10 +485,14 @@ class Stats:
             f'Число воисов: {types_total.get("voice", 0)}\nСуммарная длина сообщений: ' \
             f'{int(res.stat[0].total_len)} символов\nСуммарная продолжительность воисов: ' \
             f'{int(res.stat[0].total_seconds.total_seconds())} секунд\n\n❔Сессия - общение человека с ботом с перерывом' \
-            f' не более 3 минут. Сессии отсчитываются, если было прописано хотя бы 2 сообщения'
+            f' не более 5 минут. Сессии отсчитываются, если было прописано хотя бы 2 сообщения'
         await bot.send_photo(update.message.chat.id, im, caption=s)
 
     async def send_all_stat(self, update, context):
+        total_msg_func(update)
+        if context.user_data.get('in_conversation'):
+            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            return ConversationHandler.END
         res = self.get_all_stat().to_dict('index')
         s = "🏆ТОП пользователей🏆\n\n"
         cnt = 1
@@ -482,6 +501,63 @@ class Stats:
                  f"{int(res[i]['total_len'])} символов\nСумм. продолж. воисов: {int(res[i]['total_seconds'])} секунд\n\n"
             cnt += 1
         await bot.send_message(update.message.chat.id, s)
+
+
+class NearStation:
+    async def start(self, update, context):
+        total_msg_func(update)
+        if context.user_data.get('in_conversation'):
+            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            return ConversationHandler.END
+        context.user_data['in_conversation'] = True
+        reply_markup = await choose_way()
+        if context.user_data.get('voice') is None:
+            context.user_data['voice'] = 'alena'
+        await update.message.reply_text(
+            'Привет. Чтобы узнать название станции метро поблизости, выбери, как ты пришлешь адрес:',
+            reply_markup=reply_markup)
+        return 1
+
+    async def from_address(self, update, context):
+        query = update.callback_query
+        await query.answer()
+        num = query.data
+        chat = query.message.chat.id
+        if num == '1':
+            await query.edit_message_text(text="Выбранный способ: Геопозицией")
+            kbrd = await location_kbrd()
+            await bot.send_message(chat, 'Что ж, тогда присылай геопозицию.', reply_markup=kbrd)
+            return 2
+        else:
+            await query.edit_message_text(text="Выбранный способ: Текстом (напишу адрес)")
+            await bot.send_message(chat,
+                                   'Что ж, тогда пиши адрес места.')
+            return 3
+
+    async def address_loc(self, update, context):
+        user_location = update.message.location
+        context.user_data['metro'] = {'coords': (user_location.latitude, user_location.longitude)}
+        res = await get_nearest_metro_station(coords=context.user_data['metro']['coords'], place=None)
+        await bot.send_message(update.message.chat.id, prepare_for_markdown(res),
+                               reply_markup=ReplyKeyboardRemove(), parse_mode='MarkdownV2')
+        await bot.send_voice(update.message.chat.id, await get_audio(res, context.user_data['voice']))
+        context.user_data['in_conversation'] = False
+        return ConversationHandler.END
+
+    async def address_name(self, update, context):
+        total_msg_func(update)
+        context.user_data['metro'] = {'place': update.message.text}
+        res = await get_nearest_metro_station(place=context.user_data['metro']['place'], coords=None)
+        await bot.send_message(update.message.chat.id, prepare_for_markdown(res),
+                               reply_markup=ReplyKeyboardRemove(), parse_mode='MarkdownV2')
+        await bot.send_voice(update.message.chat.id, await get_audio(res, context.user_data['voice']))
+        context.user_data['in_conversation'] = False
+        return ConversationHandler.END
+
+    async def stop(self, update, context):
+        await bot.send_message(update.message.chat.id, 'Возвращайся!', reply_markup=ReplyKeyboardRemove())
+        context.user_data['in_conversation'] = False
+        return ConversationHandler.END
 
 
 async def send_news(update, context):
@@ -522,6 +598,8 @@ def main():
     game_towns = GameTowns()
     ai_dialog = ChatGPTDialog()
     stats = Stats()
+    station = NearStation()
+    settings = MainSettings()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start_dialog', dialog.start_dialog)],
@@ -566,12 +644,24 @@ def main():
         },
         fallbacks=[CommandHandler('stop_ai', ai_dialog.stop_ai)], block=True, conversation_timeout=60
     )
+    nearest_station_conv = ConversationHandler(
+        entry_points=[CommandHandler('metro', station.start)],
+        states={
+            1: [CallbackQueryHandler(station.from_address)],
+            2: [MessageHandler(filters.LOCATION, station.address_loc)],
+            3: [MessageHandler(filters.TEXT & ~filters.COMMAND, station.address_name)]
+        },
+        fallbacks=[CommandHandler('stop_metro', station.stop)], block=True,
+        conversation_timeout=60
+    )
     application.add_handlers(handlers={
         1: [conv_handler], 2: [navigator_dialog], 3: [config_voice_handler], 4: [game_towns_conv],
         5: [ai_dialog_conv], 6: [CommandHandler('anecdot', send_anecdot)],
         7: [CommandHandler('news', send_news)],
         8: [CommandHandler('profile', stats.send_msg_user_stat)],
-        9: [CommandHandler('stat', stats.send_all_stat)]
+        9: [CommandHandler('stat', stats.send_all_stat)],
+        10: [nearest_station_conv], 11: [CommandHandler('about', settings.about)],
+        12: [CommandHandler('help', settings.help)], 13: [CommandHandler('report', settings.report)]
     })
 
     application.run_polling()
