@@ -421,7 +421,6 @@ class Stats:
             if dur_curr.total_seconds() >= 0:
                 total += 1
                 durs.append(dur_curr.total_seconds())
-        print(durs)
         return durs, total if total else 1
 
     def make_pic(self, dau_text, dau_voice, user_id):
