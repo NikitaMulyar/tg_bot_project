@@ -1,14 +1,10 @@
-2023-04-28 19:30:23,431 - telegram.ext._application - INFO - Application started
-2023-04-28 19:31:02,352 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
-    self.dialect.do_execute(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\engine\default.py", line 748, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.IntegrityError: UNIQUE constraint failed: big_data.user_id
-
-The above exception was the direct cause of the following exception:
-
+2023-04-28 22:50:41,337 - telegram.ext._application - INFO - Application started
+2023-04-28 22:50:43,604 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001EBC4677B50>
+2023-04-28 22:50:43,604 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x000001EBC44DFCA0>, 1244682.546)]']
+connector: <aiohttp.connector.TCPConnector object at 0x000001EBC4677A60>
+2023-04-28 22:50:49,189 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
 Traceback (most recent call last):
   File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_application.py", line 1115, in process_update
     await coroutine
@@ -16,482 +12,372 @@ Traceback (most recent call last):
     new_state: object = await handler.handle_update(
   File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_handler.py", line 141, in handle_update
     return await self.callback(update, context)
-  File "C:\Users\matve\Desktop\tg_bot_project\output\app.py", line 111, in send_stt_msg_dialog
-    total_msg_func(update, msg_format="voice")
-  File "C:\Users\matve\Desktop\tg_bot_project\output\funcs_backend.py", line 213, in total_msg_func
-    db_sess.commit()
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1903, in commit
-    trans.commit(_to_root=True)
-  File "<string>", line 2, in commit
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
-    ret_value = fn(self, *arg, **kw)
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1218, in commit
-    self._prepare_impl()
-  File "<string>", line 2, in _prepare_impl
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
-    ret_value = fn(self, *arg, **kw)
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1193, in _prepare_impl
-    self.session.flush()
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4155, in flush
-    self._flush(objects)
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4292, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
-    raise exc_value.with_traceback(exc_tb)
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4252, in _flush
-    flush_context.execute()
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 467, in execute
-    rec.execute(self)
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 644, in execute
-    util.preloaded.orm_persistence.save_obj(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
-    _emit_insert_statements(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1020, in _emit_insert_statements
-    result = connection.execute(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1414, in execute
-    return meth(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 486, in _execute_on_connection
-    return connection._execute_clauseelement(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
-    ret = self._execute_context(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
-    return self._exec_single_context(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
-    self._handle_dbapi_exception(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2326, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
-    self.dialect.do_execute(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\sqlalchemy\engine\default.py", line 748, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: big_data.user_id
-[SQL: INSERT INTO big_data (user_id, start_date) VALUES (?, ?)]
-[parameters: (871689175, '2023-04-28 19:31:02.347745')]
-(Background on this error at: https://sqlalche.me/e/20/gkpj)
-2023-04-28 19:31:37,982 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
-2023-04-28 19:31:37,982 - telegram.ext._application - INFO - Application.stop() complete
-2023-04-28 19:32:16,148 - telegram.ext._application - INFO - Application started
-2023-04-28 19:32:31,166 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:31,166 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+  File "C:\Users\matve\Desktop\tg_bot_project\output\app.py", line 410, in send_news
+    chat_id = update.message.chat.id
+AttributeError: 'NoneType' object has no attribute 'chat'
+2023-04-28 22:51:04,337 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-28 22:51:04,338 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-28 22:51:09,500 - telegram.ext._application - INFO - Application started
+2023-04-28 22:51:17,233 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000028F326692B0>
+2023-04-28 22:51:17,233 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x0000028F3260B5E0>, 1244716.203)]']
+connector: <aiohttp.connector.TCPConnector object at 0x0000028F326840D0>
+2023-04-28 22:51:19,004 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000028F327D0070>
+2023-04-28 22:51:19,005 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x0000028F326A6BE0>, 1244717.937)]']
+connector: <aiohttp.connector.TCPConnector object at 0x0000028F32684820>
+2023-04-28 22:51:19,005 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
 Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:36,322 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:36,322 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:41,949 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:41,950 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:47,173 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:47,174 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:52,897 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:52,897 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:58,029 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:32:58,030 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:03,749 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:03,749 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:09,404 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:09,405 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:15,029 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:15,030 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:21,906 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:21,906 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:30,689 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:30,689 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:39,483 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:39,484 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:52,556 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:33:52,556 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:34:11,887 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:34:11,887 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:34:33,227 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:34:33,227 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:35:02,703 - telegram.ext._updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:35:02,704 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 607, in _network_loop_retry
-    if not await action_cb():
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 335, in polling_action_cb
-    raise exc
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_updater.py", line 320, in polling_action_cb
-    updates = await self.bot.get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 530, in get_updates
-    updates = await super().get_updates(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 368, in decorator
-    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 3623, in get_updates
-    await self._post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 456, in _post
-    return await self._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_extbot.py", line 312, in _do_post
-    return await super()._do_post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\_bot.py", line 487, in _do_post
-    return await request.post(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 165, in post
-    result = await self._request_wrapper(
-  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
-    raise Conflict(message)
-telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
-2023-04-28 19:35:04,391 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
-2023-04-28 19:35:04,392 - telegram.ext._application - INFO - Application.stop() complete
-2023-04-28 19:47:06,515 - telegram.ext._application - INFO - Application started
-2023-04-28 19:49:02,622 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
-2023-04-28 19:49:02,622 - telegram.ext._application - INFO - Application.stop() complete
-2023-04-28 19:49:27,581 - telegram.ext._application - INFO - Application started
-2023-04-28 19:50:12,853 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
-2023-04-28 19:50:12,853 - telegram.ext._application - INFO - Application.stop() complete
+  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_application.py", line 1115, in process_update
+    await coroutine
+  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "C:\Users\matve\Desktop\tg_bot_project\venv\lib\site-packages\telegram\ext\_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\matve\Desktop\tg_bot_project\output\app.py", line 414, in send_news
+    await update.message.reply_text(text[1], reply_markup=reply_markup)
+AttributeError: 'NoneType' object has no attribute 'reply_text'
+2023-04-28 22:53:44,903 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-28 22:53:44,903 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-28 22:53:49,418 - telegram.ext._application - INFO - Application started
+2023-04-28 22:53:52,262 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001DC3EDCC580>
+2023-04-28 22:53:52,263 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x000001DC3ED9B400>, 1244871.203)]']
+connector: <aiohttp.connector.TCPConnector object at 0x000001DC3ED34CD0>
+2023-04-28 22:54:46,278 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-28 22:54:46,279 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-28 22:54:50,304 - telegram.ext._application - INFO - Application started
+2023-04-28 22:54:56,593 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000212BE4BC790>
+2023-04-28 22:54:56,594 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000212BE48B460>, 1244935.531)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000212BE423EE0>
+2023-04-28 22:54:58,210 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000212BE4A3640>
+2023-04-28 22:54:58,211 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000212BE4D7E20>, 1244937.156)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000212BE4D5BE0>
+2023-04-28 22:55:14,481 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-28 22:55:14,482 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-28 22:55:19,214 - telegram.ext._application - INFO - Application started
+2023-04-28 22:55:23,207 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-28 22:55:23,208 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-28 22:55:45,064 - telegram.ext._application - INFO - Application started
+2023-04-28 22:55:52,781 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BEDA8D30>
+2023-04-28 22:55:52,782 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEC1C940>, 1244991.734)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEDA8C40>
+2023-04-28 22:55:58,871 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BEFABC40>
+2023-04-28 22:55:58,872 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEFAE340>, 1244997.796)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEDA8700>
+2023-04-28 22:56:01,878 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BEDE05E0>
+2023-04-28 22:56:01,879 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEDA4040>, 1245000.859)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEDE0130>
+2023-04-28 22:56:02,939 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF0BBC40>
+2023-04-28 22:56:02,939 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEFAE400>, 1245001.921)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BED9CF70>
+2023-04-28 22:56:03,973 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF0BE610>
+2023-04-28 22:56:03,973 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEE02220>, 1245002.953)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEDE2820>
+2023-04-28 22:56:05,128 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF1CA400>
+2023-04-28 22:56:05,129 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF0BDDC0>, 1245004.093)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF0BBA60>
+2023-04-28 22:56:06,168 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF2D38E0>
+2023-04-28 22:56:06,168 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF1CCF40>, 1245005.14)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEE25BB0>
+2023-04-28 22:56:07,150 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF1E6B50>
+2023-04-28 22:56:07,151 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF1CC280>, 1245006.14)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEF080D0>
+2023-04-28 22:56:08,291 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF3E92B0>
+2023-04-28 22:56:08,291 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF3EA2E0>, 1245007.265)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF1C88B0>
+2023-04-28 22:56:11,401 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF4F4940>
+2023-04-28 22:56:11,401 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF4F8340>, 1245010.359)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF1E4670>
+2023-04-28 22:56:37,344 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF490400>
+2023-04-28 22:56:37,345 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF3EA4C0>, 1245036.328)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF490460>
+2023-04-28 22:56:43,623 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF60E8B0>
+2023-04-28 22:56:43,624 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF605460>, 1245042.609)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF48BE80>
+2023-04-28 22:56:47,143 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF6111C0>
+2023-04-28 22:56:47,144 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF625460>, 1245046.125)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF47F310>
+2023-04-28 22:56:48,173 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF71E8B0>
+2023-04-28 22:56:48,173 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF6050A0>, 1245047.156)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF47F400>
+2023-04-28 22:56:49,276 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF82C790>
+2023-04-28 22:56:49,277 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF7344C0>, 1245048.25)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF626040>
+2023-04-28 22:56:50,561 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF82D0D0>
+2023-04-28 22:56:50,561 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF86A520>, 1245049.531)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF82B790>
+2023-04-28 22:56:51,902 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF626070>
+2023-04-28 22:56:51,903 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF86A100>, 1245050.89)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF4F59D0>
+2023-04-28 22:56:52,883 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BFA4C580>
+2023-04-28 22:56:52,884 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF9535E0>, 1245051.859)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF939B50>
+2023-04-28 22:56:54,157 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF9F76A0>
+2023-04-28 22:56:54,157 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF953700>, 1245053.046)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF82B760>
+2023-04-28 22:56:55,041 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF9EB0D0>
+2023-04-28 22:56:55,042 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF86AEE0>, 1245054.015)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF9F16A0>
+2023-04-28 22:57:00,155 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF1E6130>
+2023-04-28 22:57:00,156 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF605D60>, 1245059.14)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF9334F0>
+2023-04-28 22:57:17,917 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF6265E0>
+2023-04-28 22:57:17,917 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF86A9A0>, 1245076.906)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF3D9DF0>
+2023-04-28 22:58:13,526 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BEFA3820>
+2023-04-28 22:58:13,526 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF3EA7C0>, 1245132.515)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF3D9100>
+2023-04-28 22:58:14,578 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF40D5E0>
+2023-04-28 22:58:14,579 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF1CC9A0>, 1245133.562)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEF50EB0>
+2023-04-28 22:58:15,542 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF211670>
+2023-04-28 22:58:15,542 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF1CC940>, 1245134.515)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF492B80>
+2023-04-28 22:58:16,417 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF2CDD30>
+2023-04-28 22:58:16,417 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF2D8520>, 1245135.39)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEF50580>
+2023-04-28 22:58:17,218 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF88E400>
+2023-04-28 22:58:17,219 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEDA46A0>, 1245136.187)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF408250>
+2023-04-28 22:58:21,112 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF2CBD30>
+2023-04-28 22:58:21,113 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEDA4B80>, 1245140.078)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF886340>
+2023-04-28 22:58:22,752 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BEE9CB20>
+2023-04-28 22:58:22,752 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEF1FCA0>, 1245141.734)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF2894C0>
+2023-04-28 22:58:23,814 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF8A1280>
+2023-04-28 22:58:23,814 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BFA794C0>, 1245142.796)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF6265E0>
+2023-04-28 22:58:25,019 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF056370>
+2023-04-28 22:58:25,019 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF3EAA00>, 1245143.984)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEE990D0>
+2023-04-28 22:58:49,483 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF05F7C0>
+2023-04-28 22:58:49,483 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEFAE760>, 1245168.468)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF050340>
+2023-04-28 22:58:50,819 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF6ABAC0>
+2023-04-28 22:58:50,820 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEFAED00>, 1245169.796)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF8A1700>
+2023-04-28 22:58:51,915 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF01FB80>
+2023-04-28 22:58:51,915 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEDA4A00>, 1245170.89)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF11CDC0>
+2023-04-28 22:58:53,475 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF37E340>
+2023-04-28 22:58:53,476 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF6C2400>, 1245172.453)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF6AB880>
+2023-04-28 22:59:00,736 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF433940>
+2023-04-28 22:59:00,737 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF432460>, 1245179.656)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF37CA60>
+2023-04-28 22:59:01,917 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF050D60>
+2023-04-28 22:59:01,918 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF6C2B20>, 1245180.89)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF335790>
+2023-04-28 22:59:02,980 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BEFA7850>
+2023-04-28 22:59:02,980 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEFAEAC0>, 1245181.968)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF056B20>
+2023-04-28 23:03:32,610 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF2CB7F0>
+2023-04-28 23:03:32,610 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEFAE520>, 1245451.593)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF886C10>
+2023-04-28 23:03:34,037 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF48B550>
+2023-04-28 23:03:34,038 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEDA4460>, 1245453.015)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BED68610>
+2023-04-28 23:03:35,162 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF48BEE0>
+2023-04-28 23:03:35,163 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF1CCB20>, 1245454.14)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF1C89A0>
+2023-04-28 23:03:35,995 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF2CE1C0>
+2023-04-28 23:03:35,995 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF1CC880>, 1245454.984)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF2BAE80>
+2023-04-28 23:03:37,211 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BEE0E700>
+2023-04-28 23:03:37,211 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF1CC940>, 1245456.171)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF2CECD0>
+2023-04-28 23:03:38,321 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF63CDC0>
+2023-04-28 23:03:38,322 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF3EA160>, 1245457.296)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEDBAB80>
+2023-04-28 23:03:39,786 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF897490>
+2023-04-28 23:03:39,787 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BFA793A0>, 1245458.765)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF05F2B0>
+2023-04-28 23:03:40,970 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF1794C0>
+2023-04-28 23:03:40,971 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF3EACA0>, 1245459.921)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF63CAF0>
+2023-04-28 23:03:42,067 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF92CB50>
+2023-04-28 23:03:42,068 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF432AC0>, 1245461.046)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF1C8880>
+2023-04-28 23:03:43,161 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BFA39BB0>
+2023-04-28 23:03:43,161 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF2D8160>, 1245462.14)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF2CE370>
+2023-04-28 23:03:44,201 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF8F2370>
+2023-04-28 23:03:44,201 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF920B80>, 1245463.187)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF92C910>
+2023-04-28 23:03:45,182 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF91C850>
+2023-04-28 23:03:45,182 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF920940>, 1245464.156)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BFA39A00>
+2023-04-28 23:03:46,191 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF12DB20>
+2023-04-28 23:03:46,192 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BFA8F700>, 1245465.171)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BFADC970>
+2023-04-28 23:03:47,217 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF77F1F0>
+2023-04-28 23:03:47,217 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BFAC4A00>, 1245466.203)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF91C460>
+2023-04-28 23:03:48,278 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BFB8E880>
+2023-04-28 23:03:48,279 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF783B20>, 1245467.203)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF771D60>
+2023-04-28 23:03:49,429 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BFB8B940>
+2023-04-28 23:03:49,430 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF920F40>, 1245468.406)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF77E400>
+2023-04-28 23:03:51,460 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF48B7F0>
+2023-04-28 23:03:51,461 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF920880>, 1245470.437)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF172940>
+2023-04-28 23:03:51,956 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF490370>
+2023-04-28 23:03:51,956 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF920940>, 1245470.937)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BFB8B910>
+2023-04-28 23:03:53,706 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF6AB4C0>
+2023-04-28 23:03:53,706 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BFA79B20>, 1245472.687)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF2D30D0>
+2023-04-28 23:03:54,872 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF335A60>
+2023-04-28 23:03:54,873 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF1CC760>, 1245473.859)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BEE25AC0>
+2023-04-28 23:03:56,201 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF1C8970>
+2023-04-28 23:03:56,202 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF1CC6A0>, 1245475.187)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF6AB6D0>
+2023-04-28 23:03:57,305 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF02B880>
+2023-04-28 23:03:57,306 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BF2D8700>, 1245476.281)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF6366D0>
+2023-04-28 23:03:58,392 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF639A60>
+2023-04-28 23:03:58,393 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BEDA4460>, 1245477.375)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF36E6A0>
+2023-04-28 23:03:59,610 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000287BF17F700>
+2023-04-28 23:03:59,611 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x00000287BFA79760>, 1245478.562)]']
+connector: <aiohttp.connector.TCPConnector object at 0x00000287BF02B970>
+2023-04-28 23:08:17,979 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-28 23:08:17,980 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-28 23:09:51,465 - telegram.ext._application - INFO - Application started
+2023-04-28 23:09:54,044 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-28 23:09:54,044 - telegram.ext._application - INFO - Application.stop() complete

@@ -386,17 +386,46 @@ class ChatGPTDialog:
         return ConversationHandler.END
 
 
-async def send_news(update, context):
-    total_msg_func(update)
-    if context.user_data.get('in_conversation'):
-        await update.message.reply_text('Для начала выйди из предыдущего диалога.')
-        return
-    chat = update.message.chat.id
-    news = random.sample(await get_news_list(), k=3)
-    text = '\n'.join([i[0] + '...' for i in news])
-    md_text = '\n'.join(f'[{prepare_for_markdown(i[0], spoiler=False)}]({i[1]})' for i in news)
-    await update.message.reply_text(md_text, parse_mode='MarkdownV2')
-    await bot.send_voice(chat, await get_audio(text, context.user_data['voice']))
+# async def send_news(update, context):
+#     total_msg_func(update)
+#     if context.user_data.get('in_conversation'):
+#         await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+#         return
+#     chat = update.message.chat.id
+#     news = random.sample(await get_news_list(), k=3)
+#     text = '\n'.join([i[0] + '...' for i in news])
+#     md_text = '\n'.join(f'[{prepare_for_markdown(i[0], spoiler=False)}]({i[1]})' for i in news)
+#     await update.message.reply_text(md_text, parse_mode='MarkdownV2')
+#     await bot.send_voice(chat, await get_audio(text, context.user_data['voice']))
+
+class News:
+    def __init__(self):
+        self.count = 0
+        self.maximum = 30
+
+    async def send_news(self, update, context):
+        if context.user_data.get('in_conversation'):
+            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            return
+        text = (await get_news_list())[self.count % self.maximum]
+        self.count += 1
+        keyboard = [[InlineKeyboardButton("Следующую", callback_data="1")]]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        await update.message.reply_text(text[1], reply_markup=reply_markup)
+        return 1
+
+    async def send_news_new(self, update, context):
+        query = update.callback_query
+        await query.answer()
+        text = (await get_news_list())[self.count % self.maximum]
+        self.count += 1
+        keyboard = [[InlineKeyboardButton("Следующую", callback_data="1")]]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        await query.edit_message_text(text[1], reply_markup=reply_markup)
+        return 1
+
+    async def end_new(self, update, context):
+        return ConversationHandler.END
 
 
 async def send_anecdot(update, context):
@@ -423,6 +452,7 @@ def main():
     voice_config_start = ConfigVoice()
     game_towns = GameTowns()
     ai_dialog = ChatGPTDialog()
+    news_dialog = News()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start_dialog', dialog.start_dialog)],
@@ -467,11 +497,20 @@ def main():
         },
         fallbacks=[CommandHandler('stop_ai', ai_dialog.stop_ai)], block=True, conversation_timeout=60
     )
+
+    news_dialog_handler = ConversationHandler(
+        entry_points=[CommandHandler("news", news_dialog.send_news)],
+        states={
+            1: [CallbackQueryHandler(news_dialog.send_news_new)]
+        },
+        fallbacks=[CommandHandler('end_news', news_dialog.end_new)], block=True, conversation_timeout=60
+    )
     application.add_handlers(handlers={
         1: [conv_handler], 2: [navigator_dialog], 3: [config_voice_handler], 4: [game_towns_conv],
         5: [ai_dialog_conv], 6: [CommandHandler('anecdot', send_anecdot)],
-        7: [CommandHandler('news', send_news)]
-    })
+        7: [news_dialog_handler]
+    }
+    )
 
     application.run_polling()
 

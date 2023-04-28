@@ -175,9 +175,12 @@ async def get_news_list():
     sp = BeautifulSoup(page, 'html.parser')
     arr = []
     for i in sp.find_all('a', class_='styles_root__2aHN8 styles_l__3AE69 styles_news__15P0n'):
-        name = i.get_text('###').split('###')[-2] + '\n'
+        tmp = i.get_text('###').split('###')
+        themes = "🔥 " + " ".join([f"#{el.replace(' ', '_')}" for el in tmp[:-2]]) + "\n\n"
+        name = "⚡ " + tmp[-2] + "\n\n"
+        time = "🕜 " + tmp[-1]
         link = 'https://life.ru' + i.get('href')
-        arr.append((name, link))
+        arr.append((name, f"{themes+name+time}\nПодробнее 👉{link}"))
     return arr
 
 
