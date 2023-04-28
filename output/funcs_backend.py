@@ -114,13 +114,7 @@ async def get_map(a, b):
         "l": "map",
         "pt": "~".join([f"{a[1]},{a[0]},pm2am", f"{b[1]},{b[0]},pm2bm"])
     }
-    print("~".join([f"{a[1]},{a[0]},pm2am", f"{b[1]},{b[0]},pm2bm"]))
-    import requests
-    try:
-        image = requests.get(URL_MAPS, params=map_params).content
-        return image
-    except Exception:
-        return -1
+
     session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
     try:
         async with session.get(URL_MAPS, params=map_params) as res:
@@ -196,6 +190,7 @@ def put_to_db(update):
         statistic = Statistic(user_id=user__id)
         db_sess.add(statistic)
     db_sess.commit()
+    db_sess.close()
 
 
 def total_msg_func(update, msg_format="text"):
@@ -211,6 +206,7 @@ def total_msg_func(update, msg_format="text"):
     big_data = Big_data(user_id=user.user_id, type=msg_format)
     db_sess.add(big_data)
     db_sess.commit()
+    db_sess.close()
 
 
 if __name__ == '__main__':

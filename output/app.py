@@ -1,10 +1,12 @@
 import logging
 import random
 
+import pandas as pd
+from matplotlib import pyplot as plt
+import pandas
 from telegram import Bot, ReplyKeyboardRemove
 from telegram.ext import Application, MessageHandler, filters, CommandHandler, ConversationHandler, \
     CallbackQueryHandler
-
 from config import BOT_TOKEN
 from funcs_backend import *
 from yandex_cloud import *
@@ -13,6 +15,7 @@ from data import db_session
 from data.users import User
 from data.big_data import Big_data
 from data.statistics import Statistic
+from datetime import datetime, timedelta
 
 openai.api_key = AI_KEY
 
@@ -386,6 +389,101 @@ class ChatGPTDialog:
         return ConversationHandler.END
 
 
+class Stats:
+    def get_sessions(self, data):
+        total = 0
+        durs = []
+        last = None
+        dur_curr = timedelta(minutes=0)
+        for i in data:
+            if last is None:
+                last = i.start_date
+                continue
+            if i.start_date - last >= timedelta(minutes=3):
+                if dur_curr.total_seconds() != 0:
+                    total += 1
+                    durs.append(dur_curr.total_seconds())
+                dur_curr = timedelta(minutes=0)
+            else:
+                dur_curr += i.start_date - last
+            last = i.start_date
+        if i.start_date - last >= timedelta(minutes=3):
+            if dur_curr.total_seconds() != 0:
+                total += 1
+                durs.append(dur_curr.total_seconds())
+        return durs, total if total else 1
+
+    def make_pic(self, dau_text, dau_voice, user_id):
+        if len(dau_text.index):
+            plt.bar(dau_text.index, dau_text.values, width=0.3, label='Текстовые', color="#005da8")
+        if len(dau_voice.index):
+            plt.bar(dau_voice.index, dau_voice.values, width=0.3, label='Воисы', color="#4CAF50")
+        plt.title('Статистика кол-ва сообщений по дням')
+        plt.legend()
+        plt.savefig(f'out/{user_id}_stat.png')
+        plt.close('all')
+
+    def get_user_stat(self, user_id, res, user=True):
+        df = pandas.DataFrame({"msg_type": [i.type for i in res.messages],
+                               "send_time": [i.start_date for i in res.messages]})
+        df['day'] = df['send_time'].dt.strftime('%Y-%m-%d')
+        dau_text = df[df['msg_type'] == 'text']
+        dau_text = dau_text.groupby('day')['msg_type'].count()
+        dau_voice = df[df['msg_type'] == 'voice']
+        dau_voice = dau_voice.groupby('day')['msg_type'].count()
+        if user:
+            self.make_pic(dau_text, dau_voice, user_id)
+        total_types = df.groupby('msg_type')['send_time'].count()
+        sessions = self.get_sessions(res.messages)
+        days_act = len(df.groupby('day'))
+        return total_types.to_dict(), sessions, days_act
+
+    def get_all_stat(self):
+        db_sess = db_session.create_session()
+        res = db_sess.query(User).all()
+        df = pd.DataFrame({"ind": [], 'name': [], 'total_len': [], 'total_seconds': [], 'daily_act': []})
+        cnt = 0
+        for user in res:
+            df2 = pd.DataFrame({"ind": [cnt], 'name': [user.name], 'total_len': [user.stat[0].total_len],
+                                'total_seconds': [user.stat[0].total_seconds.total_seconds()],
+                                'daily_act': [self.get_user_stat(user.telegram_id, user,
+                                                                 user=False)[-1]]})
+            cnt += 1
+            df = df.append(df2)
+        df = df.sort_values(by=['daily_act', 'total_len', 'total_seconds'], ascending=False)[:10].set_index("name")
+        return df
+
+    async def send_msg_user_stat(self, update, context):
+        user_id = update.message.from_user.id
+        db_sess = db_session.create_session()
+        res = db_sess.query(User).filter(User.telegram_id == user_id).first()
+        types_total, sessions, days_act = self.get_user_stat(user_id, res)
+        im = open(f'out/{user_id}_stat.png', mode='rb')
+        try:
+            r = f'{int(sum(sessions[0]) / len(sessions[0]))} секунд'
+        except Exception:
+            r = 'Нет данных'
+        s = f'📊 Ваша статистика 📊\nДней активности: {days_act}\n==========\n' \
+            f'Число сессий: {sessions[1]}\nСредняя продолжительность сессии: ' \
+            f'{r}\n==========\nОбщее число сообщений: ' \
+            f'{int(sum(types_total.values()))}\nЧисло текстовых сообщений: {int(types_total.get("text", 0))}\n' \
+            f'Число воисов: {types_total.get("voice", 0)}\nСуммарная длина сообщений: ' \
+            f'{int(res.stat[0].total_len)} символов\nСуммарная продолжительность воисов: ' \
+            f'{int(res.stat[0].total_seconds.total_seconds())} секунд\n\n❔Сессия - общение человека с ботом с перерывом' \
+            f' не более 3 минут. Сессии отсчитываются, если было прописано хотя бы 2 сообщения'
+        await bot.send_photo(update.message.chat.id, im, caption=s)
+
+    async def send_all_stat(self, update, context):
+        res = self.get_all_stat().to_dict('index')
+        s = "🏆ТОП пользователей🏆\n\n"
+        cnt = 1
+        for i in res:
+            s += f"{cnt}. {i}\nКол-во активных дней: {int(res[i]['daily_act'])}\nСумм. длина сообщ.: " \
+                 f"{int(res[i]['total_len'])} символов\nСумм. продолж. воисов: {int(res[i]['total_seconds'])} секунд\n\n"
+            cnt += 1
+        await bot.send_message(update.message.chat.id, s)
+
+
 async def send_news(update, context):
     total_msg_func(update)
     if context.user_data.get('in_conversation'):
@@ -423,6 +521,7 @@ def main():
     voice_config_start = ConfigVoice()
     game_towns = GameTowns()
     ai_dialog = ChatGPTDialog()
+    stats = Stats()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start_dialog', dialog.start_dialog)],
@@ -470,7 +569,9 @@ def main():
     application.add_handlers(handlers={
         1: [conv_handler], 2: [navigator_dialog], 3: [config_voice_handler], 4: [game_towns_conv],
         5: [ai_dialog_conv], 6: [CommandHandler('anecdot', send_anecdot)],
-        7: [CommandHandler('news', send_news)]
+        7: [CommandHandler('news', send_news)],
+        8: [CommandHandler('profile', stats.send_msg_user_stat)],
+        9: [CommandHandler('stat', stats.send_all_stat)]
     })
 
     application.run_polling()
