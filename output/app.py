@@ -224,11 +224,8 @@ class MapRoute:
             audio = await get_audio(text, context.user_data['voice'])
             await bot.send_photo(chat, res[1])
             text = f'Путь от {name_from} до {name_to}.\n'
-            emoji = ''
-            if 'автомоб' in i[0]:
-                emoji
             text += "\n".join(
-                [i[0] + ': ' + i[1][0] + ' (' + ", ".join(i[1][1:]) + ')' for i in res[0]])
+                [self.choose_emoji(i[0]) + i[0] + ': ' + i[1][0] + ' (' + ", ".join(i[1][1:]) + ')' for i in res[0]])
             await bot.send_message(chat, text, reply_markup=ReplyKeyboardRemove())
             await bot.send_voice(chat, audio)
         return ConversationHandler.END
@@ -239,6 +236,23 @@ class MapRoute:
         await update.message.reply_text('Ну раз не хочешь, ну и ладно!',
                                         reply_markup=ReplyKeyboardRemove())
         return ConversationHandler.END
+
+    def choose_emoji(self, txt):
+        txt = txt.lower()
+        emoji = ''
+        if 'автомоб' in txt:
+            emoji = '🚗 '
+        elif 'транспорт' in txt:
+            emoji = '🚌 '
+        elif 'такс' in txt:
+            emoji = '🚕 '
+        elif 'пешк' in txt:
+            emoji = '🚶🏼 '
+        elif 'велосип' in txt:
+            emoji = '🚲 '
+        elif 'самок' in txt:
+            emoji = '🛴 '
+        return emoji
 
 
 class MainSettings:
@@ -261,7 +275,40 @@ Telegram Premium (цены):\n
                                """)
 
     async def report(self, update, context):
-        await bot.send_message(update.message.chat.id, f"Скоро!")
+        await bot.send_message(update.message.chat.id, f"Опишите проблему. Если необходимо, "
+                                                       f"приложите файлы и/или скриншоты с местом, где бот перестал отвечать и какие "
+                                                       f"сообщения были до этого (2-3).\nЕсли вы передумали отправлять репорт, "
+                                                       f"пропишите команду: /stop_report")
+        if 'report_id' not in context.user_data:
+            context.user_data['report_id'] = 1
+        return 1
+
+    async def report_forward_msg(self, update, context):
+        chat = update.message.chat.id
+        name = update.message.from_user.name
+        await bot.send_message(ADMIN_CHAT, f'Репорт #{context.user_data["report_id"]} от {name}:')
+        await bot.forward_message(ADMIN_CHAT, chat, update.message.id)
+        await bot.send_message(chat, '📢 Репорт отправлен!')
+        if not context.bot_data.get(name):
+            context.bot_data[name] = {'chat': chat, 'msg':
+                {context.user_data['report_id']: update.message.id}}
+        else:
+            context.bot_data[name]['msg'][context.user_data['report_id']] = update.message.id
+        context.user_data['report_id'] += 1
+        return ConversationHandler.END
+
+    async def stop_report(self, update, context):
+        await bot.send_message(update.message.chat.id, 'Отправка репорта была отменена.')
+        return ConversationHandler.END
+
+    async def answer(self, update, context):
+        args = context.args
+        if len(args) == 0:
+            await update.message.reply_text('Формат ответа: /answer <@name> <Report ID>\\n\n<Text>')
+            return
+        ans = ' '.join(args[2:])
+        await bot.send_message(context.bot_data[args[0]]['chat'], f"❗️Ответ на репорт #{args[1]}:\n{ans}",
+                               reply_to_message_id=context.bot_data[args[0]]['msg'][int(args[1])])
 
 
 class GameTowns:
@@ -838,6 +885,13 @@ def main():
         fallbacks=[CommandHandler('stop_metro', station.stop)], block=True,
         conversation_timeout=60
     )
+    report_conv = ConversationHandler(
+        entry_points=[CommandHandler('report', settings.report)],
+        states={
+            1: [MessageHandler(filters.ALL & ~filters.COMMAND, settings.report_forward_msg)]
+        },
+        fallbacks=[CommandHandler('stop_report', settings.stop_report)]
+    )
     application.add_handlers(handlers={
         1: [conv_handler], 2: [navigator_dialog], 3: [config_voice_handler], 4: [game_towns_conv],
         5: [ai_dialog_conv], 6: [CommandHandler('anecdot', send_anecdot)],
@@ -845,7 +899,8 @@ def main():
         8: [CommandHandler('profile', stats.send_msg_user_stat)],
         9: [CommandHandler('stat', stats.send_all_stat)],
         10: [nearest_station_conv], 11: [CommandHandler('about', settings.about)],
-        12: [CommandHandler('help', settings.help)], 13: [CommandHandler('report', settings.report)]
+        12: [CommandHandler('help', settings.help)],
+        15: [CommandHandler('answer', settings.answer)], 16: [report_conv]
     }
     )
 

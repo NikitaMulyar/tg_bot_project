@@ -28,3 +28,5 @@ STOP_AI = "/stop_ai"
 STOP_NEWS = "/stop_news"
 STOP_WEATHER = "/stop_pogoda"
 STOP_METRO = "/stop_metro"
+
+ADMIN_CHAT = -818598815
