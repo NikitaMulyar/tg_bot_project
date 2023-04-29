@@ -242,8 +242,9 @@ class MainSettings:
     async def help(self, update, context):
         await bot.send_message(update.message.chat.id,
                                prepare_for_markdown("Если у вас возникли какие-либо вопросы, "
-                               "пишите одному из админов: @delikatny_pon, @Matthew_Davidyan или "
-                               "обратитесь к документации: ", spoiler=False) + f"[Документация]({prepare_for_markdown('https://telegra.ph/Kak-polzovatsya-botom-Velikij-Guru-opisanie-komand-04-16', spoiler=False)})",
+                                                    "пишите одному из админов: @delikatny_pon, @Matthew_Davidyan или "
+                                                    "обратитесь к документации: ",
+                                                    spoiler=False) + f"[Документация]({prepare_for_markdown('https://telegra.ph/Kak-polzovatsya-botom-Velikij-Guru-opisanie-komand-04-16', spoiler=False)})",
                                parse_mode="MarkdownV2")
 
     async def about(self, update, context):
@@ -419,7 +420,7 @@ class News:
 
         chat = update.message.chat.id
         context.user_data['in_conversation'] = True
-        msg = await bot.send_voice(chat, await get_audio(text[1], context.user_data['voice']))
+        msg = await bot.send_voice(chat, await get_audio(text[2], context.user_data['voice']))
         self.voices[chat] = msg.id
 
         return 1
@@ -435,7 +436,7 @@ class News:
 
         chat = query.message.chat.id
         await bot.delete_message(chat, self.voices[chat])
-        msg = await bot.send_voice(chat, await get_audio(text[1], context.user_data['voice']))
+        msg = await bot.send_voice(chat, await get_audio(text[2], context.user_data['voice']))
         self.voices[chat] = msg.id
 
         return 1
@@ -447,6 +448,9 @@ class News:
 
 
 class Weather:
+    def __init__(self):
+        self.voices = {}
+
     async def weather_start(self, update, context):
         total_msg_func(update)
         if context.user_data.get('in_conversation'):
@@ -483,7 +487,11 @@ class Weather:
                         [InlineKeyboardButton("Через 2 дня", callback_data="5")]]
             reply_markup = InlineKeyboardMarkup(keyboard)
             await bot.send_message(chat, text, reply_markup=reply_markup)
-            await bot.send_voice(chat, await get_audio(for_robot, context.user_data['voice']))
+
+            chat = update.message.chat.id
+            msg = await bot.send_voice(chat, await get_audio(for_robot, context.user_data['voice']))
+            self.voices[chat] = msg.id
+            # await bot.send_voice(chat, await get_audio(for_robot, context.user_data['voice']))
         return 2
 
     async def change_date(self, update, context):
@@ -501,6 +509,12 @@ class Weather:
         else:
             text, for_robot = await get_weather(self.response, self.name_from, date=int(num) - 3)
         await query.edit_message_text(text, reply_markup=reply_markup)
+
+        chat = query.message.chat.id
+        await bot.delete_message(chat, self.voices[chat])
+        msg = await bot.send_voice(chat, await get_audio(for_robot, context.user_data['voice']))
+        self.voices[chat] = msg.id
+
         return 2
 
     async def stop_weather(self, update, context):
@@ -545,7 +559,7 @@ class Stats:
 
     def get_user_stat(self, user_id, res, user=True):
         df = pd.DataFrame({"msg_type": [i.type for i in res.messages],
-                               "send_time": [i.start_date for i in res.messages]})
+                           "send_time": [i.start_date for i in res.messages]})
         df['day'] = df['send_time'].dt.strftime('%Y-%m-%d')
         dau_text = df[df['msg_type'] == 'text']
         dau_text = dau_text.groupby('day')['msg_type'].count()

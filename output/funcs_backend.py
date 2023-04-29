@@ -234,7 +234,7 @@ async def get_weather(response, name_from, date="fact"):
               "freezing-rain": "ледяной дождь",
               "tornado": "торнадо",
               "volcanic-ash": "вулканический пепел"}
-    for_robot = f"Погода в {name_from}.\nОсновная информация:\n\n"
+    for_robot = f"Погода в {name_from}, "
     if date == "fact":
         tmp = "сегодня"
     elif date == 0:
@@ -243,6 +243,8 @@ async def get_weather(response, name_from, date="fact"):
         tmp = "послезавтра"
     elif date == 2:
         tmp = "через 2 дня"
+    for_robot += tmp
+    for_robot += ".\nОсновная информация:\n\n"
     text = f"🌍 Погода в {name_from} {tmp}\nОсновная информация:\n\n"
     text + "На текущий момент наблюдается:\n"
     for_robot += "На текущий момент наблюдается:\n"
@@ -317,11 +319,12 @@ async def get_news_list():
     arr = []
     for i in sp.find_all('a', class_='styles_root__2aHN8 styles_l__3AE69 styles_news__15P0n'):
         tmp = i.get_text('###').split('###')
+        robot = tmp[-2] + ".\nПодробнее читайте по ссылке."
         themes = "🔥 " + " ".join([f"#{el.replace(' ', '_')}" for el in tmp[:-2]]) + "\n\n"
         name = "⚡ " + tmp[-2] + "\n\n"
         time = "🕜 " + tmp[-1]
         link = 'https://life.ru' + i.get('href')
-        arr.append((name, f"{themes + name + time}\nПодробнее 👉{link}"))
+        arr.append((name, f"{themes + name + time}\nПодробнее 👉{link}", robot))
     return arr
 
 
