@@ -238,3 +238,221 @@ connector: <aiohttp.connector.TCPConnector object at 0x125d41e70>
 2023-04-29 04:01:15,145 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2023-04-29 04:01:15,145 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2023-04-29 04:01:15,147 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-04-29 04:04:00,286 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 04:04:00,287 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 04:04:00,363 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x12516fa60>
+2023-04-29 16:45:32,353 - telegram.ext._application - INFO - Application started
+2023-04-29 16:45:58,179 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 16:45:58,180 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 16:45:58,251 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x12eb898d0>
+2023-04-29 16:54:44,109 - telegram.ext._application - INFO - Application started
+2023-04-29 16:54:57,950 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 274, in _request_wrapper
+    code, payload = await self.do_request(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_httpxrequest.py", line 213, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_requestdata.py", line 73, in json_parameters
+    return {
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_requestdata.py", line 76, in <dictcomp>
+    if param.json_value is not None
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_requestparameter.py", line 75, in json_value
+    return json.dumps(self.value)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type coroutine is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/app.py", line 462, in weather_start
+    await update.message.reply_text('Привет. Чтобы узнать информацию о погоде, выбери, как ты пришлешь'
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_message.py", line 1041, in reply_text
+    return await self.get_bot().send_message(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 2618, in send_message
+    return await super().send_message(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 368, in decorator
+    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 797, in send_message
+    return await self._send_message(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 494, in _send_message
+    result = await super()._send_message(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 549, in _send_message
+    result = await self._post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 456, in _post
+    return await self._do_post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 312, in _do_post
+    return await super()._do_post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 487, in _do_post
+    return await request.post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 165, in post
+    result = await self._request_wrapper(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 290, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type coroutine is not JSON serializable')
+2023-04-29 16:56:07,500 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 16:56:07,501 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 16:56:07,571 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x160b82200>
+2023-04-29 16:56:08,887 - telegram.ext._application - INFO - Application started
+2023-04-29 16:56:11,635 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 274, in _request_wrapper
+    code, payload = await self.do_request(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_httpxrequest.py", line 213, in do_request
+    data = request_data.json_parameters if request_data else None
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_requestdata.py", line 73, in json_parameters
+    return {
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_requestdata.py", line 76, in <dictcomp>
+    if param.json_value is not None
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_requestparameter.py", line 75, in json_value
+    return json.dumps(self.value)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type coroutine is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/app.py", line 462, in weather_start
+    await update.message.reply_text('Привет. Чтобы узнать информацию о погоде, выбери, как ты пришлешь'
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_message.py", line 1041, in reply_text
+    return await self.get_bot().send_message(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 2618, in send_message
+    return await super().send_message(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 368, in decorator
+    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 797, in send_message
+    return await self._send_message(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 494, in _send_message
+    result = await super()._send_message(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 549, in _send_message
+    result = await self._post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 456, in _post
+    return await self._do_post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 312, in _do_post
+    return await super()._do_post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 487, in _do_post
+    return await request.post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 165, in post
+    result = await self._request_wrapper(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 290, in _request_wrapper
+    raise NetworkError(f"Unknown error in HTTP implementation: {repr(exc)}") from exc
+telegram.error.NetworkError: Unknown error in HTTP implementation: TypeError('Object of type coroutine is not JSON serializable')
+2023-04-29 16:57:38,718 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 16:57:38,719 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 16:57:38,789 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11e2820b0>
+2023-04-29 16:57:39,932 - telegram.ext._application - INFO - Application started
+2023-04-29 16:58:13,629 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 16:58:13,629 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 16:58:13,699 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11fb821a0>
+2023-04-29 16:58:16,649 - telegram.ext._application - INFO - Application started
+2023-04-29 16:58:47,455 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 16:58:47,455 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 16:58:47,534 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1311ed780>
+2023-04-29 16:58:50,544 - telegram.ext._application - INFO - Application started
+2023-04-29 18:31:26,109 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 18:31:26,112 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 18:31:26,192 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1600863b0>
+2023-04-29 18:31:27,666 - telegram.ext._application - INFO - Application started
+2023-04-29 18:31:49,523 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/app.py", line 160, in address_loc
+    total_msg_func(update)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/funcs_backend.py", line 354, in total_msg_func
+    user.total_len += len("".join(update.message.text.split()))
+AttributeError: 'NoneType' object has no attribute 'split'
+2023-04-29 18:31:57,459 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/app.py", line 160, in address_loc
+    total_msg_func(update)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/funcs_backend.py", line 354, in total_msg_func
+    user.total_len += len("".join(update.message.text.split()))
+AttributeError: 'NoneType' object has no attribute 'split'
+2023-04-29 18:44:28,953 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 18:44:28,953 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 18:44:29,034 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x129910c70>
+2023-04-29 18:44:30,411 - telegram.ext._application - INFO - Application started
+2023-04-29 18:45:10,603 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/app.py", line 277, in start_game
+    await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
+KeyError: 'cmd'
+2023-04-29 18:45:17,159 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/app.py", line 277, in start_game
+    await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
+KeyError: 'cmd'
+2023-04-29 18:46:09,026 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 18:46:09,026 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 18:46:09,096 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11db82920>
+2023-04-29 18:46:10,253 - telegram.ext._application - INFO - Application started
+2023-04-29 18:56:23,164 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-04-29 18:56:23,165 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-04-29 18:56:23,166 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-04-29 19:37:16,152 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 19:37:16,152 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 19:37:16,223 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x12567edd0>
+2023-04-29 19:37:17,509 - telegram.ext._application - INFO - Application started
+2023-04-29 19:38:01,343 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 19:38:01,343 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 19:38:01,412 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x121c368f0>
+2023-04-29 19:38:02,691 - telegram.ext._application - INFO - Application started

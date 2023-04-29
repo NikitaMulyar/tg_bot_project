@@ -19,3 +19,12 @@ URL_GEOCODER = 'http://geocode-maps.yandex.ru/1.x/'
 URL_ORG = 'https://search-maps.yandex.ru/v1/'
 URL_MAPS = 'http://static-maps.yandex.ru/1.x/'
 AI_KEY = "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"
+
+# STOP CMDS
+STOP_DIALOG = "/stop_dialog"
+STOP_ROUTE = "/stop_route"
+STOP_TOWNS = "/end_game"
+STOP_AI = "/stop_ai"
+STOP_NEWS = "/stop_news"
+STOP_WEATHER = "/stop_pogoda"
+STOP_METRO = "/stop_metro"

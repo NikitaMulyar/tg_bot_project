@@ -34,9 +34,9 @@ class ConfigVoice:
         put_to_db(update)
         total_msg_func(update)
         if context.user_data.get('in_conversation'):
-            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
             return
-        context.user_data['skip_voice'] = False
+        context.user_data['in_conversation'] = True
         context.user_data['voice'] = 'alena'
         await update.message.reply_text(
             'Привет! Давай знакомиться. Я - Великий Гуру, умею общаться с людьми голосом!',
@@ -44,7 +44,6 @@ class ConfigVoice:
         return await self.config_voice(update, context)
 
     async def config_voice(self, update, context):
-        context.user_data['skip_voice'] = False
         keyboard = [
             [
                 InlineKeyboardButton("Филипп", callback_data="1"),
@@ -69,21 +68,21 @@ class ConfigVoice:
     async def inline_button(self, update, context):
         query = update.callback_query
         await query.answer()
-        if context.user_data.get('skip_voice'):
-            chat = query.message.chat.id
-            context.user_data['in_conversation'] = False
-            await bot.send_message(chat, "Выбор голоса пропущен. Пропишите команду еще раз.")
-            return ConversationHandler.END
+        # if context.user_data.get('skip_voice'):
+        #     chat = query.message.chat.id
+        #     context.user_data['in_conversation'] = False
+        #     await bot.send_message(chat, "Выбор голоса пропущен. Пропиши команду еще раз.")
+        #     return ConversationHandler.END
         num = query.data
         context.user_data['voice'] = VOICES[num][0]
         await query.edit_message_text(text=f"Выбранный голос: {VOICES[num][1]}")
+        context.user_data['in_conversation'] = False
         return ConversationHandler.END
 
     async def get_out(self, update, context):
-        context.user_data['skip_voice'] = True
         context.user_data['in_conversation'] = False
-        # chat = update.message.chat.id
-        # await bot.send_message(chat, "Выбор голоса пропущен. Пропишите команду еще раз.")
+        chat = update.message.chat.id
+        await bot.send_message(chat, "Выбор голоса пропущен. Пропишите команду еще раз.")
         return ConversationHandler.END
 
 
@@ -91,9 +90,10 @@ class Dialog:
     async def start_dialog(self, update, context):
         total_msg_func(update)
         if context.user_data.get('in_conversation'):
-            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
             return ConversationHandler.END
         context.user_data['in_conversation'] = True
+        context.user_data["cmd"] = STOP_DIALOG
         await update.message.reply_text(
             'Давай поболтаем! Отправляй мне воисы - а я тебе их расшифровку, и наоборот!\n'
             'Но учти - если воис не на русском языке, я не гарантирую хороший перевод!')
@@ -130,9 +130,10 @@ class MapRoute:
     async def navigator_start(self, update, context):
         total_msg_func(update)
         if context.user_data.get('in_conversation'):
-            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
             return ConversationHandler.END
         context.user_data['in_conversation'] = True
+        context.user_data["cmd"] = STOP_ROUTE
         reply_markup = await choose_way()
         if context.user_data.get('voice') is None:
             context.user_data['voice'] = 'alena'
@@ -157,7 +158,6 @@ class MapRoute:
             return 3
 
     async def address_loc(self, update, context):
-        total_msg_func(update)
         user_location = update.message.location
         context.user_data['geopos'] = {'from': (user_location.latitude, user_location.longitude)}
         reply_markup = await choose_way()
@@ -224,6 +224,9 @@ class MapRoute:
             audio = await get_audio(text, context.user_data['voice'])
             await bot.send_photo(chat, res[1])
             text = f'Путь от {name_from} до {name_to}.\n'
+            emoji = ''
+            if 'автомоб' in i[0]:
+                emoji
             text += "\n".join(
                 [i[0] + ': ' + i[1][0] + ' (' + ", ".join(i[1][1:]) + ')' for i in res[0]])
             await bot.send_message(chat, text, reply_markup=ReplyKeyboardRemove())
@@ -275,9 +278,10 @@ class GameTowns:
     async def start_game(self, update, context):
         total_msg_func(update)
         if context.user_data.get('in_conversation'):
-            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
             return ConversationHandler.END
         context.user_data['in_conversation'] = True
+        context.user_data["cmd"] = STOP_TOWNS
         chat = update.message.chat.id
         s = 'Привет! Давай поиграем в города! Ты должен называть города, ' \
             'начинающиеся на ту букву, на которую заканчивается ' \
@@ -357,9 +361,10 @@ class ChatGPTDialog:
     async def start(self, update, context):
         total_msg_func(update)
         if context.user_data.get('in_conversation'):
-            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
             return ConversationHandler.END
         context.user_data['in_conversation'] = True
+        context.user_data["cmd"] = STOP_AI
         chat = update.message.chat.id
         await update.message.reply_text('|| Доброго времени суток\! Давай поболтаем \- присылай '
                                         'мне воисы или сообщения\, а я отвечу на них\.\.\. ||',
@@ -410,7 +415,7 @@ class News:
     async def send_news(self, update, context):
         total_msg_func(update)
         if context.user_data.get('in_conversation'):
-            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
             return
         text = (await get_news_list())[self.count % self.maximum]
         self.count += 1
@@ -420,6 +425,7 @@ class News:
 
         chat = update.message.chat.id
         context.user_data['in_conversation'] = True
+        context.user_data["cmd"] = STOP_NEWS
         msg = await bot.send_voice(chat, await get_audio(text[2], context.user_data['voice']))
         self.voices[chat] = msg.id
 
@@ -454,20 +460,67 @@ class Weather:
     async def weather_start(self, update, context):
         total_msg_func(update)
         if context.user_data.get('in_conversation'):
-            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
             return ConversationHandler.END
         context.user_data['in_conversation'] = True
+        context.user_data["cmd"] = STOP_WEATHER
         if context.user_data.get('voice') is None:
             context.user_data['voice'] = 'alena'
-        await update.message.reply_text('Привет. Чтобы узнать информацию о погоде, напиши интересующий адрес:')
+        await update.message.reply_text('Привет. Чтобы узнать информацию о погоде, выбери, как ты пришлешь '
+                                        'адрес.', reply_markup=await choose_way())
         return 1
+
+    async def choose_type_loc(self, update, context):
+        query = update.callback_query
+        await query.answer()
+        num = query.data
+        chat = query.message.chat.id
+        if num == '1':
+            await query.edit_message_text(text="Выбранный способ: Геопозицией")
+            kbrd = await location_kbrd()
+            await bot.send_message(chat, 'Что ж, тогда присылай геопозицию.', reply_markup=kbrd)
+            return 2
+        else:
+            await query.edit_message_text(text="Выбранный способ: Текстом (напишу адрес)")
+            await bot.send_message(chat, 'Что ж, тогда пиши адрес места.')
+            return 3
+
+    async def weather_loc(self, update, context):
+        user_location = update.message.location
+        pos = (user_location.latitude, user_location.longitude)
+        chat = update.message.chat.id
+        self.name_from = await get_address_text(pos)
+        params = {"lat": pos[0],
+                  "lon": pos[1],
+                  "lang": "ru_RU",
+                  "limit": "7",
+                  "hours": "false",
+                  "extra": "true"}
+        headers = {"X-Yandex-API-Key": "97fa72d6-6cec-42c1-90ac-969b3a5c9418"}
+        self.response = requests.get('https://api.weather.yandex.ru/v2/forecast', params=params,
+                                     headers=headers).json()
+        text, for_robot = await get_weather(self.response, self.name_from)
+        keyboard = [[InlineKeyboardButton("Сейчас", callback_data="2")],
+                    [InlineKeyboardButton("Завтра", callback_data="3")],
+                    [InlineKeyboardButton("Послезавтра", callback_data="4")],
+                    [InlineKeyboardButton("Через 2 дня", callback_data="5")]]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        r = await update.message.reply_text('.', reply_markup=ReplyKeyboardRemove())
+        await bot.delete_message(chat, r.id)
+        await bot.send_message(chat, text, reply_markup=reply_markup)
+
+        chat = update.message.chat.id
+        msg = await bot.send_voice(chat, await get_audio(for_robot, context.user_data['voice']))
+        self.voices[chat] = msg.id
+        return 4
 
     async def weather_address(self, update, context):
         total_msg_func(update)
         res = await get_coords(update.message.text)
         if res == -1:
             await update.message.reply_text('Такого адреса нет. Попробуй написать ещё раз.')
-            return 1
+            context.user_data['in_conversation'] = False
+            return ConversationHandler.END
         else:
             chat = update.message.chat.id
             self.name_from = await get_address_text(res)
@@ -492,7 +545,7 @@ class Weather:
             msg = await bot.send_voice(chat, await get_audio(for_robot, context.user_data['voice']))
             self.voices[chat] = msg.id
             # await bot.send_voice(chat, await get_audio(for_robot, context.user_data['voice']))
-        return 2
+        return 4
 
     async def change_date(self, update, context):
         query = update.callback_query
@@ -515,7 +568,7 @@ class Weather:
         msg = await bot.send_voice(chat, await get_audio(for_robot, context.user_data['voice']))
         self.voices[chat] = msg.id
 
-        return 2
+        return 4
 
     async def stop_weather(self, update, context):
         await bot.send_message(update.message.chat.id, 'Пока!')
@@ -630,9 +683,10 @@ class NearStation:
     async def start(self, update, context):
         total_msg_func(update)
         if context.user_data.get('in_conversation'):
-            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
             return ConversationHandler.END
         context.user_data['in_conversation'] = True
+        context.user_data["cmd"] = STOP_METRO
         reply_markup = await choose_way()
         if context.user_data.get('voice') is None:
             context.user_data['voice'] = 'alena'
@@ -767,8 +821,10 @@ def main():
     weather_dialog_handler = ConversationHandler(
         entry_points=[CommandHandler('pogoda', weather_dialog.weather_start)],
         states={
-            1: [MessageHandler(filters.TEXT & ~filters.COMMAND, weather_dialog.weather_address)],
-            2: [CallbackQueryHandler(weather_dialog.change_date)]
+            1: [CallbackQueryHandler(weather_dialog.choose_type_loc)],
+            3: [MessageHandler(filters.TEXT & ~filters.COMMAND, weather_dialog.weather_address)],
+            2: [MessageHandler(filters.LOCATION, weather_dialog.weather_loc)],
+            4: [CallbackQueryHandler(weather_dialog.change_date)]
         },
         fallbacks=[CommandHandler('stop_pogoda', weather_dialog.stop_weather)], block=True, conversation_timeout=60
     )
