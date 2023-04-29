@@ -3,6 +3,7 @@ from sqlalchemy import orm
 from .db_session import SqlAlchemyBase
 from datetime import timedelta
 
+
 class Statistic(SqlAlchemyBase):
     __tablename__ = 'statistics'
 
