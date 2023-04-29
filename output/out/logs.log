@@ -202,3 +202,39 @@ connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x000001FFCEBAB
 connector: <aiohttp.connector.TCPConnector object at 0x000001FFCECC00D0>
 2023-04-29 03:31:49,168 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
 2023-04-29 03:31:49,169 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 03:58:09,482 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11ff31ba0>
+2023-04-29 03:58:14,531 - telegram.ext._application - INFO - Application started
+2023-04-29 03:58:53,668 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 03:58:53,668 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 03:58:53,741 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x12756f7f0>
+2023-04-29 03:58:54,943 - telegram.ext._application - INFO - Application started
+2023-04-29 03:59:36,828 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x125a18190>
+2023-04-29 03:59:36,830 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x125a0b520>, 886557.786815666)]']
+connector: <aiohttp.connector.TCPConnector object at 0x12579ea40>
+2023-04-29 03:59:42,681 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1258053f0>
+2023-04-29 03:59:42,682 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x12576dd20>, 886563.640229791)]']
+connector: <aiohttp.connector.TCPConnector object at 0x12579e860>
+2023-04-29 03:59:58,431 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x125b80970>
+2023-04-29 03:59:58,432 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x125b7d5a0>, 886579.389120875)]']
+connector: <aiohttp.connector.TCPConnector object at 0x12579fb50>
+2023-04-29 04:00:00,371 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x125d40b80>
+2023-04-29 04:00:00,371 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x125b7e0e0>, 886581.33077)]']
+connector: <aiohttp.connector.TCPConnector object at 0x125d41600>
+2023-04-29 04:00:05,616 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x125da5480>
+2023-04-29 04:00:05,616 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x125b7ec80>, 886586.574734291)]']
+connector: <aiohttp.connector.TCPConnector object at 0x125d41e70>
+2023-04-29 04:01:15,145 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-04-29 04:01:15,145 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-04-29 04:01:15,147 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
