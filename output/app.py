@@ -404,6 +404,7 @@ class News:
         await update.message.reply_text(text[1], reply_markup=reply_markup)
 
         chat = update.message.chat.id
+        context.user_data['in_conversation'] = True
         msg = await bot.send_voice(chat, await get_audio(text[1], context.user_data['voice']))
         self.voices[chat] = msg.id
 
@@ -426,6 +427,8 @@ class News:
         return 1
 
     async def end_new(self, update, context):
+        await bot.send_message(update.message.chat.id, 'Пока!')
+        context.user_data['in_conversation'] = False
         return ConversationHandler.END
 
 
@@ -443,7 +446,6 @@ class Weather:
 
     async def weather_address(self, update, context):
         total_msg_func(update)
-        context.user_data['in_conversation'] = False
         res = await get_coords(update.message.text)
         if res == -1:
             await update.message.reply_text('Такого адреса нет. Попробуй написать ещё раз.')
@@ -488,6 +490,8 @@ class Weather:
         return 2
 
     async def stop_weather(self, update, context):
+        await bot.send_message(update.message.chat.id, 'Пока!')
+        context.user_data['in_conversation'] = False
         return ConversationHandler.END
 
 
@@ -575,7 +579,7 @@ def main():
             1: [MessageHandler(filters.TEXT & ~filters.COMMAND, weather_dialog.weather_address)],
             2: [CallbackQueryHandler(weather_dialog.change_date)]
         },
-        fallbacks=[CommandHandler('stop_wather', weather_dialog.stop_weather)], block=True, conversation_timeout=60
+        fallbacks=[CommandHandler('stop_pogoda', weather_dialog.stop_weather)], block=True, conversation_timeout=60
     )
     application.add_handlers(handlers={
         1: [conv_handler], 2: [navigator_dialog], 3: [config_voice_handler], 4: [game_towns_conv],
