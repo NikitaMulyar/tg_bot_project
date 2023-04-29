@@ -6,6 +6,7 @@ import asyncio
 from consts import *
 import openai
 import string
+import requests
 
 from data import db_session
 from data.users import User
@@ -134,6 +135,152 @@ async def get_map(a, b):
     return image
 
 
+async def get_w(txt):
+    if txt == 'clear':
+        txt = '🌞 Ясно'
+    elif txt == 'partly-cloudy':
+        txt = '🌤 Малооблачно'
+    elif txt == 'cloudy':
+        txt = '⛅Облачно с прояснениями'
+    elif txt == 'overcast':
+        txt = '☁ Пасмурно'
+    elif txt == 'drizzle':
+        txt = '🌂Морось'
+    elif txt == 'light-rain':
+        txt = '💧Небольшой дождь'
+    elif txt == 'rain':
+        txt = '☔Дождь'
+    elif txt == 'moderate-rain':
+        txt = '🌧Умеренно сильный дождь'
+    elif txt == 'heavy-rain':
+        txt = '🌧Сильный дождь'
+    elif txt == 'continuous-heavy-rain':
+        txt = '🌧🌧Длительный сильный дождь'
+    elif txt == 'showers':
+        txt = '🌧🌧🌧Ливень'
+    elif txt == 'wet-snow':
+        txt = '💧❄Дождь со снегом'
+    elif txt == 'light-snow':
+        txt = '❄Небольшой снег'
+    elif txt == 'snow':
+        txt = '❄☃Снег'
+    elif txt == 'snow-showers':
+        txt = '🌨Снегопад'
+    elif txt == 'hail':
+        txt = '😵Град'
+    elif txt == 'thunderstorm':
+        txt = '⚡Гроза'
+    elif txt == 'thunderstorm-with-rain':
+        txt = '⛈Дождь с грозой'
+    elif txt == 'thunderstorm-with-hail':
+        txt = '⛈⛈Гроза с градом'
+    return txt
+
+
+async def get_dir(dir_, tmp=1):
+    if tmp == 1:
+        if dir_ == 'nw':
+            return '↘ С-З'
+        if dir_ == 'n':
+            return '⬇ С'
+        if dir_ == 'ne':
+            return '↙ С-В'
+        if dir_ == 'e':
+            return '⬅ В'
+        if dir_ == 'se':
+            return '↖ Ю-В'
+        if dir_ == 's':
+            return '⬆ Ю'
+        if dir_ == 'sw':
+            return '↗ Ю-З'
+        if dir_ == 'w':
+            return '➡ З'
+        return 'Штиль'
+    else:
+        if dir_ == 'nw':
+            return 'северо-западное.'
+        if dir_ == 'n':
+            return 'северное'
+        if dir_ == 'ne':
+            return 'северо-восточное'
+        if dir_ == 'e':
+            return 'восточное'
+        if dir_ == 'se':
+            return 'юго-восточное'
+        if dir_ == 's':
+            return 'южное'
+        if dir_ == 'sw':
+            return 'юго-западное'
+        if dir_ == 'w':
+            return 'западное'
+        return 'Штиль'
+
+
+async def get_cl(cl):
+    if cl == 0:
+        return 'Ясно'
+    if cl == 0.25:
+        return 'Малооблачно'
+    if cl == 0.5 or cl == 0.75:
+        return 'Облачно с прояснениями'
+    return 'Пасмурно'
+
+
+async def get_weather(response, name_from, date="fact"):
+    phenom = {"fog": "туман",
+              "mist": "дымка",
+              "smoke": "смог",
+              "dust": "пыль",
+              "dust-suspension": "пылевая взвесь",
+              "duststorm": "пыльная буря",
+              "thunderstorm-with-duststorm": "пыльная буря с грозой",
+              "drifting-snow": "слабая метель",
+              "blowing-snow": "метель",
+              "ice-pellets": "ледяная крупа",
+              "freezing-rain": "ледяной дождь",
+              "tornado": "торнадо",
+              "volcanic-ash": "вулканический пепел"}
+    for_robot = f"Погода в {name_from}.\nОсновная информация:\n\n"
+    if date == "fact":
+        tmp = "сегодня"
+    elif date == 0:
+        tmp = "завтра"
+    elif date == 1:
+        tmp = "послезавтра"
+    elif date == 2:
+        tmp = "через 2 дня"
+    text = f"🌍 Погода в {name_from} {tmp}\nОсновная информация:\n\n"
+    text + "На текущий момент наблюдается:\n"
+    for_robot += "На текущий момент наблюдается:\n"
+    if date == "fact":
+        now = response['fact']
+    else:
+        now = response["forecasts"][date]["parts"]["day"]
+    text += f"Ощущаемая температура °C: 🌡{now['feels_like']}\n"
+    for_robot += f"Ощущаемая температура {now['feels_like']} градусов.\n"
+    text += f"Описание: {await get_w(now['condition'])}\n"
+    for_robot += f"Описание: {await get_w(now['condition'])}.\n"
+    text += f"Скорость ветра до 💨{now['wind_speed']} м\с\n"
+    for_robot += f"Скорость ветра до {now['wind_speed']} метров в секунду.\n"
+    text += f"Давление в пределах {now['pressure_mm']} мм.рт.ст\n"
+    for_robot += f"Давление в пределах {now['pressure_mm']} миллиметров ртутного столба.\n"
+    text += f"\nДополнительная информация:\n"
+    for_robot += "Дополнительная информация:"
+    if now.get('temp_water'):
+        text += f"Температура воды 🌊{now['temp_water']} °C\n"
+        for_robot += f"Температура воды {now['temp_water']} градусов."
+    text += f"Направление ветра 💨 {await get_dir(now['wind_dir'])}\n"
+    for_robot += f"Направление ветра 💨 {await get_dir(now['wind_dir'], tmp=2)}.\n"
+    text += f"Влажность составляет {now['humidity']}%\n"
+    for_robot += f"Влажность составляет {now['humidity']} процентов.\n"
+    text += f"Облачность: {await get_cl(now['cloudness'])}\n"
+    for_robot += f"Облачность: {await get_cl(now['cloudness'])}\n"
+    if now.get('phenom_condition'):
+        text += f"Доп. погодные условия: {phenom[now['phenom_condition']]}"
+        for_robot += f"Дополнительные погодные условия: {phenom[now['phenom_condition']]}"
+    return text, for_robot
+
+
 async def get_anecdot():
     url = 'http://anecdotica.ru/'
     session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
@@ -180,7 +327,7 @@ async def get_news_list():
         name = "⚡ " + tmp[-2] + "\n\n"
         time = "🕜 " + tmp[-1]
         link = 'https://life.ru' + i.get('href')
-        arr.append((name, f"{themes+name+time}\nПодробнее 👉{link}"))
+        arr.append((name, f"{themes + name + time}\nПодробнее 👉{link}"))
     return arr
 
 
