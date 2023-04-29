@@ -1,5 +1,6 @@
 import logging
 import random
+import requests
 
 from telegram import Bot, ReplyKeyboardRemove
 from telegram.ext import Application, MessageHandler, filters, CommandHandler, ConversationHandler, \
@@ -386,22 +387,11 @@ class ChatGPTDialog:
         return ConversationHandler.END
 
 
-# async def send_news(update, context):
-#     total_msg_func(update)
-#     if context.user_data.get('in_conversation'):
-#         await update.message.reply_text('Для начала выйди из предыдущего диалога.')
-#         return
-#     chat = update.message.chat.id
-#     news = random.sample(await get_news_list(), k=3)
-#     text = '\n'.join([i[0] + '...' for i in news])
-#     md_text = '\n'.join(f'[{prepare_for_markdown(i[0], spoiler=False)}]({i[1]})' for i in news)
-#     await update.message.reply_text(md_text, parse_mode='MarkdownV2')
-#     await bot.send_voice(chat, await get_audio(text, context.user_data['voice']))
-
 class News:
     def __init__(self):
         self.count = 0
         self.maximum = 30
+        self.voices = {}
 
     async def send_news(self, update, context):
         if context.user_data.get('in_conversation'):
@@ -412,6 +402,11 @@ class News:
         keyboard = [[InlineKeyboardButton("Следующую", callback_data="1")]]
         reply_markup = InlineKeyboardMarkup(keyboard)
         await update.message.reply_text(text[1], reply_markup=reply_markup)
+
+        chat = update.message.chat.id
+        msg = await bot.send_voice(chat, await get_audio(text[1], context.user_data['voice']))
+        self.voices[chat] = msg.id
+
         return 1
 
     async def send_news_new(self, update, context):
@@ -422,9 +417,77 @@ class News:
         keyboard = [[InlineKeyboardButton("Следующую", callback_data="1")]]
         reply_markup = InlineKeyboardMarkup(keyboard)
         await query.edit_message_text(text[1], reply_markup=reply_markup)
+
+        chat = query.message.chat.id
+        await bot.delete_message(chat, self.voices[chat])
+        msg = await bot.send_voice(chat, await get_audio(text[1], context.user_data['voice']))
+        self.voices[chat] = msg.id
+
         return 1
 
     async def end_new(self, update, context):
+        return ConversationHandler.END
+
+
+class Weather:
+    async def weather_start(self, update, context):
+        total_msg_func(update)
+        if context.user_data.get('in_conversation'):
+            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            return ConversationHandler.END
+        context.user_data['in_conversation'] = True
+        if context.user_data.get('voice') is None:
+            context.user_data['voice'] = 'alena'
+        await update.message.reply_text('Привет. Чтобы узнать информацию о погоде, напиши интересующий адрес:')
+        return 1
+
+    async def weather_address(self, update, context):
+        total_msg_func(update)
+        context.user_data['in_conversation'] = False
+        res = await get_coords(update.message.text)
+        if res == -1:
+            await update.message.reply_text('Такого адреса нет. Попробуй написать ещё раз.')
+            return 1
+        else:
+            chat = update.message.chat.id
+            self.name_from = await get_address_text(res)
+            params = {"lat": res[0],
+                      "lon": res[1],
+                      "lang": "ru_RU",
+                      "limit": "7",
+                      "hours": "false",
+                      "extra": "true"}
+            headers = {"X-Yandex-API-Key": "97fa72d6-6cec-42c1-90ac-969b3a5c9418"}
+            self.response = requests.get('https://api.weather.yandex.ru/v2/forecast', params=params,
+                                         headers=headers).json()
+            text, for_robot = await get_weather(self.response, self.name_from)
+            keyboard = [[InlineKeyboardButton("Сейчас", callback_data="2")],
+                        [InlineKeyboardButton("Завтра", callback_data="3")],
+                        [InlineKeyboardButton("Послезавтра", callback_data="4")],
+                        [InlineKeyboardButton("Через 2 дня", callback_data="5")]]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await bot.send_message(chat, text, reply_markup=reply_markup)
+            await bot.send_voice(chat, await get_audio(for_robot, context.user_data['voice']))
+        return 2
+
+    async def change_date(self, update, context):
+        query = update.callback_query
+        await query.answer()
+        num = query.data
+        chat = query.message.chat.id
+        keyboard = [[InlineKeyboardButton("Сейчас", callback_data="2")],
+                    [InlineKeyboardButton("Завтра", callback_data="3")],
+                    [InlineKeyboardButton("Послезавтра", callback_data="4")],
+                    [InlineKeyboardButton("Через 2 дня", callback_data="5")]]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        if num == '2':
+            text, for_robot = await get_weather(self.response, self.name_from)
+        else:
+            text, for_robot = await get_weather(self.response, self.name_from, date=int(num) - 3)
+        await query.edit_message_text(text, reply_markup=reply_markup)
+        return 2
+
+    async def stop_weather(self, update, context):
         return ConversationHandler.END
 
 
@@ -453,6 +516,7 @@ def main():
     game_towns = GameTowns()
     ai_dialog = ChatGPTDialog()
     news_dialog = News()
+    weather_dialog = Weather()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start_dialog', dialog.start_dialog)],
@@ -505,10 +569,18 @@ def main():
         },
         fallbacks=[CommandHandler('end_news', news_dialog.end_new)], block=True, conversation_timeout=60
     )
+    weather_dialog_handler = ConversationHandler(
+        entry_points=[CommandHandler('pogoda', weather_dialog.weather_start)],
+        states={
+            1: [MessageHandler(filters.TEXT & ~filters.COMMAND, weather_dialog.weather_address)],
+            2: [CallbackQueryHandler(weather_dialog.change_date)]
+        },
+        fallbacks=[CommandHandler('stop_wather', weather_dialog.stop_weather)], block=True, conversation_timeout=60
+    )
     application.add_handlers(handlers={
         1: [conv_handler], 2: [navigator_dialog], 3: [config_voice_handler], 4: [game_towns_conv],
         5: [ai_dialog_conv], 6: [CommandHandler('anecdot', send_anecdot)],
-        7: [news_dialog_handler]
+        7: [news_dialog_handler], 8: [weather_dialog_handler]
     }
     )
 
