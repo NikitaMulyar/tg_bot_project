@@ -524,3 +524,7 @@ client_session: <aiohttp.client.ClientSession object at 0x1440a01f0>
 2023-04-29 21:55:23,859 - asyncio - ERROR - Unclosed client session
 client_session: <aiohttp.client.ClientSession object at 0x139e2a860>
 2023-04-29 22:01:29,124 - telegram.ext._application - INFO - Application started
+2023-04-29 22:07:23,095 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-29 22:07:23,095 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-29 22:07:23,167 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x128b988b0>
