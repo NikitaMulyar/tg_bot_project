@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ### Запуск
 4) В директории `output` запустите файл `app.py`
 ```bash
-python app.py
+python server.py
 ```
 
 ## Код проекта
