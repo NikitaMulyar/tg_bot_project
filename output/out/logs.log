@@ -685,3 +685,124 @@ Traceback (most recent call last):
   File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 683, in _interpret_response_line
     raise self.handle_error_response(
 openai.error.AuthenticationError: Incorrect API key provided: sk-3i619***************************************OiRT. You can find your API key at https://platform.openai.com/account/api-keys.
+2023-05-01 15:19:33,508 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-05-01 15:19:33,516 - telegram.ext._application - INFO - Application.stop() complete
+2023-05-01 15:19:33,600 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x133194eb0>
+2023-05-01 15:19:34,853 - telegram.ext._application - INFO - Application started
+2023-05-01 15:19:52,193 - openai - INFO - error_code=None error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2023-05-01 15:19:52,193 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 437, in text_request
+    return await self.send_response(update, context, update.message.text, info_msg, chat)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 440, in send_response
+    resp = get_answer(request)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/funcs_backend.py", line 295, in get_answer
+    completion = openai.Completion.create(engine="text-davinci-003", prompt=prompt, temperature=0.7,
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_resources/completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 620, in _interpret_response
+    self._interpret_response_line(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 683, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.RateLimitError: You exceeded your current quota, please check your plan and billing details.
+2023-05-01 15:21:24,644 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-05-01 15:21:24,644 - telegram.ext._application - INFO - Application.stop() complete
+2023-05-01 15:21:24,714 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x150e91120>
+2023-05-01 15:21:25,960 - telegram.ext._application - INFO - Application started
+2023-05-01 15:21:42,765 - openai - INFO - error_code=None error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2023-05-01 15:21:42,765 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 437, in text_request
+    return await self.send_response(update, context, update.message.text, info_msg, chat)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 440, in send_response
+    resp = get_answer(request)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/funcs_backend.py", line 295, in get_answer
+    completion = openai.Completion.create(engine="text-davinci-003", prompt=prompt, temperature=0.7,
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_resources/completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 620, in _interpret_response
+    self._interpret_response_line(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 683, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.RateLimitError: You exceeded your current quota, please check your plan and billing details.
+2023-05-01 15:22:11,813 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-05-01 15:22:11,814 - telegram.ext._application - INFO - Application.stop() complete
+2023-05-01 15:22:11,888 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x12d695000>
+2023-05-01 15:22:12,965 - telegram.ext._application - INFO - Application started
+2023-05-01 15:22:24,718 - openai - INFO - error_code=None error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2023-05-01 15:22:24,719 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 437, in text_request
+    return await self.send_response(update, context, update.message.text, info_msg, chat)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 440, in send_response
+    resp = get_answer(request)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/funcs_backend.py", line 295, in get_answer
+    completion = openai.Completion.create(engine="text-davinci-003", prompt=prompt, temperature=0.7,
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_resources/completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 620, in _interpret_response
+    self._interpret_response_line(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 683, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.RateLimitError: You exceeded your current quota, please check your plan and billing details.
+2023-05-01 15:51:54,247 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-05-01 15:51:54,247 - telegram.ext._application - INFO - Application.stop() complete
+2023-05-01 15:51:54,322 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11cf910f0>
+2023-05-01 15:51:55,453 - telegram.ext._application - INFO - Application started
+2023-05-01 16:25:54,671 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11fa98b20>
+2023-05-01 16:25:54,672 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x11fae7e80>, 967515.645154958)]']
+connector: <aiohttp.connector.TCPConnector object at 0x11dac1060>
+2023-05-01 16:26:05,215 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11fc26530>
+2023-05-01 16:26:05,215 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x11fae41c0>, 967526.187493541)]']
+connector: <aiohttp.connector.TCPConnector object at 0x11dac0970>
+2023-05-01 16:27:06,911 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-05-01 16:27:06,911 - telegram.ext._application - INFO - Application.stop() complete
+2023-05-01 16:27:06,984 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x11bf95000>
+2023-05-01 16:27:08,391 - telegram.ext._application - INFO - Application started
+2023-05-01 16:27:20,806 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1374f8ee0>
+2023-05-01 16:27:20,807 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x13728f700>, 967601.791037333)]']
+connector: <aiohttp.connector.TCPConnector object at 0x1372afb20>
+2023-05-01 16:28:41,232 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-01 16:28:41,233 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-01 16:28:41,235 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.

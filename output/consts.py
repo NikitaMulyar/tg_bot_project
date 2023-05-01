@@ -18,7 +18,7 @@ API_GEO = '40d1649f-0493-4b70-98ba-98533de7710b'
 URL_GEOCODER = 'http://geocode-maps.yandex.ru/1.x/'
 URL_ORG = 'https://search-maps.yandex.ru/v1/'
 URL_MAPS = 'http://static-maps.yandex.ru/1.x/'
-AI_KEY = "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"
+AI_KEY = "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"
 
 # STOP CMDS
 STOP_DIALOG = "/stop_dialog"
