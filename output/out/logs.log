@@ -529,3 +529,159 @@ client_session: <aiohttp.client.ClientSession object at 0x139e2a860>
 2023-04-29 22:07:23,167 - asyncio - ERROR - Unclosed client session
 client_session: <aiohttp.client.ClientSession object at 0x128b988b0>
 2023-04-30 16:45:29,032 - telegram.ext._application - INFO - Application started
+2023-04-30 18:23:42,871 - telegram.ext._application - INFO - Application started
+2023-04-30 18:58:14,503 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 599, in change_date
+    await query.answer()
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_callbackquery.py", line 180, in answer
+    return await self.get_bot().answer_callback_query(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 760, in answer_callback_query
+    return await super().answer_callback_query(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 368, in decorator
+    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 3266, in answer_callback_query
+    result = await self._post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 456, in _post
+    return await self._do_post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 312, in _do_post
+    return await super()._do_post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 487, in _do_post
+    return await request.post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 165, in post
+    result = await self._request_wrapper(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 328, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Query is too old and response timeout expired or query id is invalid
+2023-04-30 18:58:14,605 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 599, in change_date
+    await query.answer()
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_callbackquery.py", line 180, in answer
+    return await self.get_bot().answer_callback_query(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 760, in answer_callback_query
+    return await super().answer_callback_query(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 368, in decorator
+    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 3266, in answer_callback_query
+    result = await self._post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 456, in _post
+    return await self._do_post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 312, in _do_post
+    return await super()._do_post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 487, in _do_post
+    return await request.post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 165, in post
+    result = await self._request_wrapper(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 328, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Query is too old and response timeout expired or query id is invalid
+2023-04-30 18:58:14,692 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 599, in change_date
+    await query.answer()
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_callbackquery.py", line 180, in answer
+    return await self.get_bot().answer_callback_query(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 760, in answer_callback_query
+    return await super().answer_callback_query(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 368, in decorator
+    result = await func(*args, **kwargs)  # skipcq: PYL-E1102
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 3266, in answer_callback_query
+    result = await self._post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 456, in _post
+    return await self._do_post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 312, in _do_post
+    return await super()._do_post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/_bot.py", line 487, in _do_post
+    return await request.post(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 165, in post
+    result = await self._request_wrapper(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 328, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Query is too old and response timeout expired or query id is invalid
+2023-04-30 19:00:15,139 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x151938d00>
+2023-04-30 19:00:15,140 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x1520f8ee0>, 936262.212281291)]']
+connector: <aiohttp.connector.TCPConnector object at 0x151938d30>
+2023-04-30 19:00:34,688 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1523ceb60>
+2023-04-30 19:00:34,688 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x1522bf1c0>, 936270.530017916)]']
+connector: <aiohttp.connector.TCPConnector object at 0x152073910>
+2023-04-30 19:04:31,585 - openai - INFO - error_code=invalid_api_key error_message='Incorrect API key provided: sk-3i619***************************************OiRT. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-04-30 19:04:31,586 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 437, in text_request
+    return await self.send_response(update, context, update.message.text, info_msg, chat)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 440, in send_response
+    resp = get_answer(request)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/funcs_backend.py", line 295, in get_answer
+    completion = openai.Completion.create(engine="text-davinci-003", prompt=prompt, temperature=0.7,
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_resources/completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 620, in _interpret_response
+    self._interpret_response_line(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 683, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.AuthenticationError: Incorrect API key provided: sk-3i619***************************************OiRT. You can find your API key at https://platform.openai.com/account/api-keys.
+2023-04-30 19:10:07,802 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-04-30 19:10:07,803 - telegram.ext._application - INFO - Application.stop() complete
+2023-04-30 19:10:07,916 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x150e1d000>
+2023-04-30 19:10:34,400 - telegram.ext._application - INFO - Application started
+2023-05-01 15:05:56,932 - telegram.ext._application - INFO - Application started
+2023-05-01 15:06:19,652 - openai - INFO - error_code=invalid_api_key error_message='Incorrect API key provided: sk-3i619***************************************OiRT. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-05-01 15:06:19,653 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 437, in text_request
+    return await self.send_response(update, context, update.message.text, info_msg, chat)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 440, in send_response
+    resp = get_answer(request)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/funcs_backend.py", line 295, in get_answer
+    completion = openai.Completion.create(engine="text-davinci-003", prompt=prompt, temperature=0.7,
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_resources/completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 620, in _interpret_response
+    self._interpret_response_line(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/openai/api_requestor.py", line 683, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.AuthenticationError: Incorrect API key provided: sk-3i619***************************************OiRT. You can find your API key at https://platform.openai.com/account/api-keys.
