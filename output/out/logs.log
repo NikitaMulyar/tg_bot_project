@@ -860,3 +860,60 @@ KeyError: 'voice'
 2023-05-02 02:33:08,598 - telegram.ext._application - INFO - Application.stop() complete
 2023-05-02 02:33:08,695 - asyncio - ERROR - Unclosed client session
 client_session: <aiohttp.client.ClientSession object at 0x12744ea10>
+2023-05-02 17:59:48,715 - apscheduler.scheduler - INFO - Scheduler started
+2023-05-02 17:59:48,715 - telegram.ext._application - INFO - Application started
+2023-05-02 18:00:04,972 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:00:06,297 - apscheduler.scheduler - INFO - Removed job 5e3075a05cd4482dbe6f035e136fdd41
+2023-05-02 18:00:12,370 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:00:35,530 - apscheduler.scheduler - INFO - Removed job dc2ac12c8e394b3a9b2c5fccfa3cf591
+2023-05-02 18:00:41,351 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:00:46,294 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:00:47,355 - apscheduler.scheduler - INFO - Removed job b86669ac322040f2b156ed9cb4d4b2c3
+2023-05-02 18:00:49,745 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:01:08,033 - apscheduler.scheduler - INFO - Removed job af6c6ab29f134252b71d54b3814f3cc7
+2023-05-02 18:01:13,911 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:01:14,799 - apscheduler.scheduler - INFO - Removed job 566988b279d24d74b7db8c2b2ab56ce1
+2023-05-02 18:01:15,438 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:01:17,052 - apscheduler.scheduler - INFO - Removed job 3f93084eda8b48cfb85f1b34fef945bd
+2023-05-02 18:01:17,271 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:01:18,564 - apscheduler.scheduler - INFO - Removed job 9ed55caa97cb4bd5a20deb440f88ac20
+2023-05-02 18:01:18,975 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:01:22,069 - apscheduler.scheduler - INFO - Removed job a9d3e1e2252a4a7685fb7dadda763e05
+2023-05-02 18:01:46,296 - apscheduler.scheduler - INFO - Removed job 5d795c998fd1488abc3988399ac36b56
+2023-05-02 18:01:46,296 - apscheduler.executors.default - INFO - Running job "_trigger_timeout (trigger: date[2023-05-02 15:01:46 UTC], next run at: 2023-05-02 15:01:46 UTC)" (scheduled at 2023-05-02 15:01:46.294262+00:00)
+2023-05-02 18:01:46,297 - apscheduler.executors.default - INFO - Job "_trigger_timeout (trigger: date[2023-05-02 15:01:46 UTC], next run at: 2023-05-02 15:01:46 UTC)" executed successfully
+2023-05-02 18:02:19,236 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:02:25,558 - apscheduler.scheduler - INFO - Removed job 3d1f9adc6af043ac817a090fed994d44
+2023-05-02 18:02:26,843 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:02:46,754 - apscheduler.scheduler - INFO - Removed job befdf109676742028eec24fb313a734a
+2023-05-02 18:02:47,546 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:02:50,439 - apscheduler.scheduler - INFO - Removed job 8c583a145db5423aa2d57d09be0976c6
+2023-05-02 18:02:51,297 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:02:57,748 - apscheduler.scheduler - INFO - Removed job 3ba4c1ee066a4142bc5d7dabf2ff534b
+2023-05-02 18:02:58,685 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:03:05,836 - apscheduler.scheduler - INFO - Removed job e8a61a608ba94098b764d548feb3152f
+2023-05-02 18:03:06,798 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:03:12,928 - apscheduler.scheduler - INFO - Removed job 1feddb20c6cd4c0dbdefea17dd0ff114
+2023-05-02 18:03:13,986 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:03:20,956 - apscheduler.scheduler - INFO - Removed job 706a8656cb734d70a1b38476285d05d0
+2023-05-02 18:03:22,103 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:03:45,738 - apscheduler.scheduler - INFO - Removed job 18e20e20754941a8b15ddc6edc10e753
+2023-05-02 18:03:50,181 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:03:58,864 - apscheduler.scheduler - INFO - Removed job ae04bfcd842f4697a2c3764d32422465
+2023-05-02 18:04:13,445 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:04:23,350 - apscheduler.scheduler - INFO - Removed job aadf4be34a544ba1991e8c2d1e5ba1c8
+2023-05-02 18:04:33,093 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1208d18a0>
+2023-05-02 18:04:33,093 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x12089cb20>, 1004256.147965083)]']
+connector: <aiohttp.connector.TCPConnector object at 0x120893a30>
+2023-05-02 18:04:34,198 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 18:05:29,791 - apscheduler.scheduler - INFO - Removed job 50396672ffde4e4f8728bcf8c08253c8
+2023-05-02 18:05:35,092 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 18:05:35,093 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 18:05:35,094 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 18:05:43,305 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-05-02 18:05:43,306 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2023-05-02 18:05:43,317 - telegram.ext._application - INFO - Application.stop() complete
+2023-05-02 18:05:43,395 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x12014aad0>

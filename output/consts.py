@@ -25,7 +25,7 @@ STOP_DIALOG = "/stop_dialog"
 STOP_ROUTE = "/stop_route"
 STOP_TOWNS = "/stop_game"
 STOP_AI = "/stop_ai"
-STOP_NEWS = "/stop_news"
+STOP_NEWS = "/end_news"
 STOP_WEATHER = "/stop_pogoda"
 STOP_METRO = "/stop_metro"
 

@@ -863,7 +863,7 @@ def main():
         states={
             1: [CallbackQueryHandler(news_dialog.send_news_new)]
         },
-        fallbacks=[CommandHandler('stop_news', news_dialog.end_new)], block=True, conversation_timeout=60
+        fallbacks=[CommandHandler('end_news', news_dialog.end_new)], block=True, conversation_timeout=60
     )
     weather_dialog_handler = ConversationHandler(
         entry_points=[CommandHandler('pogoda', weather_dialog.weather_start)],
