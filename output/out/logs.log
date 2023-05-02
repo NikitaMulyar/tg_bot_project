@@ -806,3 +806,57 @@ connector: <aiohttp.connector.TCPConnector object at 0x1372afb20>
 2023-05-01 16:28:41,232 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2023-05-01 16:28:41,233 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2023-05-01 16:28:41,235 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-01 18:44:48,346 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_conversationhandler.py", line 826, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 93, in start_dialog
+    await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
+KeyError: 'cmd'
+2023-05-01 22:10:18,256 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-01 22:10:18,257 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-01 22:10:18,260 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-01 22:20:27,223 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-05-01 22:20:27,223 - telegram.ext._application - INFO - Application.stop() complete
+2023-05-01 22:20:27,316 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x13701cf10>
+2023-05-01 22:20:29,018 - apscheduler.scheduler - INFO - Scheduler started
+2023-05-01 22:20:29,019 - telegram.ext._application - INFO - Application started
+2023-05-02 01:27:56,102 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 01:27:56,103 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 01:27:56,106 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 01:28:39,099 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 01:28:39,100 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 01:28:39,103 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 02:20:14,979 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 794, in send_anecdot
+    audio = await get_audio(text, context.user_data['voice'])
+KeyError: 'voice'
+2023-05-02 02:20:27,807 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 02:20:27,807 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 02:20:27,810 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2023-05-02 02:20:30,470 - telegram.ext._application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_application.py", line 1115, in process_update
+    await coroutine
+  File "/Users/nikita/PycharmProjects/tg_bot_project/venv/lib/python3.10/site-packages/telegram/ext/_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+  File "/Users/nikita/PycharmProjects/tg_bot_project/tg_bot_project/output/server.py", line 794, in send_anecdot
+    audio = await get_audio(text, context.user_data['voice'])
+KeyError: 'voice'
+2023-05-02 02:20:50,552 - apscheduler.scheduler - INFO - Added job "_trigger_timeout" to job store "default"
+2023-05-02 02:20:51,416 - apscheduler.scheduler - INFO - Removed job 5f9ebc703d9a4284ae6aab82caa503b5
+2023-05-02 02:33:08,586 - telegram.ext._application - INFO - Application is stopping. This might take a moment.
+2023-05-02 02:33:08,587 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2023-05-02 02:33:08,598 - telegram.ext._application - INFO - Application.stop() complete
+2023-05-02 02:33:08,695 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x12744ea10>
