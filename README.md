@@ -28,14 +28,14 @@ pip install -r requirements.txt
 ```
 
 ### Запуск
-4) В директории `output` запустите файл `app.py`
+4) В директории `output` запустите файл `server.py`
 ```bash
 python server.py
 ```
 
 ## Код проекта
 В проекте есть 2 части - первая выполнена командой Yandex Cloud, вторая - наша. В нашу часть входят файлы, которые лежат в директории `output`
-(`app.py, config.py` и т.д., кроме папок `google` и `yandex` и файла `anecdotica.py`)
+(кроме папок `google` и `yandex`)
 
 ## О проекте
 
@@ -57,3 +57,4 @@ python server.py
 
 * [Бот](https://t.me/guru1514_bot)
 * [Документация](https://telegra.ph/Kak-polzovatsya-botom-Velikij-Guru-opisanie-komand-04-16)
+* В корне проекта есть также файлы `note_about_project.txt` и `защита проекта.pdf` - рекомендуем ознакомиться с ними, чтобы иметь бОльшее представление о нашей работе
