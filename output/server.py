@@ -714,7 +714,7 @@ class Stats:
     async def send_all_stat(self, update, context):
         total_msg_func(update)
         if context.user_data.get('in_conversation'):
-            await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+            await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
             return ConversationHandler.END
         res = self.get_all_stat().to_dict('index')
         s = "🏆ТОП пользователей🏆\n\n"
