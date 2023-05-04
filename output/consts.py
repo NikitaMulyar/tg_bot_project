@@ -23,7 +23,7 @@ AI_KEY = "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"
 # STOP CMDS
 STOP_DIALOG = "/stop_dialog"
 STOP_ROUTE = "/stop_route"
-STOP_TOWNS = "/stop_game"
+STOP_TOWNS = "/end_game"
 STOP_AI = "/stop_ai"
 STOP_NEWS = "/end_news"
 STOP_WEATHER = "/stop_pogoda"
