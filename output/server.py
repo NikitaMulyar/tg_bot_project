@@ -787,7 +787,7 @@ class NearStation:
 async def send_anecdot(update, context):
     total_msg_func(update)
     if context.user_data.get('in_conversation'):
-        await update.message.reply_text('Для начала выйди из предыдущего диалога.')
+        await update.message.reply_text(f'Для начала выйди из предыдущего диалога: {context.user_data["cmd"]}')
         return
     chat = update.message.chat.id
     text = await get_anecdot()
